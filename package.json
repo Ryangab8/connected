@@ -1,0 +1,28 @@
+{
+  "name": "the-unraveling",
+  "version": "1.0.0",
+  "description": "Interactive biodiversity visualization showing species decline and ecological ripple effects",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "fetch-data": "node scripts/fetch-gbif.js",
+    "process-data": "node scripts/process-species.js",
+    "generate-stories": "node scripts/generate-stories.js"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.0",
+    "leaflet": "^1.9.4",
+    "react-leaflet": "^4.2.1",
+    "framer-motion": "^11.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.1.0"
+  },
+  "author": "",
+  "license": "MIT"
+}
