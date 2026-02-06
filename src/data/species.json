@@ -1,0 +1,828 @@
+[
+  {
+    "id": "atlantic-salmon",
+    "commonName": "Atlantic Salmon",
+    "scientificName": "Salmo salar",
+    "declineScore": {
+      "percent": 43250,
+      "direction": "increase",
+      "trend": "increasing",
+      "earlyPeriod": "2004-2008",
+      "latePeriod": "2020-2024",
+      "earlyPeriodRecords": 2,
+      "latePeriodRecords": 867
+    },
+    "ecologicalImpactScore": {
+      "score": 88,
+      "components": {
+        "trophicRole": 4,
+        "ecosystemEngineering": 4,
+        "dependencyCount": 5,
+        "functionalRedundancy": 5
+      },
+      "notes": "Keystone species. Transports marine nutrients into freshwater/forest ecosystems. Feeds everything.",
+      "sources": [
+        "Atlantic Salmon Trust",
+        "Missing Salmon Alliance"
+      ]
+    },
+    "urgencyScore": 93,
+    "totalRecords": 5133,
+    "peakRegions": [
+      "Wales",
+      "South West England",
+      "North West England"
+    ],
+    "mostDeclinedRegions": [],
+    "yearlyTrend": {
+      "2004": 0,
+      "2005": 0,
+      "2006": 1,
+      "2007": 0,
+      "2008": 1,
+      "2009": 3,
+      "2010": 1,
+      "2011": 6,
+      "2012": 78,
+      "2013": 688,
+      "2014": 753,
+      "2015": 524,
+      "2016": 419,
+      "2017": 509,
+      "2018": 668,
+      "2019": 615,
+      "2020": 49,
+      "2021": 167,
+      "2022": 280,
+      "2023": 177,
+      "2024": 194
+    },
+    "byCountry": {
+      "England": {
+        "total": 2040,
+        "decline": 0
+      },
+      "Scotland": {
+        "total": 194,
+        "decline": 4200
+      },
+      "Wales": {
+        "total": 2777,
+        "decline": 0
+      },
+      "Northern Ireland": {
+        "total": 5,
+        "decline": 0
+      },
+      "Republic of Ireland": {
+        "total": 22,
+        "decline": 300
+      }
+    },
+    "dataSource": "GBIF",
+    "dateRange": "2004-2024",
+    "lastUpdated": "2026-02-06T03:07:09.600Z",
+    "urgencyRank": 1
+  },
+  {
+    "id": "red-squirrel",
+    "commonName": "Red Squirrel",
+    "scientificName": "Sciurus vulgaris",
+    "declineScore": {
+      "percent": 9234,
+      "direction": "increase",
+      "trend": "increasing",
+      "earlyPeriod": "2004-2008",
+      "latePeriod": "2020-2024",
+      "earlyPeriodRecords": 59,
+      "latePeriodRecords": 5507
+    },
+    "ecologicalImpactScore": {
+      "score": 56,
+      "components": {
+        "trophicRole": 2,
+        "ecosystemEngineering": 4,
+        "dependencyCount": 3,
+        "functionalRedundancy": 4
+      },
+      "notes": "Critical for conifer forest regeneration. Forgotten seed caches = new trees. Grey squirrels don't cache the same way.",
+      "sources": [
+        "Red Squirrel Survival Trust",
+        "Scottish Wildlife Trust"
+      ]
+    },
+    "urgencyScore": 74,
+    "totalRecords": 8268,
+    "peakRegions": [
+      "Scotland",
+      "Republic of Ireland",
+      "Northern Ireland"
+    ],
+    "mostDeclinedRegions": [],
+    "yearlyTrend": {
+      "2004": 2,
+      "2005": 7,
+      "2006": 5,
+      "2007": 24,
+      "2008": 21,
+      "2009": 53,
+      "2010": 142,
+      "2011": 307,
+      "2012": 268,
+      "2013": 204,
+      "2014": 317,
+      "2015": 581,
+      "2016": 186,
+      "2017": 298,
+      "2018": 343,
+      "2019": 3,
+      "2020": 12,
+      "2021": 18,
+      "2022": 210,
+      "2023": 148,
+      "2024": 5119
+    },
+    "byCountry": {
+      "England": {
+        "total": 128,
+        "decline": 0
+      },
+      "Scotland": {
+        "total": 4908,
+        "decline": 488800
+      },
+      "Wales": {
+        "total": 9,
+        "decline": 0
+      },
+      "Northern Ireland": {
+        "total": 310,
+        "decline": 8500
+      },
+      "Republic of Ireland": {
+        "total": 2883,
+        "decline": 540
+      }
+    },
+    "dataSource": "GBIF",
+    "dateRange": "2004-2024",
+    "lastUpdated": "2026-02-06T03:06:19.857Z",
+    "urgencyRank": 2
+  },
+  {
+    "id": "corncrake",
+    "commonName": "Corncrake",
+    "scientificName": "Crex crex",
+    "declineScore": {
+      "percent": 65925,
+      "direction": "increase",
+      "trend": "increasing",
+      "earlyPeriod": "2004-2008",
+      "latePeriod": "2020-2024",
+      "earlyPeriodRecords": 8,
+      "latePeriodRecords": 5282
+    },
+    "ecologicalImpactScore": {
+      "score": 44,
+      "components": {
+        "trophicRole": 3,
+        "ecosystemEngineering": 2,
+        "dependencyCount": 2,
+        "functionalRedundancy": 4
+      },
+      "notes": "Indicator species for traditional hay meadow management. Decline = agricultural intensification.",
+      "sources": [
+        "RSPB Corncrake Conservation",
+        "Scottish Natural Heritage"
+      ]
+    },
+    "urgencyScore": 66,
+    "totalRecords": 5390,
+    "peakRegions": [
+      "Scotland",
+      "Republic of Ireland",
+      "East of England"
+    ],
+    "mostDeclinedRegions": [],
+    "yearlyTrend": {
+      "2004": 0,
+      "2005": 1,
+      "2006": 2,
+      "2007": 4,
+      "2008": 1,
+      "2009": 2,
+      "2010": 1,
+      "2011": 2,
+      "2012": 6,
+      "2013": 3,
+      "2014": 7,
+      "2015": 10,
+      "2016": 18,
+      "2017": 5,
+      "2018": 24,
+      "2019": 21,
+      "2020": 6,
+      "2021": 26,
+      "2022": 681,
+      "2023": 2468,
+      "2024": 2101
+    },
+    "byCountry": {
+      "England": {
+        "total": 112,
+        "decline": 0
+      },
+      "Scotland": {
+        "total": 4985,
+        "decline": 0
+      },
+      "Northern Ireland": {
+        "total": 17,
+        "decline": 600
+      },
+      "Republic of Ireland": {
+        "total": 273,
+        "decline": 2717
+      }
+    },
+    "dataSource": "GBIF",
+    "dateRange": "2004-2024",
+    "lastUpdated": "2026-02-06T03:08:48.399Z",
+    "urgencyRank": 3
+  },
+  {
+    "id": "natterjack-toad",
+    "commonName": "Natterjack Toad",
+    "scientificName": "Epidalea calamita",
+    "declineScore": {
+      "percent": 65,
+      "direction": "increase",
+      "trend": "increasing",
+      "earlyPeriod": "2004-2008",
+      "latePeriod": "2020-2024",
+      "earlyPeriodRecords": 406,
+      "latePeriodRecords": 668
+    },
+    "ecologicalImpactScore": {
+      "score": 56,
+      "components": {
+        "trophicRole": 3,
+        "ecosystemEngineering": 3,
+        "dependencyCount": 2,
+        "functionalRedundancy": 5
+      },
+      "notes": "Specialist of coastal dunes and heathland. Breeds in warm shallow pools. Unique niche.",
+      "sources": [
+        "Amphibian and Reptile Conservation",
+        "Natural England"
+      ]
+    },
+    "urgencyScore": 60,
+    "totalRecords": 4308,
+    "peakRegions": [
+      "North West England",
+      "Wales",
+      "Republic of Ireland"
+    ],
+    "mostDeclinedRegions": [
+      {
+        "name": "North West England",
+        "declinePercent": -94,
+        "total": 2564
+      }
+    ],
+    "yearlyTrend": {
+      "2004": 182,
+      "2005": 118,
+      "2006": 32,
+      "2007": 41,
+      "2008": 33,
+      "2009": 225,
+      "2010": 162,
+      "2011": 29,
+      "2012": 71,
+      "2013": 64,
+      "2014": 106,
+      "2015": 51,
+      "2016": 140,
+      "2017": 136,
+      "2018": 424,
+      "2019": 1826,
+      "2020": 119,
+      "2021": 198,
+      "2022": 137,
+      "2023": 147,
+      "2024": 67
+    },
+    "byCountry": {
+      "England": {
+        "total": 2644,
+        "decline": -87
+      },
+      "Scotland": {
+        "total": 42,
+        "decline": 850
+      },
+      "Wales": {
+        "total": 1158,
+        "decline": 4956
+      },
+      "Republic of Ireland": {
+        "total": 82,
+        "decline": 0
+      }
+    },
+    "dataSource": "GBIF",
+    "dateRange": "2004-2024",
+    "lastUpdated": "2026-02-06T03:09:31.256Z",
+    "urgencyRank": 4
+  },
+  {
+    "id": "turtle-dove",
+    "commonName": "European Turtle Dove",
+    "scientificName": "Streptopelia turtur",
+    "declineScore": {
+      "percent": 73443,
+      "direction": "increase",
+      "trend": "increasing",
+      "earlyPeriod": "2004-2008",
+      "latePeriod": "2020-2024",
+      "earlyPeriodRecords": 7,
+      "latePeriodRecords": 5148
+    },
+    "ecologicalImpactScore": {
+      "score": 25,
+      "components": {
+        "trophicRole": 2,
+        "ecosystemEngineering": 2,
+        "dependencyCount": 2,
+        "functionalRedundancy": 2
+      },
+      "notes": "Farmland specialist. Decline indicates agricultural intensification impacts.",
+      "sources": [
+        "Operation Turtle Dove",
+        "BTO Bird Trends"
+      ]
+    },
+    "urgencyScore": 55,
+    "totalRecords": 5199,
+    "peakRegions": [
+      "East of England",
+      "South East England",
+      "East Midlands"
+    ],
+    "mostDeclinedRegions": [],
+    "yearlyTrend": {
+      "2004": 0,
+      "2005": 3,
+      "2006": 2,
+      "2007": 0,
+      "2008": 2,
+      "2009": 1,
+      "2010": 6,
+      "2011": 5,
+      "2012": 1,
+      "2013": 0,
+      "2014": 6,
+      "2015": 0,
+      "2016": 0,
+      "2017": 2,
+      "2018": 13,
+      "2019": 10,
+      "2020": 6,
+      "2021": 1437,
+      "2022": 1167,
+      "2023": 1217,
+      "2024": 1321
+    },
+    "byCountry": {
+      "England": {
+        "total": 4598,
+        "decline": 0
+      },
+      "Scotland": {
+        "total": 63,
+        "decline": 0
+      },
+      "Wales": {
+        "total": 6,
+        "decline": 0
+      },
+      "Northern Ireland": {
+        "total": 2,
+        "decline": 0
+      },
+      "Republic of Ireland": {
+        "total": 97,
+        "decline": 557
+      }
+    },
+    "dataSource": "GBIF",
+    "dateRange": "2004-2024",
+    "lastUpdated": "2026-02-06T03:03:31.373Z",
+    "urgencyRank": 5
+  },
+  {
+    "id": "water-vole",
+    "commonName": "Water Vole",
+    "scientificName": "Arvicola amphibius",
+    "declineScore": {
+      "percent": 0,
+      "direction": "decline",
+      "trend": "insufficient_data",
+      "earlyPeriod": "2004-2008",
+      "latePeriod": "2020-2024"
+    },
+    "ecologicalImpactScore": {
+      "score": 75,
+      "components": {
+        "trophicRole": 2,
+        "ecosystemEngineering": 5,
+        "dependencyCount": 4,
+        "functionalRedundancy": 5
+      },
+      "notes": "Keystone riparian engineer. Burrows prevent bank erosion, create habitat for invertebrates, fish, amphibians.",
+      "sources": [
+        "Wildlife Trusts",
+        "Environment Agency Water Vole Conservation"
+      ]
+    },
+    "urgencyScore": 45,
+    "totalRecords": 5100,
+    "peakRegions": [
+      "East Midlands",
+      "Wales",
+      "South East England"
+    ],
+    "mostDeclinedRegions": [],
+    "yearlyTrend": {
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 0,
+      "2009": 0,
+      "2010": 0,
+      "2011": 0,
+      "2012": 0,
+      "2013": 0,
+      "2014": 0,
+      "2015": 0,
+      "2016": 0,
+      "2017": 0,
+      "2018": 0,
+      "2019": 0,
+      "2020": 0,
+      "2021": 1551,
+      "2022": 982,
+      "2023": 1558,
+      "2024": 1009
+    },
+    "byCountry": {
+      "England": {
+        "total": 2605,
+        "decline": 0
+      },
+      "Scotland": {
+        "total": 328,
+        "decline": 0
+      },
+      "Wales": {
+        "total": 577,
+        "decline": 0
+      }
+    },
+    "dataSource": "GBIF",
+    "dateRange": "2004-2024",
+    "lastUpdated": "2026-02-06T03:02:43.283Z",
+    "urgencyRank": 6
+  },
+  {
+    "id": "curlew",
+    "commonName": "Eurasian Curlew",
+    "scientificName": "Numenius arquata",
+    "declineScore": {
+      "percent": 0,
+      "direction": "decline",
+      "trend": "insufficient_data",
+      "earlyPeriod": "2004-2008",
+      "latePeriod": "2020-2024"
+    },
+    "ecologicalImpactScore": {
+      "score": 50,
+      "components": {
+        "trophicRole": 3,
+        "ecosystemEngineering": 2,
+        "dependencyCount": 3,
+        "functionalRedundancy": 4
+      },
+      "notes": "Flagship species for upland and wet grassland conservation. Indicator of ecosystem health.",
+      "sources": [
+        "Curlew Recovery Partnership",
+        "RSPB State of UK Birds 2023"
+      ]
+    },
+    "urgencyScore": 30,
+    "totalRecords": 10200,
+    "peakRegions": [
+      "Republic of Ireland",
+      "South East England",
+      "South West England"
+    ],
+    "mostDeclinedRegions": [],
+    "yearlyTrend": {
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 0,
+      "2009": 0,
+      "2010": 0,
+      "2011": 0,
+      "2012": 0,
+      "2013": 0,
+      "2014": 0,
+      "2015": 0,
+      "2016": 0,
+      "2017": 0,
+      "2018": 0,
+      "2019": 0,
+      "2020": 0,
+      "2021": 0,
+      "2022": 0,
+      "2023": 184,
+      "2024": 10016
+    },
+    "byCountry": {
+      "England": {
+        "total": 3123,
+        "decline": 0
+      },
+      "Scotland": {
+        "total": 792,
+        "decline": 0
+      },
+      "Wales": {
+        "total": 162,
+        "decline": 0
+      },
+      "Northern Ireland": {
+        "total": 169,
+        "decline": 0
+      },
+      "Republic of Ireland": {
+        "total": 4910,
+        "decline": 0
+      }
+    },
+    "dataSource": "GBIF",
+    "dateRange": "2004-2024",
+    "lastUpdated": "2026-02-06T03:01:55.679Z",
+    "urgencyRank": 7
+  },
+  {
+    "id": "hedgehog",
+    "commonName": "Hedgehog",
+    "scientificName": "Erinaceus europaeus",
+    "declineScore": {
+      "percent": 0,
+      "direction": "decline",
+      "trend": "insufficient_data",
+      "earlyPeriod": "2004-2008",
+      "latePeriod": "2020-2024"
+    },
+    "ecologicalImpactScore": {
+      "score": 50,
+      "components": {
+        "trophicRole": 3,
+        "ecosystemEngineering": 3,
+        "dependencyCount": 3,
+        "functionalRedundancy": 3
+      },
+      "notes": "Key invertebrate predator in gardens. Controls slugs, beetles. Declining = pest outbreaks.",
+      "sources": [
+        "PTES Hedgehog Report 2022",
+        "British Hedgehog Preservation Society"
+      ]
+    },
+    "urgencyScore": 30,
+    "totalRecords": 10200,
+    "peakRegions": [
+      "Republic of Ireland",
+      "South East England",
+      "South West England"
+    ],
+    "mostDeclinedRegions": [],
+    "yearlyTrend": {
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 0,
+      "2009": 0,
+      "2010": 0,
+      "2011": 0,
+      "2012": 0,
+      "2013": 0,
+      "2014": 0,
+      "2015": 0,
+      "2016": 0,
+      "2017": 0,
+      "2018": 0,
+      "2019": 0,
+      "2020": 553,
+      "2021": 2303,
+      "2022": 1114,
+      "2023": 1110,
+      "2024": 5120
+    },
+    "byCountry": {
+      "England": {
+        "total": 4490,
+        "decline": 0
+      },
+      "Scotland": {
+        "total": 511,
+        "decline": 0
+      },
+      "Wales": {
+        "total": 98,
+        "decline": 0
+      },
+      "Northern Ireland": {
+        "total": 239,
+        "decline": 0
+      },
+      "Republic of Ireland": {
+        "total": 4834,
+        "decline": 0
+      }
+    },
+    "dataSource": "GBIF",
+    "dateRange": "2004-2024",
+    "lastUpdated": "2026-02-06T03:00:26.380Z",
+    "urgencyRank": 8
+  },
+  {
+    "id": "common-toad",
+    "commonName": "Common Toad",
+    "scientificName": "Bufo bufo",
+    "declineScore": {
+      "percent": 0,
+      "direction": "decline",
+      "trend": "insufficient_data",
+      "earlyPeriod": "2004-2008",
+      "latePeriod": "2020-2024"
+    },
+    "ecologicalImpactScore": {
+      "score": 44,
+      "components": {
+        "trophicRole": 3,
+        "ecosystemEngineering": 2,
+        "dependencyCount": 3,
+        "functionalRedundancy": 3
+      },
+      "notes": "Major slug and invertebrate predator. Migrates to breed - road mortality is catastrophic.",
+      "sources": [
+        "Froglife",
+        "Toad Patrol data"
+      ]
+    },
+    "urgencyScore": 26,
+    "totalRecords": 5106,
+    "peakRegions": [
+      "South West England",
+      "Scotland",
+      "South East England"
+    ],
+    "mostDeclinedRegions": [],
+    "yearlyTrend": {
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 0,
+      "2009": 0,
+      "2010": 0,
+      "2011": 1,
+      "2012": 0,
+      "2013": 0,
+      "2014": 0,
+      "2015": 0,
+      "2016": 0,
+      "2017": 0,
+      "2018": 0,
+      "2019": 0,
+      "2020": 0,
+      "2021": 1,
+      "2022": 0,
+      "2023": 11,
+      "2024": 5093
+    },
+    "byCountry": {
+      "England": {
+        "total": 3760,
+        "decline": 0
+      },
+      "Scotland": {
+        "total": 850,
+        "decline": 0
+      },
+      "Wales": {
+        "total": 316,
+        "decline": 0
+      },
+      "Republic of Ireland": {
+        "total": 5,
+        "decline": 0
+      }
+    },
+    "dataSource": "GBIF",
+    "dateRange": "2004-2024",
+    "lastUpdated": "2026-02-06T03:07:58.825Z",
+    "urgencyRank": 9
+  },
+  {
+    "id": "small-tortoiseshell",
+    "commonName": "Small Tortoiseshell",
+    "scientificName": "Aglais urticae",
+    "declineScore": {
+      "percent": 0,
+      "direction": "decline",
+      "trend": "insufficient_data",
+      "earlyPeriod": "2004-2008",
+      "latePeriod": "2020-2024"
+    },
+    "ecologicalImpactScore": {
+      "score": 44,
+      "components": {
+        "trophicRole": 2,
+        "ecosystemEngineering": 3,
+        "dependencyCount": 3,
+        "functionalRedundancy": 3
+      },
+      "notes": "Key pollinator and indicator of habitat quality. Part of broader pollinator crisis.",
+      "sources": [
+        "Butterfly Conservation",
+        "UK Butterfly Monitoring Scheme"
+      ]
+    },
+    "urgencyScore": 26,
+    "totalRecords": 10200,
+    "peakRegions": [
+      "Republic of Ireland",
+      "East Midlands",
+      "Scotland"
+    ],
+    "mostDeclinedRegions": [],
+    "yearlyTrend": {
+      "2004": 0,
+      "2005": 0,
+      "2006": 0,
+      "2007": 0,
+      "2008": 0,
+      "2009": 0,
+      "2010": 0,
+      "2011": 0,
+      "2012": 0,
+      "2013": 0,
+      "2014": 0,
+      "2015": 0,
+      "2016": 0,
+      "2017": 0,
+      "2018": 0,
+      "2019": 0,
+      "2020": 49,
+      "2021": 2588,
+      "2022": 356,
+      "2023": 2936,
+      "2024": 4269
+    },
+    "byCountry": {
+      "England": {
+        "total": 4048,
+        "decline": 0
+      },
+      "Scotland": {
+        "total": 843,
+        "decline": 0
+      },
+      "Wales": {
+        "total": 143,
+        "decline": 0
+      },
+      "Northern Ireland": {
+        "total": 332,
+        "decline": 0
+      },
+      "Republic of Ireland": {
+        "total": 4690,
+        "decline": 0
+      }
+    },
+    "dataSource": "GBIF",
+    "dateRange": "2004-2024",
+    "lastUpdated": "2026-02-06T03:05:05.920Z",
+    "urgencyRank": 10
+  }
+]

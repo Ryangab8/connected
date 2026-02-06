@@ -12,12 +12,14 @@
     "generate-stories": "node scripts/generate-stories.js"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.73.0",
+    "dotenv": "^17.2.4",
+    "framer-motion": "^11.0.0",
+    "leaflet": "^1.9.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.0",
-    "leaflet": "^1.9.4",
     "react-leaflet": "^4.2.1",
-    "framer-motion": "^11.0.0"
+    "react-router-dom": "^6.22.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",

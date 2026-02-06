@@ -1,0 +1,175 @@
+{
+  "type": "FeatureCollection",
+  "name": "UK_Ireland_Regions",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "south-east-england",
+        "name": "South East England",
+        "country": "England",
+        "countryCode": "GB"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-1.5, 50.7], [1.5, 50.7], [1.5, 51.8], [-1.5, 51.8], [-1.5, 50.7]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "south-west-england",
+        "name": "South West England",
+        "country": "England",
+        "countryCode": "GB"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-5.7, 50.0], [-1.5, 50.0], [-1.5, 51.7], [-5.7, 51.7], [-5.7, 50.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "london",
+        "name": "London",
+        "country": "England",
+        "countryCode": "GB"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-0.5, 51.3], [0.3, 51.3], [0.3, 51.7], [-0.5, 51.7], [-0.5, 51.3]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "east-of-england",
+        "name": "East of England",
+        "country": "England",
+        "countryCode": "GB"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-0.5, 51.5], [1.8, 51.5], [1.8, 52.9], [-0.5, 52.9], [-0.5, 51.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "east-midlands",
+        "name": "East Midlands",
+        "country": "England",
+        "countryCode": "GB"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-1.8, 52.0], [0.0, 52.0], [0.0, 53.5], [-1.8, 53.5], [-1.8, 52.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "west-midlands",
+        "name": "West Midlands",
+        "country": "England",
+        "countryCode": "GB"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-3.1, 52.0], [-1.2, 52.0], [-1.2, 53.0], [-3.1, 53.0], [-3.1, 52.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "yorkshire",
+        "name": "Yorkshire",
+        "country": "England",
+        "countryCode": "GB"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-2.5, 53.3], [-0.1, 53.3], [-0.1, 54.5], [-2.5, 54.5], [-2.5, 53.3]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "north-west-england",
+        "name": "North West England",
+        "country": "England",
+        "countryCode": "GB"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-3.1, 53.0], [-1.8, 53.0], [-1.8, 55.2], [-3.1, 55.2], [-3.1, 53.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "north-east-england",
+        "name": "North East England",
+        "country": "England",
+        "countryCode": "GB"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-2.5, 54.5], [-0.8, 54.5], [-0.8, 55.8], [-2.5, 55.8], [-2.5, 54.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "scotland",
+        "name": "Scotland",
+        "country": "Scotland",
+        "countryCode": "GB"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-7.6, 54.6], [-0.7, 54.6], [-0.7, 61.0], [-7.6, 61.0], [-7.6, 54.6]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "wales",
+        "name": "Wales",
+        "country": "Wales",
+        "countryCode": "GB"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-5.5, 51.3], [-2.6, 51.3], [-2.6, 53.5], [-5.5, 53.5], [-5.5, 51.3]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "northern-ireland",
+        "name": "Northern Ireland",
+        "country": "Northern Ireland",
+        "countryCode": "GB"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-8.2, 54.0], [-5.4, 54.0], [-5.4, 55.4], [-8.2, 55.4], [-8.2, 54.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "republic-of-ireland",
+        "name": "Republic of Ireland",
+        "country": "Republic of Ireland",
+        "countryCode": "IE"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-10.5, 51.4], [-5.9, 51.4], [-5.9, 55.4], [-10.5, 55.4], [-10.5, 51.4]]]
+      }
+    }
+  ]
+}

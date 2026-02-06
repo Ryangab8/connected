@@ -1,0 +1,73 @@
+{
+  "fetchedAt": "2026-02-06T03:09:32.774Z",
+  "config": {
+    "startYear": 2004,
+    "endYear": 2024,
+    "gbifBaseUrl": "https://api.gbif.org/v1",
+    "requestDelay": 1500,
+    "maxRecordsPerSpecies": 10000,
+    "outputDir": "C:\\Users\\ryang\\OneDrive - RG Consulting\\Github\\connected\\scripts\\output\\raw"
+  },
+  "results": [
+    {
+      "id": "hedgehog",
+      "commonName": "Hedgehog",
+      "totalRecords": 10200,
+      "status": "success"
+    },
+    {
+      "id": "curlew",
+      "commonName": "Eurasian Curlew",
+      "totalRecords": 10200,
+      "status": "success"
+    },
+    {
+      "id": "water-vole",
+      "commonName": "Water Vole",
+      "totalRecords": 5100,
+      "status": "success"
+    },
+    {
+      "id": "turtle-dove",
+      "commonName": "European Turtle Dove",
+      "totalRecords": 5199,
+      "status": "success"
+    },
+    {
+      "id": "small-tortoiseshell",
+      "commonName": "Small Tortoiseshell",
+      "totalRecords": 10200,
+      "status": "success"
+    },
+    {
+      "id": "red-squirrel",
+      "commonName": "Red Squirrel",
+      "totalRecords": 8268,
+      "status": "success"
+    },
+    {
+      "id": "atlantic-salmon",
+      "commonName": "Atlantic Salmon",
+      "totalRecords": 5133,
+      "status": "success"
+    },
+    {
+      "id": "common-toad",
+      "commonName": "Common Toad",
+      "totalRecords": 5106,
+      "status": "success"
+    },
+    {
+      "id": "corncrake",
+      "commonName": "Corncrake",
+      "totalRecords": 5390,
+      "status": "success"
+    },
+    {
+      "id": "natterjack-toad",
+      "commonName": "Natterjack Toad",
+      "totalRecords": 4308,
+      "status": "success"
+    }
+  ]
+}

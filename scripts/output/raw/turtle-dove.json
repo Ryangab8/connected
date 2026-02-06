@@ -1,0 +1,1415 @@
+{
+  "species": {
+    "id": "turtle-dove",
+    "commonName": "European Turtle Dove",
+    "scientificName": "Streptopelia turtur"
+  },
+  "metadata": {
+    "totalRecords": 5199,
+    "dateRange": "2004-2024",
+    "fetchedAt": "2026-02-06T03:03:31.373Z"
+  },
+  "byYear": {
+    "2004": 0,
+    "2005": 3,
+    "2006": 2,
+    "2007": 0,
+    "2008": 2,
+    "2009": 1,
+    "2010": 6,
+    "2011": 5,
+    "2012": 1,
+    "2013": 0,
+    "2014": 6,
+    "2015": 0,
+    "2016": 0,
+    "2017": 2,
+    "2018": 13,
+    "2019": 10,
+    "2020": 6,
+    "2021": 1437,
+    "2022": 1167,
+    "2023": 1217,
+    "2024": 1321
+  },
+  "byRegion": {
+    "South East England": {
+      "total": 1505,
+      "byYear": {
+        "2004": 0,
+        "2005": 0,
+        "2006": 0,
+        "2007": 0,
+        "2008": 0,
+        "2009": 0,
+        "2010": 0,
+        "2011": 0,
+        "2012": 0,
+        "2013": 0,
+        "2014": 0,
+        "2015": 0,
+        "2016": 0,
+        "2017": 0,
+        "2018": 0,
+        "2019": 0,
+        "2020": 0,
+        "2021": 472,
+        "2022": 314,
+        "2023": 311,
+        "2024": 408
+      }
+    },
+    "South West England": {
+      "total": 187,
+      "byYear": {
+        "2004": 0,
+        "2005": 0,
+        "2006": 0,
+        "2007": 0,
+        "2008": 0,
+        "2009": 0,
+        "2010": 0,
+        "2011": 0,
+        "2012": 0,
+        "2013": 0,
+        "2014": 0,
+        "2015": 0,
+        "2016": 0,
+        "2017": 0,
+        "2018": 0,
+        "2019": 0,
+        "2020": 0,
+        "2021": 46,
+        "2022": 54,
+        "2023": 54,
+        "2024": 33
+      }
+    },
+    "London": {
+      "total": 0,
+      "byYear": {
+        "2004": 0,
+        "2005": 0,
+        "2006": 0,
+        "2007": 0,
+        "2008": 0,
+        "2009": 0,
+        "2010": 0,
+        "2011": 0,
+        "2012": 0,
+        "2013": 0,
+        "2014": 0,
+        "2015": 0,
+        "2016": 0,
+        "2017": 0,
+        "2018": 0,
+        "2019": 0,
+        "2020": 0,
+        "2021": 0,
+        "2022": 0,
+        "2023": 0,
+        "2024": 0
+      }
+    },
+    "East of England": {
+      "total": 2316,
+      "byYear": {
+        "2004": 0,
+        "2005": 0,
+        "2006": 0,
+        "2007": 0,
+        "2008": 0,
+        "2009": 0,
+        "2010": 0,
+        "2011": 0,
+        "2012": 0,
+        "2013": 0,
+        "2014": 0,
+        "2015": 0,
+        "2016": 0,
+        "2017": 0,
+        "2018": 0,
+        "2019": 0,
+        "2020": 0,
+        "2021": 587,
+        "2022": 534,
+        "2023": 602,
+        "2024": 593
+      }
+    },
+    "East Midlands": {
+      "total": 349,
+      "byYear": {
+        "2004": 0,
+        "2005": 0,
+        "2006": 0,
+        "2007": 0,
+        "2008": 0,
+        "2009": 0,
+        "2010": 0,
+        "2011": 0,
+        "2012": 0,
+        "2013": 0,
+        "2014": 0,
+        "2015": 0,
+        "2016": 0,
+        "2017": 0,
+        "2018": 0,
+        "2019": 0,
+        "2020": 0,
+        "2021": 160,
+        "2022": 69,
+        "2023": 66,
+        "2024": 54
+      }
+    },
+    "West Midlands": {
+      "total": 10,
+      "byYear": {
+        "2004": 0,
+        "2005": 0,
+        "2006": 0,
+        "2007": 0,
+        "2008": 0,
+        "2009": 0,
+        "2010": 0,
+        "2011": 0,
+        "2012": 0,
+        "2013": 0,
+        "2014": 0,
+        "2015": 0,
+        "2016": 0,
+        "2017": 0,
+        "2018": 0,
+        "2019": 0,
+        "2020": 0,
+        "2021": 2,
+        "2022": 5,
+        "2023": 1,
+        "2024": 2
+      }
+    },
+    "Yorkshire": {
+      "total": 213,
+      "byYear": {
+        "2004": 0,
+        "2005": 0,
+        "2006": 0,
+        "2007": 0,
+        "2008": 0,
+        "2009": 0,
+        "2010": 0,
+        "2011": 0,
+        "2012": 0,
+        "2013": 0,
+        "2014": 0,
+        "2015": 0,
+        "2016": 0,
+        "2017": 0,
+        "2018": 0,
+        "2019": 0,
+        "2020": 0,
+        "2021": 73,
+        "2022": 39,
+        "2023": 47,
+        "2024": 54
+      }
+    },
+    "North West England": {
+      "total": 13,
+      "byYear": {
+        "2004": 0,
+        "2005": 0,
+        "2006": 0,
+        "2007": 0,
+        "2008": 0,
+        "2009": 0,
+        "2010": 0,
+        "2011": 0,
+        "2012": 0,
+        "2013": 0,
+        "2014": 0,
+        "2015": 0,
+        "2016": 0,
+        "2017": 0,
+        "2018": 0,
+        "2019": 0,
+        "2020": 0,
+        "2021": 0,
+        "2022": 9,
+        "2023": 3,
+        "2024": 1
+      }
+    },
+    "North East England": {
+      "total": 5,
+      "byYear": {
+        "2004": 0,
+        "2005": 0,
+        "2006": 0,
+        "2007": 0,
+        "2008": 0,
+        "2009": 0,
+        "2010": 0,
+        "2011": 0,
+        "2012": 0,
+        "2013": 0,
+        "2014": 0,
+        "2015": 0,
+        "2016": 0,
+        "2017": 0,
+        "2018": 0,
+        "2019": 0,
+        "2020": 0,
+        "2021": 0,
+        "2022": 0,
+        "2023": 3,
+        "2024": 2
+      }
+    },
+    "Scotland": {
+      "total": 63,
+      "byYear": {
+        "2004": 0,
+        "2005": 0,
+        "2006": 0,
+        "2007": 0,
+        "2008": 0,
+        "2009": 0,
+        "2010": 0,
+        "2011": 0,
+        "2012": 0,
+        "2013": 0,
+        "2014": 0,
+        "2015": 0,
+        "2016": 0,
+        "2017": 0,
+        "2018": 0,
+        "2019": 0,
+        "2020": 0,
+        "2021": 0,
+        "2022": 25,
+        "2023": 9,
+        "2024": 29
+      }
+    },
+    "Wales": {
+      "total": 6,
+      "byYear": {
+        "2004": 0,
+        "2005": 0,
+        "2006": 0,
+        "2007": 0,
+        "2008": 0,
+        "2009": 0,
+        "2010": 0,
+        "2011": 0,
+        "2012": 0,
+        "2013": 0,
+        "2014": 0,
+        "2015": 0,
+        "2016": 0,
+        "2017": 0,
+        "2018": 0,
+        "2019": 0,
+        "2020": 0,
+        "2021": 1,
+        "2022": 2,
+        "2023": 3,
+        "2024": 0
+      }
+    },
+    "Northern Ireland": {
+      "total": 2,
+      "byYear": {
+        "2004": 0,
+        "2005": 0,
+        "2006": 0,
+        "2007": 0,
+        "2008": 0,
+        "2009": 0,
+        "2010": 0,
+        "2011": 0,
+        "2012": 0,
+        "2013": 0,
+        "2014": 0,
+        "2015": 0,
+        "2016": 0,
+        "2017": 0,
+        "2018": 0,
+        "2019": 0,
+        "2020": 0,
+        "2021": 0,
+        "2022": 2,
+        "2023": 0,
+        "2024": 0
+      }
+    },
+    "Republic of Ireland": {
+      "total": 97,
+      "byYear": {
+        "2004": 0,
+        "2005": 3,
+        "2006": 2,
+        "2007": 0,
+        "2008": 2,
+        "2009": 1,
+        "2010": 6,
+        "2011": 5,
+        "2012": 1,
+        "2013": 0,
+        "2014": 6,
+        "2015": 0,
+        "2016": 0,
+        "2017": 2,
+        "2018": 13,
+        "2019": 10,
+        "2020": 6,
+        "2021": 1,
+        "2022": 2,
+        "2023": 12,
+        "2024": 25
+      }
+    }
+  },
+  "byCountry": {
+    "England": {
+      "total": 4598,
+      "byYear": {
+        "2004": 0,
+        "2005": 0,
+        "2006": 0,
+        "2007": 0,
+        "2008": 0,
+        "2009": 0,
+        "2010": 0,
+        "2011": 0,
+        "2012": 0,
+        "2013": 0,
+        "2014": 0,
+        "2015": 0,
+        "2016": 0,
+        "2017": 0,
+        "2018": 0,
+        "2019": 0,
+        "2020": 0,
+        "2021": 1340,
+        "2022": 1024,
+        "2023": 1087,
+        "2024": 1147
+      }
+    },
+    "Scotland": {
+      "total": 63,
+      "byYear": {
+        "2004": 0,
+        "2005": 0,
+        "2006": 0,
+        "2007": 0,
+        "2008": 0,
+        "2009": 0,
+        "2010": 0,
+        "2011": 0,
+        "2012": 0,
+        "2013": 0,
+        "2014": 0,
+        "2015": 0,
+        "2016": 0,
+        "2017": 0,
+        "2018": 0,
+        "2019": 0,
+        "2020": 0,
+        "2021": 0,
+        "2022": 25,
+        "2023": 9,
+        "2024": 29
+      }
+    },
+    "Wales": {
+      "total": 6,
+      "byYear": {
+        "2004": 0,
+        "2005": 0,
+        "2006": 0,
+        "2007": 0,
+        "2008": 0,
+        "2009": 0,
+        "2010": 0,
+        "2011": 0,
+        "2012": 0,
+        "2013": 0,
+        "2014": 0,
+        "2015": 0,
+        "2016": 0,
+        "2017": 0,
+        "2018": 0,
+        "2019": 0,
+        "2020": 0,
+        "2021": 1,
+        "2022": 2,
+        "2023": 3,
+        "2024": 0
+      }
+    },
+    "Northern Ireland": {
+      "total": 2,
+      "byYear": {
+        "2004": 0,
+        "2005": 0,
+        "2006": 0,
+        "2007": 0,
+        "2008": 0,
+        "2009": 0,
+        "2010": 0,
+        "2011": 0,
+        "2012": 0,
+        "2013": 0,
+        "2014": 0,
+        "2015": 0,
+        "2016": 0,
+        "2017": 0,
+        "2018": 0,
+        "2019": 0,
+        "2020": 0,
+        "2021": 0,
+        "2022": 2,
+        "2023": 0,
+        "2024": 0
+      }
+    },
+    "Republic of Ireland": {
+      "total": 97,
+      "byYear": {
+        "2004": 0,
+        "2005": 3,
+        "2006": 2,
+        "2007": 0,
+        "2008": 2,
+        "2009": 1,
+        "2010": 6,
+        "2011": 5,
+        "2012": 1,
+        "2013": 0,
+        "2014": 6,
+        "2015": 0,
+        "2016": 0,
+        "2017": 2,
+        "2018": 13,
+        "2019": 10,
+        "2020": 6,
+        "2021": 1,
+        "2022": 2,
+        "2023": 12,
+        "2024": 25
+      }
+    }
+  },
+  "rawSample": [
+    {
+      "year": 2024,
+      "month": 1,
+      "lat": 51.910483,
+      "lon": 0.918018,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "lat": 51.075134,
+      "lon": -1.345953,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "lat": 51.556139,
+      "lon": 0.674953,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "lat": 52.420278,
+      "lon": -1.940761,
+      "region": "West Midlands",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "lat": 51.910494,
+      "lon": 0.918184,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "lat": 51.910459,
+      "lon": 0.917947,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "lat": 50.52437,
+      "lon": -3.592358,
+      "region": "South West England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "lat": 51.910494,
+      "lon": 0.918103,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "lat": 50.06483,
+      "lon": -5.61198,
+      "region": "South West England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "lat": 52.823758,
+      "lon": 0.889233,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "lat": 52.823774,
+      "lon": 0.889224,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "lat": 52.823914,
+      "lon": 0.889092,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "lat": 50.937641,
+      "lon": -0.493754,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 3,
+      "lat": 51.617676,
+      "lon": -0.549026,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 3,
+      "lat": 54.007629,
+      "lon": -1.434936,
+      "region": "Yorkshire",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 3,
+      "lat": 53.440278,
+      "lon": -2.39052,
+      "region": "Yorkshire",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 51.323639,
+      "lon": 1.189998,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.650888,
+      "lon": -0.329827,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 53.813199,
+      "lon": -1.470073,
+      "region": "Yorkshire",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.650852,
+      "lon": -0.330571,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 51.235912,
+      "lon": 1.375678,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 51.31338,
+      "lon": 1.193347,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.875504,
+      "lon": 0.451994,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 51.39855,
+      "lon": 0.399367,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 50.970737,
+      "lon": -0.370465,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 51.235912,
+      "lon": 1.375678,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 50.69182,
+      "lon": -2.002224,
+      "region": "South West England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.964718,
+      "lon": 0.606608,
+      "region": "Unknown",
+      "country": "Unknown",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.30398,
+      "lon": 0.135502,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.964718,
+      "lon": 0.606608,
+      "region": "Unknown",
+      "country": "Unknown",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 50.930195,
+      "lon": 0.764606,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 51.37873,
+      "lon": 1.445711,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.652008,
+      "lon": -0.329754,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.50089,
+      "lon": 0.518479,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.573524,
+      "lon": 1.71243,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.652008,
+      "lon": -0.329754,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.823013,
+      "lon": 0.891974,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.30398,
+      "lon": 0.135502,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 50.087387,
+      "lon": -5.642764,
+      "region": "South West England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 53.37398,
+      "lon": -0.944481,
+      "region": "East Midlands",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 51.13181,
+      "lon": 1.338315,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.30806,
+      "lon": -0.035019,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.873962,
+      "lon": 0.447808,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.623184,
+      "lon": 1.350744,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.30398,
+      "lon": 0.135502,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.333565,
+      "lon": 0.375969,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.964718,
+      "lon": 0.606608,
+      "region": "Unknown",
+      "country": "Unknown",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.621227,
+      "lon": 1.339817,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.24807,
+      "lon": 0.852357,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.964718,
+      "lon": 0.606608,
+      "region": "Unknown",
+      "country": "Unknown",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 52.964718,
+      "lon": 0.606608,
+      "region": "Unknown",
+      "country": "Unknown",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 51.235912,
+      "lon": 1.375678,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 51.31338,
+      "lon": 1.193347,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "lat": 50.930195,
+      "lon": 0.764606,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 51.940136,
+      "lon": 1.15052,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "datasetName": "iNaturalist research-grade observations"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 51.940975,
+      "lon": 1.142983,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "datasetName": "iNaturalist research-grade observations"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 51.548504,
+      "lon": 0.839683,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "datasetName": "iNaturalist research-grade observations"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.31253,
+      "lon": -0.031089,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "datasetName": "iNaturalist research-grade observations"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 51.940817,
+      "lon": 1.145103,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "datasetName": "iNaturalist research-grade observations"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.872831,
+      "lon": 0.452677,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 53.637684,
+      "lon": -0.93586,
+      "region": "Yorkshire",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "datasetName": "iNaturalist research-grade observations"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.874786,
+      "lon": 0.452294,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 51.940113,
+      "lon": 1.143156,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 51.941126,
+      "lon": 1.145539,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.312076,
+      "lon": -0.034134,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.963882,
+      "lon": 0.606677,
+      "region": "Unknown",
+      "country": "Unknown",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 50.969897,
+      "lon": -0.364806,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 51.838017,
+      "lon": 0.96869,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.883014,
+      "lon": 0.455507,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.930385,
+      "lon": 1.128899,
+      "region": "Unknown",
+      "country": "Unknown",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.963803,
+      "lon": 0.607053,
+      "region": "Unknown",
+      "country": "Unknown",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.312153,
+      "lon": -0.036003,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 51.290565,
+      "lon": 1.109555,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 53.650053,
+      "lon": 0.11834,
+      "region": "Unknown",
+      "country": "Unknown",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 51.352334,
+      "lon": 0.814192,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.063629,
+      "lon": -0.530722,
+      "region": "East Midlands",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.311624,
+      "lon": -0.037336,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.833496,
+      "lon": 0.849101,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.824002,
+      "lon": 0.8891,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 51.940114,
+      "lon": 1.143069,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 51.315474,
+      "lon": 1.169447,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.932696,
+      "lon": 1.124865,
+      "region": "Unknown",
+      "country": "Unknown",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.545525,
+      "lon": 1.120792,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.068213,
+      "lon": -0.539107,
+      "region": "East Midlands",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 50.927444,
+      "lon": -0.395233,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.31408,
+      "lon": -0.032315,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 51.487301,
+      "lon": -0.521511,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 51.973024,
+      "lon": 1.156529,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 50.778112,
+      "lon": 0.262988,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 51.382787,
+      "lon": 0.625707,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 50.970737,
+      "lon": -0.370465,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 50.970737,
+      "lon": -0.370465,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 51.9696,
+      "lon": 0.776296,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 51.306896,
+      "lon": 1.186012,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.932507,
+      "lon": 1.123187,
+      "region": "Unknown",
+      "country": "Unknown",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.209026,
+      "lon": 1.621342,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 51.834778,
+      "lon": 0.970809,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.30398,
+      "lon": 0.135502,
+      "region": "East of England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 52.932507,
+      "lon": 1.123187,
+      "region": "Unknown",
+      "country": "Unknown",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "lat": 50.964348,
+      "lon": -0.368838,
+      "region": "South East England",
+      "country": "England",
+      "basisOfRecord": "HUMAN_OBSERVATION"
+    }
+  ]
+}
