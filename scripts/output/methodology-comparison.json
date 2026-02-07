@@ -1,0 +1,314 @@
+{
+  "generatedAt": "2026-02-06T23:19:05.012Z",
+  "config": {
+    "earlyPeriod": {
+      "start": 2012,
+      "end": 2016,
+      "label": "2012-2016"
+    },
+    "latePeriod": {
+      "start": 2020,
+      "end": 2024,
+      "label": "2020-2024"
+    },
+    "peerGroups": {
+      "Garden Wildlife": [
+        "hedgehog",
+        "common-toad",
+        "small-tortoiseshell"
+      ],
+      "Farmland Birds": [
+        "curlew",
+        "turtle-dove",
+        "corncrake"
+      ],
+      "Specialist/Aquatic": [
+        "water-vole",
+        "atlantic-salmon",
+        "natterjack-toad",
+        "red-squirrel"
+      ]
+    }
+  },
+  "testAResults": {
+    "atlantic-salmon": {
+      "commonName": "Atlantic Salmon",
+      "earlyRaw": 2462,
+      "lateRaw": 867,
+      "rawChange": -64.78472786352559,
+      "earlyPercent": 0.007876509385699133,
+      "latePercent": 0.001803975337430778,
+      "normalizedChange": -77.09676648508616
+    },
+    "common-toad": {
+      "commonName": "Common Toad",
+      "earlyRaw": 0,
+      "lateRaw": 5105,
+      "rawChange": null,
+      "earlyPercent": 0,
+      "latePercent": 0.010622023180604522,
+      "normalizedChange": null
+    },
+    "corncrake": {
+      "commonName": "Corncrake",
+      "earlyRaw": 44,
+      "lateRaw": 5282,
+      "rawChange": 11904.545454545454,
+      "earlyPercent": 0.0001407662116046961,
+      "latePercent": 0.010990308803124993,
+      "normalizedChange": 7707.490645545188
+    },
+    "curlew": {
+      "commonName": "Eurasian Curlew",
+      "earlyRaw": 0,
+      "lateRaw": 10200,
+      "rawChange": null,
+      "earlyPercent": 0,
+      "latePercent": 0.021223239263891507,
+      "normalizedChange": null
+    },
+    "hedgehog": {
+      "commonName": "Hedgehog",
+      "earlyRaw": 0,
+      "lateRaw": 10200,
+      "rawChange": null,
+      "earlyPercent": 0,
+      "latePercent": 0.021223239263891507,
+      "normalizedChange": null
+    },
+    "natterjack-toad": {
+      "commonName": "Natterjack Toad",
+      "earlyRaw": 432,
+      "lateRaw": 668,
+      "rawChange": 54.629629629629626,
+      "earlyPercent": 0.0013820682593915616,
+      "latePercent": 0.0013899141008117183,
+      "normalizedChange": 0.5676884167508994
+    },
+    "red-squirrel": {
+      "commonName": "Red Squirrel",
+      "earlyRaw": 1556,
+      "lateRaw": 5507,
+      "rawChange": 253.92030848329048,
+      "earlyPercent": 0.004978005119475162,
+      "latePercent": 0.01145846849276966,
+      "normalizedChange": 130.18193468587154
+    },
+    "small-tortoiseshell": {
+      "commonName": "Small Tortoiseshell",
+      "earlyRaw": 0,
+      "lateRaw": 10198,
+      "rawChange": null,
+      "earlyPercent": 0,
+      "latePercent": 0.021219077844427996,
+      "normalizedChange": null
+    },
+    "turtle-dove": {
+      "commonName": "European Turtle Dove",
+      "earlyRaw": 7,
+      "lateRaw": 5148,
+      "rawChange": 73442.85714285714,
+      "earlyPercent": 0.00002239462457347438,
+      "latePercent": 0.010711493699069947,
+      "normalizedChange": 47730.64643002465
+    },
+    "water-vole": {
+      "commonName": "Water Vole",
+      "earlyRaw": 0,
+      "lateRaw": 5100,
+      "rawChange": null,
+      "earlyPercent": 0,
+      "latePercent": 0.010611619631945754,
+      "normalizedChange": null
+    }
+  },
+  "testBResults": {
+    "atlantic-salmon": {
+      "commonName": "Atlantic Salmon",
+      "peerGroup": "Specialist/Aquatic",
+      "earlyRatio": 55.32584269662921,
+      "lateRatio": 7.1405040355789815,
+      "ratioChange": -87.09372747427844
+    },
+    "common-toad": {
+      "commonName": "Common Toad",
+      "peerGroup": "Garden Wildlife",
+      "earlyRatio": 0,
+      "lateRatio": 20.017252872211113,
+      "ratioChange": null
+    },
+    "corncrake": {
+      "commonName": "Corncrake",
+      "peerGroup": "Farmland Birds",
+      "earlyRatio": 86.27450980392157,
+      "lateRatio": 25.603490063015027,
+      "ratioChange": -70.32322742695986
+    },
+    "curlew": {
+      "commonName": "Eurasian Curlew",
+      "peerGroup": "Farmland Birds",
+      "earlyRatio": 0,
+      "lateRatio": 49.442559379544356,
+      "ratioChange": null
+    },
+    "hedgehog": {
+      "commonName": "Hedgehog",
+      "peerGroup": "Garden Wildlife",
+      "earlyRatio": 0,
+      "lateRatio": 39.995294671215156,
+      "ratioChange": null
+    },
+    "natterjack-toad": {
+      "commonName": "Natterjack Toad",
+      "peerGroup": "Specialist/Aquatic",
+      "earlyRatio": 9.707865168539326,
+      "lateRatio": 5.501564816339977,
+      "ratioChange": -43.32878835020163
+    },
+    "red-squirrel": {
+      "commonName": "Red Squirrel",
+      "peerGroup": "Specialist/Aquatic",
+      "earlyRatio": 34.96629213483146,
+      "lateRatio": 45.35496623291056,
+      "ratioChange": 29.71053967638303
+    },
+    "small-tortoiseshell": {
+      "commonName": "Small Tortoiseshell",
+      "peerGroup": "Garden Wildlife",
+      "earlyRatio": 0,
+      "lateRatio": 39.987452456573735,
+      "ratioChange": null
+    },
+    "turtle-dove": {
+      "commonName": "European Turtle Dove",
+      "peerGroup": "Farmland Birds",
+      "earlyRatio": 13.725490196078432,
+      "lateRatio": 24.95395055744062,
+      "ratioChange": 81.80735406135308
+    },
+    "water-vole": {
+      "commonName": "Water Vole",
+      "peerGroup": "Specialist/Aquatic",
+      "earlyRatio": 0,
+      "lateRatio": 42.00296491517048,
+      "ratioChange": null
+    }
+  },
+  "comparison": [
+    {
+      "id": "hedgehog",
+      "commonName": "Hedgehog",
+      "literature": -75,
+      "literatureSource": "PTES State of Hedgehogs 2022",
+      "literaturePeriod": "2000-2020",
+      "rawGBIF": null,
+      "testA": null,
+      "testB": null,
+      "bestMatch": "N/A"
+    },
+    {
+      "id": "curlew",
+      "commonName": "Eurasian Curlew",
+      "literature": -65,
+      "literatureSource": "BTO Breeding Bird Survey",
+      "literaturePeriod": "1995-2018",
+      "rawGBIF": null,
+      "testA": null,
+      "testB": null,
+      "bestMatch": "N/A"
+    },
+    {
+      "id": "water-vole",
+      "commonName": "Water Vole",
+      "literature": -90,
+      "literatureSource": "Wildlife Trusts",
+      "literaturePeriod": "1990-2015",
+      "rawGBIF": null,
+      "testA": null,
+      "testB": null,
+      "bestMatch": "N/A"
+    },
+    {
+      "id": "turtle-dove",
+      "commonName": "European Turtle Dove",
+      "literature": -98,
+      "literatureSource": "BTO Bird Trends",
+      "literaturePeriod": "1970-2020",
+      "rawGBIF": 73442.85714285714,
+      "testA": 47730.64643002465,
+      "testB": 81.80735406135308,
+      "bestMatch": "Test B"
+    },
+    {
+      "id": "small-tortoiseshell",
+      "commonName": "Small Tortoiseshell",
+      "literature": -75,
+      "literatureSource": "UK Butterfly Monitoring",
+      "literaturePeriod": "1976-2019",
+      "rawGBIF": null,
+      "testA": null,
+      "testB": null,
+      "bestMatch": "N/A"
+    },
+    {
+      "id": "red-squirrel",
+      "commonName": "Red Squirrel",
+      "literature": -50,
+      "literatureSource": "Red Squirrel Survival Trust",
+      "literaturePeriod": "1950-2010",
+      "rawGBIF": 253.92030848329048,
+      "testA": 130.18193468587154,
+      "testB": 29.71053967638303,
+      "bestMatch": "Test B"
+    },
+    {
+      "id": "atlantic-salmon",
+      "commonName": "Atlantic Salmon",
+      "literature": -70,
+      "literatureSource": "Atlantic Salmon Trust",
+      "literaturePeriod": "1980-2020",
+      "rawGBIF": -64.78472786352559,
+      "testA": -77.09676648508616,
+      "testB": -87.09372747427844,
+      "bestMatch": "Test A"
+    },
+    {
+      "id": "common-toad",
+      "commonName": "Common Toad",
+      "literature": -68,
+      "literatureSource": "Froglife",
+      "literaturePeriod": "1985-2015",
+      "rawGBIF": null,
+      "testA": null,
+      "testB": null,
+      "bestMatch": "N/A"
+    },
+    {
+      "id": "corncrake",
+      "commonName": "Corncrake",
+      "literature": -80,
+      "literatureSource": "RSPB",
+      "literaturePeriod": "1970-2000",
+      "rawGBIF": 11904.545454545454,
+      "testA": 7707.490645545188,
+      "testB": -70.32322742695986,
+      "bestMatch": "Test B"
+    },
+    {
+      "id": "natterjack-toad",
+      "commonName": "Natterjack Toad",
+      "literature": -75,
+      "literatureSource": "ARC Trust",
+      "literaturePeriod": "1900-2000",
+      "rawGBIF": 54.629629629629626,
+      "testA": 0.5676884167508994,
+      "testB": -43.32878835020163,
+      "bestMatch": "Test B"
+    }
+  ],
+  "summary": {
+    "testAWins": 1,
+    "testBWins": 4,
+    "recommendation": "Test B"
+  }
+}
