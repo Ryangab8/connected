@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-02-27T17:53:05.980Z",
+  "files": {
+    "cascades.json": {
+      "size": 16260,
+      "sizeFormatted": "15.9 KB",
+      "modified": "2026-02-26T23:47:58.715Z"
+    },
+    "distributions.json": {
+      "size": 2644056,
+      "sizeFormatted": "2.5 MB",
+      "modified": "2026-02-27T17:53:05.978Z"
+    },
+    "regions.json": {
+      "size": 4561,
+      "sizeFormatted": "4.5 KB",
+      "modified": "2026-02-06T02:19:59.588Z"
+    },
+    "relationships.json": {
+      "size": 36162,
+      "sizeFormatted": "35.3 KB",
+      "modified": "2026-02-26T23:48:04.274Z"
+    },
+    "species-images.json": {
+      "size": 10199,
+      "sizeFormatted": "10.0 KB",
+      "modified": "2026-02-27T17:52:57.898Z"
+    },
+    "species.json": {
+      "size": 41243,
+      "sizeFormatted": "40.3 KB",
+      "modified": "2026-02-26T23:47:47.430Z"
+    },
+    "_manifest.json": {
+      "size": 984,
+      "sizeFormatted": "984 B",
+      "modified": "2026-02-27T17:15:22.190Z"
+    }
+  }
+}

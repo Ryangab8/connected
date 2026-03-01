@@ -1,0 +1,190 @@
+{
+  "fetchedAt": "2026-02-27T00:24:04.856Z",
+  "elapsed": "16m 47s",
+  "config": {
+    "dateRange": "2020-2025",
+    "recordCaps": {
+      "excellent": 5000,
+      "good": 3000,
+      "moderate": 2000,
+      "poor": 1000
+    }
+  },
+  "results": [
+    {
+      "id": "oak",
+      "commonName": "Oak",
+      "points": 4483,
+      "status": "success"
+    },
+    {
+      "id": "red-squirrel",
+      "commonName": "Red Squirrel",
+      "points": 2840,
+      "status": "success"
+    },
+    {
+      "id": "grey-squirrel",
+      "commonName": "Grey Squirrel",
+      "points": 4788,
+      "status": "success"
+    },
+    {
+      "id": "jay",
+      "commonName": "Jay",
+      "points": 5400,
+      "status": "success"
+    },
+    {
+      "id": "tawny-owl",
+      "commonName": "Tawny Owl",
+      "points": 1090,
+      "status": "success"
+    },
+    {
+      "id": "badger",
+      "commonName": "Badger",
+      "points": 2656,
+      "status": "success"
+    },
+    {
+      "id": "bluebell",
+      "commonName": "Bluebell",
+      "points": 5400,
+      "status": "success"
+    },
+    {
+      "id": "hedgehog",
+      "commonName": "Hedgehog",
+      "points": 5400,
+      "status": "success"
+    },
+    {
+      "id": "barn-owl",
+      "commonName": "Barn Owl",
+      "points": 4202,
+      "status": "success"
+    },
+    {
+      "id": "skylark",
+      "commonName": "Skylark",
+      "points": 5399,
+      "status": "success"
+    },
+    {
+      "id": "earthworm",
+      "commonName": "Earthworm",
+      "points": 201,
+      "status": "success"
+    },
+    {
+      "id": "hawthorn",
+      "commonName": "Hawthorn",
+      "points": 5400,
+      "status": "success"
+    },
+    {
+      "id": "atlantic-salmon",
+      "commonName": "Atlantic Salmon",
+      "points": 897,
+      "status": "success"
+    },
+    {
+      "id": "otter",
+      "commonName": "Otter",
+      "points": 1729,
+      "status": "success"
+    },
+    {
+      "id": "white-clawed-crayfish",
+      "commonName": "White-clawed Crayfish",
+      "points": 267,
+      "status": "success"
+    },
+    {
+      "id": "kingfisher",
+      "commonName": "Kingfisher",
+      "points": 5400,
+      "status": "success"
+    },
+    {
+      "id": "water-vole",
+      "commonName": "Water Vole",
+      "points": 3000,
+      "status": "success"
+    },
+    {
+      "id": "atlantic-puffin",
+      "commonName": "Atlantic Puffin",
+      "points": 5400,
+      "status": "success"
+    },
+    {
+      "id": "grey-seal",
+      "commonName": "Grey Seal",
+      "points": 3238,
+      "status": "success"
+    },
+    {
+      "id": "sand-eel",
+      "commonName": "Sand Eel",
+      "points": 39,
+      "status": "success"
+    },
+    {
+      "id": "hen-harrier",
+      "commonName": "Hen Harrier",
+      "points": 4937,
+      "status": "success"
+    },
+    {
+      "id": "red-grouse",
+      "commonName": "Red Grouse",
+      "points": 1504,
+      "status": "success"
+    },
+    {
+      "id": "heather",
+      "commonName": "Heather",
+      "points": 5400,
+      "status": "success"
+    },
+    {
+      "id": "buff-tailed-bumblebee",
+      "commonName": "Buff-tailed Bumblebee",
+      "points": 5399,
+      "status": "success"
+    },
+    {
+      "id": "small-tortoiseshell",
+      "commonName": "Small Tortoiseshell",
+      "points": 5400,
+      "status": "success"
+    },
+    {
+      "id": "swift",
+      "commonName": "Swift",
+      "points": 5400,
+      "status": "success"
+    },
+    {
+      "id": "red-fox",
+      "commonName": "Red Fox",
+      "points": 4339,
+      "status": "success"
+    },
+    {
+      "id": "common-frog",
+      "commonName": "Common Frog",
+      "points": 5400,
+      "status": "success"
+    },
+    {
+      "id": "american-mink",
+      "commonName": "American Mink",
+      "points": 1729,
+      "status": "success"
+    }
+  ],
+  "skipped": []
+}

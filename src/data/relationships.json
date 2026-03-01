@@ -1,0 +1,787 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generated": "2026-02-26",
+    "description": "85 ecological relationships between 29 UK & Ireland wildlife species",
+    "relationshipTypes": {
+      "predator_prey": "Species A hunts/eats Species B",
+      "intraguild_predation": "Species compete AND one predates the other",
+      "competition": "Species compete for shared resources",
+      "disease_vector": "Species A transmits disease harmful to Species B",
+      "seed_dispersal": "Species A disperses seeds/propagules of Species B",
+      "pollination": "Species A pollinates Species B",
+      "habitat_provider": "Species A provides critical habitat for Species B",
+      "soil_engineering": "Species A engineers soil benefiting Species B",
+      "nutrient_cycling": "Species A delivers nutrients benefiting Species B",
+      "indirect_positive": "Species A indirectly benefits Species B via intermediate effects",
+      "herbivory": "Species A feeds on plant Species B"
+    }
+  },
+  "relationships": [
+    {
+      "id": "r001",
+      "source": "otter",
+      "target": "atlantic-salmon",
+      "type": "predator_prey",
+      "description": "Otters predate salmon; salmonids are a major dietary component, especially in Scottish rivers.",
+      "cascadeEffect": "Otter diet shifts to alternative prey (crayfish, frogs) when salmon decline.",
+      "source_citation": "Carss, Kruuk & Conroy (1990) Journal of Fish Biology 37:935–944"
+    },
+    {
+      "id": "r002",
+      "source": "otter",
+      "target": "white-clawed-crayfish",
+      "type": "predator_prey",
+      "description": "Otters predate native crayfish in remaining populations.",
+      "cascadeEffect": "Loss of native crayfish shifts otter predation to other freshwater species.",
+      "source_citation": "Britton et al. (2017) Knowledge & Management of Aquatic Ecosystems 418:12"
+    },
+    {
+      "id": "r003",
+      "source": "otter",
+      "target": "common-frog",
+      "type": "predator_prey",
+      "description": "Otters consume frogs, especially in spring breeding aggregations. Frog bones frequently found in otter spraints.",
+      "cascadeEffect": "Frog decline reduces a supplementary food source for otters.",
+      "source_citation": "Mammal Society otter profile; Wildlife Online"
+    },
+    {
+      "id": "r004",
+      "source": "otter",
+      "target": "water-vole",
+      "type": "predator_prey",
+      "description": "Native predator of water voles, but unlike mink, otters cannot enter vole burrows. Voles evolved to coexist with otter predation.",
+      "cascadeEffect": "Unlike mink predation, otter predation is sustainable and does not drive vole decline.",
+      "source_citation": "Wildlife Trusts; IUCN UK Peatland Programme"
+    },
+    {
+      "id": "r005",
+      "source": "grey-seal",
+      "target": "sand-eel",
+      "type": "predator_prey",
+      "description": "Sand eels dominate grey seal diet in multiple UK regions.",
+      "cascadeEffect": "Sand eel decline forces seals to switch to gadid fish, buffering their population but increasing pressure on commercial fisheries.",
+      "source_citation": "Hammond & Wilson (2016) SMRU Report CSD 3.3"
+    },
+    {
+      "id": "r006",
+      "source": "grey-seal",
+      "target": "atlantic-salmon",
+      "type": "predator_prey",
+      "description": "Seals opportunistically take salmon near estuaries and river mouths.",
+      "cascadeEffect": "Seal predation adds additional pressure to already declining salmon stocks.",
+      "source_citation": "Sea Mammal Research Unit diet studies"
+    },
+    {
+      "id": "r007",
+      "source": "atlantic-puffin",
+      "target": "sand-eel",
+      "type": "predator_prey",
+      "description": "Sand eels are the primary food for puffin chicks. Puffin decline is directly linked to sand eel loss.",
+      "cascadeEffect": "Sand eel decline causes puffin chick starvation and breeding failure across North Sea colonies.",
+      "source_citation": "RSPB Revive Our Seas (2021); Seabirds Count (JNCC, 2023)"
+    },
+    {
+      "id": "r008",
+      "source": "atlantic-salmon",
+      "target": "sand-eel",
+      "type": "predator_prey",
+      "description": "Salmon feed on sand eels during their marine phase.",
+      "cascadeEffect": "Sand eel decline reduces salmon condition and survival at sea.",
+      "source_citation": "Hendry & Cragg-Hine (2003) Conserving Natura 2000 Rivers No. 7"
+    },
+    {
+      "id": "r009",
+      "source": "american-mink",
+      "target": "water-vole",
+      "type": "predator_prey",
+      "description": "Primary driver of 94% water vole decline. Female mink enter burrows and kill mothers with pups.",
+      "cascadeEffect": "Water vole extinction from river reaches simplifies riparian habitat, reducing invertebrate and amphibian diversity.",
+      "source_citation": "Rushton et al. (2000) Journal of Applied Ecology 37:475–490"
+    },
+    {
+      "id": "r010",
+      "source": "american-mink",
+      "target": "kingfisher",
+      "type": "predator_prey",
+      "description": "Mink predate kingfishers and other bank-nesting birds along waterways.",
+      "cascadeEffect": "Mink presence suppresses kingfisher nesting success along affected rivers.",
+      "source_citation": "ZSL Water Vole programme; Suffolk Wildlife Trust"
+    },
+    {
+      "id": "r011",
+      "source": "american-mink",
+      "target": "common-frog",
+      "type": "predator_prey",
+      "description": "Mink predate amphibians including frogs along waterways.",
+      "cascadeEffect": "Mink predation adds pressure to rural frog populations already stressed by habitat loss.",
+      "source_citation": "Wildlife Trusts"
+    },
+    {
+      "id": "r012",
+      "source": "kingfisher",
+      "target": "common-frog",
+      "type": "predator_prey",
+      "description": "Kingfishers take tadpoles and small froglets from shallow water.",
+      "cascadeEffect": "Frog decline reduces food diversity for kingfishers, increasing dependence on fish.",
+      "source_citation": "Wildlife Online; Birdfact"
+    },
+    {
+      "id": "r013",
+      "source": "tawny-owl",
+      "target": "common-frog",
+      "type": "predator_prey",
+      "description": "Amphibians feature as supplementary prey for tawny owls.",
+      "cascadeEffect": "Frog decline narrows tawny owl diet breadth.",
+      "source_citation": "Southern (1954) Ibis 99:384–410; Birdfact"
+    },
+    {
+      "id": "r014",
+      "source": "tawny-owl",
+      "target": "earthworm",
+      "type": "predator_prey",
+      "description": "Earthworms consumed by tawny owls, particularly during wet weather.",
+      "cascadeEffect": "Earthworm decline reduces alternative prey when primary prey (voles) are scarce.",
+      "source_citation": "Birdfact; BTO"
+    },
+    {
+      "id": "r015",
+      "source": "tawny-owl",
+      "target": "red-squirrel",
+      "type": "predator_prey",
+      "description": "Red squirrels documented as occasional prey in owl pellet analyses.",
+      "cascadeEffect": "Red squirrel decline removes a prey option from tawny owl diet.",
+      "source_citation": "Cramp (1985) Birds of the Western Palearctic Vol. 4"
+    },
+    {
+      "id": "r016",
+      "source": "tawny-owl",
+      "target": "jay",
+      "type": "predator_prey",
+      "description": "Jays appear in owl pellet analyses as occasional prey.",
+      "cascadeEffect": "Minimal population-level effect; illustrates woodland predator-prey complexity.",
+      "source_citation": "Glue (1972) BTO Avian Predator Food Survey"
+    },
+    {
+      "id": "r017",
+      "source": "barn-owl",
+      "target": "common-frog",
+      "type": "predator_prey",
+      "description": "Frogs occasionally taken; voles are primary prey.",
+      "cascadeEffect": "Frog availability provides dietary buffering during vole population crashes.",
+      "source_citation": "Barn Owl Trust; Natural History Museum"
+    },
+    {
+      "id": "r018",
+      "source": "barn-owl",
+      "target": "earthworm",
+      "type": "predator_prey",
+      "description": "Minor dietary component in adverse conditions.",
+      "cascadeEffect": "Earthworm decline reduces fallback food during prey scarcity.",
+      "source_citation": "Barn Owl Trust; Somerset Wildlife Trust"
+    },
+    {
+      "id": "r019",
+      "source": "hen-harrier",
+      "target": "red-grouse",
+      "type": "predator_prey",
+      "description": "Harriers prey on grouse chicks during breeding season; can reduce grouse numbers below shooting viability.",
+      "cascadeEffect": "Triggers illegal persecution of harriers by gamekeepers, suppressing harrier population to fraction of capacity.",
+      "source_citation": "Thirgood & Redpath (2008) Journal of Applied Ecology 45:982–991"
+    },
+    {
+      "id": "r020",
+      "source": "red-fox",
+      "target": "hedgehog",
+      "type": "predator_prey",
+      "description": "Occasional predation; hedgehog spines usually deter foxes. Some scavenging of roadkill.",
+      "cascadeEffect": "Fox predation is minor compared to badger intraguild effects and habitat loss.",
+      "source_citation": "Morris, The New Hedgehog Book; Wildlife Online"
+    },
+    {
+      "id": "r021",
+      "source": "red-fox",
+      "target": "common-frog",
+      "type": "predator_prey",
+      "description": "Frogs are a documented component of fox diet.",
+      "cascadeEffect": "Fox predation contributes to cumulative predation pressure on rural frogs.",
+      "source_citation": "Harris (1981) Mammal Review; Wildlife Online"
+    },
+    {
+      "id": "r022",
+      "source": "red-fox",
+      "target": "grey-squirrel",
+      "type": "predator_prey",
+      "description": "Grey squirrels found in urban fox diet studies.",
+      "cascadeEffect": "Foxes provide some natural control on grey squirrel populations in urban areas.",
+      "source_citation": "Harris (1981) Mammal Review; Wildlife Online"
+    },
+    {
+      "id": "r023",
+      "source": "red-fox",
+      "target": "earthworm",
+      "type": "predator_prey",
+      "description": "Significant dietary component; earthworms can provide up to 60% of caloric intake.",
+      "cascadeEffect": "Earthworm decline forces foxes to increase predation on other species.",
+      "source_citation": "The Fox Project; Wildlife Online"
+    },
+    {
+      "id": "r024",
+      "source": "red-fox",
+      "target": "red-grouse",
+      "type": "predator_prey",
+      "description": "Major grouse predator; fox control is central to grouse moor management.",
+      "cascadeEffect": "Fox control for grouse also benefits ground-nesting skylarks in adjacent farmland.",
+      "source_citation": "Hudson & Newborn (1995) Manual of Red Grouse, Game Conservancy Trust"
+    },
+    {
+      "id": "r025",
+      "source": "red-fox",
+      "target": "skylark",
+      "type": "predator_prey",
+      "description": "Foxes prey on ground-nesting skylarks and their eggs.",
+      "cascadeEffect": "Fox predation is one of multiple pressures on declining skylark populations.",
+      "source_citation": "RSPB; BTO"
+    },
+    {
+      "id": "r026",
+      "source": "red-fox",
+      "target": "red-squirrel",
+      "type": "predator_prey",
+      "description": "Squirrels form part of varied mammalian prey.",
+      "cascadeEffect": "Minor additional predation pressure on already declining red squirrel populations.",
+      "source_citation": "Wildlife Online"
+    },
+    {
+      "id": "r027",
+      "source": "badger",
+      "target": "earthworm",
+      "type": "predator_prey",
+      "description": "Earthworms constitute ~80% of badger diet. Hundreds consumed per night.",
+      "cascadeEffect": "Earthworm decline is a bottom-up pressure on badger populations; forces dietary shifts.",
+      "source_citation": "Neal & Cheeseman (1996) Badgers, Poyser; Woodland Trust"
+    },
+    {
+      "id": "r028",
+      "source": "badger",
+      "target": "common-frog",
+      "type": "predator_prey",
+      "description": "Documented predator of common frogs.",
+      "cascadeEffect": "Badger population increase adds predation pressure on rural frog populations.",
+      "source_citation": "Wildlife Online; Discover Wildlife"
+    },
+    {
+      "id": "r029",
+      "source": "hedgehog",
+      "target": "earthworm",
+      "type": "predator_prey",
+      "description": "Major dietary component alongside beetles and slugs.",
+      "cascadeEffect": "Earthworm decline reduces hedgehog food availability, compounding habitat and badger pressures.",
+      "source_citation": "PTES Hedgehog Street; Woodland Trust"
+    },
+    {
+      "id": "r030",
+      "source": "hedgehog",
+      "target": "common-frog",
+      "type": "predator_prey",
+      "description": "Occasional predation documented.",
+      "cascadeEffect": "Hedgehog decline reduces one predation pressure on frog populations.",
+      "source_citation": "Wildlife Online"
+    },
+    {
+      "id": "r031",
+      "source": "skylark",
+      "target": "earthworm",
+      "type": "predator_prey",
+      "description": "Worms are important invertebrate prey for skylarks.",
+      "cascadeEffect": "Earthworm decline in farmland reduces food availability during chick-rearing.",
+      "source_citation": "Songbird Survival; RSPB"
+    },
+    {
+      "id": "r032",
+      "source": "common-frog",
+      "target": "earthworm",
+      "type": "predator_prey",
+      "description": "Frogs actively prey on earthworms in terrestrial habitats.",
+      "cascadeEffect": "Earthworm decline reduces frog food in terrestrial phase.",
+      "source_citation": "Woodland Trust; Wildlife Online"
+    },
+    {
+      "id": "r033",
+      "source": "badger",
+      "target": "hedgehog",
+      "type": "intraguild_predation",
+      "description": "Only UK predator that can overcome hedgehog spines. Both compete for invertebrates. Experimental badger removal doubled hedgehog counts.",
+      "cascadeEffect": "Rising badger populations contribute to hedgehog decline through both predation and competition for invertebrate prey.",
+      "source_citation": "Trewby et al. (2014) PLOS ONE 9(4):e95477; Doncaster (1992) Proc. R. Soc. B 249:113–117"
+    },
+    {
+      "id": "r034",
+      "source": "grey-squirrel",
+      "target": "red-squirrel",
+      "type": "competition",
+      "description": "Exploitative competition for food, especially acorns. Greys digest tannins more efficiently, depleting food before reds can access it.",
+      "cascadeEffect": "Red squirrels excluded from deciduous woodland; confined to conifer refugia in Scotland and northern England.",
+      "source_citation": "Gurnell et al. (2004) Journal of Animal Ecology 73:26–35; Kenward & Holm (1993)"
+    },
+    {
+      "id": "r035",
+      "source": "badger",
+      "target": "hedgehog",
+      "type": "competition",
+      "description": "Competition for invertebrate food; one badger consumes ~5× more invertebrates than one hedgehog.",
+      "cascadeEffect": "Food competition forces hedgehogs into urban gardens where badger density is lower.",
+      "source_citation": "PTES; Warwickshire Wildlife Trust"
+    },
+    {
+      "id": "r036",
+      "source": "otter",
+      "target": "american-mink",
+      "type": "competition",
+      "description": "Otter recovery displaces mink. Mink occupancy dropped from 77% to 23% within one year of otter arrival in Upper Thames.",
+      "cascadeEffect": "Mink displacement triggers positive cascade: water vole recovery, reduced predation on kingfishers and amphibians.",
+      "source_citation": "Bonesi & Macdonald (2004) Oikos 106:9–18; McDonald et al. (2007) Diversity & Distributions 13:92–98"
+    },
+    {
+      "id": "r037",
+      "source": "white-clawed-crayfish",
+      "target": "atlantic-salmon",
+      "type": "competition",
+      "description": "Invasive signal crayfish (displacing native crayfish) predate salmonid eggs and compete with juvenile salmon for refuges.",
+      "cascadeEffect": "Signal crayfish invasion simultaneously threatens native crayfish and adds pressure on salmon reproduction.",
+      "source_citation": "Hendry & Cragg-Hine (2003); Inland Waterways Association"
+    },
+    {
+      "id": "r038",
+      "source": "grey-squirrel",
+      "target": "red-squirrel",
+      "type": "disease_vector",
+      "description": "Greys carry squirrelpox virus (SQPV) asymptomatically; ~100% fatal to reds. Accelerates replacement ~20× faster than competition alone.",
+      "cascadeEffect": "Disease front moves northward through Scotland; reds can only survive where greys are excluded.",
+      "source_citation": "Tompkins et al. (2002) Proc. R. Soc. B 269:529–533; Rushton et al. (2006)"
+    },
+    {
+      "id": "r039",
+      "source": "jay",
+      "target": "oak",
+      "type": "seed_dispersal",
+      "description": "Primary long-distance dispersal agent of oak acorns. Responsible for post-Ice Age northward expansion of oaks. A single jay caches up to 5,000 acorns per autumn.",
+      "cascadeEffect": "Jay decline would dramatically slow oak regeneration, threatening the 2,300+ species that depend on oak.",
+      "source_citation": "Bossema (1979) Behaviour 70:1–116; den Ouden et al. (2005)"
+    },
+    {
+      "id": "r040",
+      "source": "red-squirrel",
+      "target": "oak",
+      "type": "seed_dispersal",
+      "description": "Red squirrels cache and eat acorns; unforgotten caches germinate into new trees.",
+      "cascadeEffect": "Red squirrel decline reduces one seed dispersal pathway for oaks.",
+      "source_citation": "Kenward & Holm (1993) Proc. R. Soc. B 251:187–194"
+    },
+    {
+      "id": "r041",
+      "source": "grey-squirrel",
+      "target": "oak",
+      "type": "seed_dispersal",
+      "description": "Grey squirrels cache acorns but also exploit crops before ripening due to superior tannin tolerance.",
+      "cascadeEffect": "Greys consume more acorns before caching, reducing regeneration potential compared to red squirrel dispersal.",
+      "source_citation": "Kenward & Holm (1993); Gurnell et al. (2004)"
+    },
+    {
+      "id": "r042",
+      "source": "buff-tailed-bumblebee",
+      "target": "heather",
+      "type": "pollination",
+      "description": "Major pollinator of heather. Heather nectar contains compounds that protect bumblebees from gut parasite Crithidia bombi.",
+      "cascadeEffect": "Heather moorland loss removes a medicinal food source, increasing bumblebee disease susceptibility.",
+      "source_citation": "Koch et al., Royal Botanic Gardens Kew, Current Biology"
+    },
+    {
+      "id": "r043",
+      "source": "buff-tailed-bumblebee",
+      "target": "hawthorn",
+      "type": "pollination",
+      "description": "Pollinates hawthorn blossom. Hawthorn provides key early-season nectar source for emerging queens.",
+      "cascadeEffect": "Hawthorn removal from hedgerows reduces critical early spring food for queen bumblebees.",
+      "source_citation": "Woodland Trust; Jacobs (2008) PhD thesis, Stirling University"
+    },
+    {
+      "id": "r044",
+      "source": "buff-tailed-bumblebee",
+      "target": "bluebell",
+      "type": "pollination",
+      "description": "Important early spring nectar source in woodland for bumblebees emerging from hibernation.",
+      "cascadeEffect": "Bluebell decline would remove a critical early-season food source.",
+      "source_citation": "NatureScot Research Report 1211; Woodland Trust"
+    },
+    {
+      "id": "r045",
+      "source": "small-tortoiseshell",
+      "target": "heather",
+      "type": "pollination",
+      "description": "Adults nectar on heather flowers, particularly in upland habitats.",
+      "cascadeEffect": "Heather loss reduces foraging habitat for already-declining tortoiseshell populations.",
+      "source_citation": "Butterfly Conservation UK; Scottish Wildlife Trust"
+    },
+    {
+      "id": "r046",
+      "source": "small-tortoiseshell",
+      "target": "hawthorn",
+      "type": "pollination",
+      "description": "Adults visit hawthorn blossom and hedgerow flowers for nectar.",
+      "cascadeEffect": "Hedgerow loss reduces nectar availability across flight corridors.",
+      "source_citation": "Butterfly Conservation; Scottish Wildlife Trust"
+    },
+    {
+      "id": "r047",
+      "source": "oak",
+      "target": "tawny-owl",
+      "type": "habitat_provider",
+      "description": "Provides critical nesting cavities in natural tree holes. Tawny owls depend on mature trees.",
+      "cascadeEffect": "Loss of mature oaks forces tawny owls into nest boxes or suboptimal sites, reducing breeding success.",
+      "source_citation": "BTO; Scottish Wildlife Trust"
+    },
+    {
+      "id": "r048",
+      "source": "oak",
+      "target": "jay",
+      "type": "habitat_provider",
+      "description": "Provides nesting habitat and primary food source (acorns).",
+      "cascadeEffect": "Oak decline would reduce jay populations, further slowing oak regeneration in a negative feedback loop.",
+      "source_citation": "Mitchell et al. (2019) Biological Conservation"
+    },
+    {
+      "id": "r049",
+      "source": "oak",
+      "target": "red-squirrel",
+      "type": "habitat_provider",
+      "description": "Provides habitat, nesting sites (dreys), and food in mixed woodland.",
+      "cascadeEffect": "Loss of mature oak woodland shrinks red squirrel habitat in remaining strongholds.",
+      "source_citation": "Mitchell et al. (2019); Forestry Commission"
+    },
+    {
+      "id": "r050",
+      "source": "oak",
+      "target": "grey-squirrel",
+      "type": "habitat_provider",
+      "description": "Optimal habitat; grey squirrel density correlates positively with oak canopy coverage.",
+      "cascadeEffect": "Oak-dominated woodland supports highest grey squirrel densities.",
+      "source_citation": "Gurnell et al. (2004) Journal of Animal Ecology"
+    },
+    {
+      "id": "r051",
+      "source": "oak",
+      "target": "badger",
+      "type": "habitat_provider",
+      "description": "Woodland habitat for setts; oak leaf litter supports the earthworm populations badgers depend on.",
+      "cascadeEffect": "Oak woodland loss reduces both shelter and food base for badgers.",
+      "source_citation": "Mitchell et al. (2019) Biological Conservation"
+    },
+    {
+      "id": "r052",
+      "source": "oak",
+      "target": "bluebell",
+      "type": "habitat_provider",
+      "description": "Deciduous canopy allows the brief spring light window that bluebells need to flower.",
+      "cascadeEffect": "Change in canopy species (e.g., to evergreen conifers) eliminates bluebell populations.",
+      "source_citation": "Wildlife Trusts; JNCC habitat descriptions"
+    },
+    {
+      "id": "r053",
+      "source": "oak",
+      "target": "barn-owl",
+      "type": "habitat_provider",
+      "description": "Historical nest cavities in old oaks; some still used alongside modern nest boxes.",
+      "cascadeEffect": "Loss of ancient oaks reduces natural nesting sites.",
+      "source_citation": "Barn Owl Trust; Woodland Trust"
+    },
+    {
+      "id": "r054",
+      "source": "hawthorn",
+      "target": "hedgehog",
+      "type": "habitat_provider",
+      "description": "Dense thorny hedgerows provide shelter, nesting, and hibernation habitat. Hedgerows also serve as movement corridors.",
+      "cascadeEffect": "Hedgerow removal isolates hedgehog populations and removes hibernation sites.",
+      "source_citation": "PTES Hedgehog Street; Woodland Trust"
+    },
+    {
+      "id": "r055",
+      "source": "hawthorn",
+      "target": "skylark",
+      "type": "habitat_provider",
+      "description": "Hedgerows structure farmland landscape. Invertebrates in hedgerow base provide food.",
+      "cascadeEffect": "Hedgerow loss simplifies farmland, reducing invertebrate food availability for skylarks.",
+      "source_citation": "RSPB; BTO Breeding Bird Survey"
+    },
+    {
+      "id": "r056",
+      "source": "hawthorn",
+      "target": "jay",
+      "type": "habitat_provider",
+      "description": "Haws eaten by jays in autumn/winter; hedgerow provides nesting cover.",
+      "cascadeEffect": "Hedgerow loss reduces winter food and nesting options for jays.",
+      "source_citation": "Woodland Trust"
+    },
+    {
+      "id": "r057",
+      "source": "hawthorn",
+      "target": "red-fox",
+      "type": "habitat_provider",
+      "description": "Hedgerows provide cover, denning habitat, and movement corridors for foxes.",
+      "cascadeEffect": "Hedgerow loss exposes foxes to persecution and reduces hunting cover.",
+      "source_citation": "Wildlife Trusts"
+    },
+    {
+      "id": "r058",
+      "source": "heather",
+      "target": "red-grouse",
+      "type": "habitat_provider",
+      "description": "Primary food plant (~90% of diet) and nesting habitat. Red grouse are entirely dependent on heather moorland.",
+      "cascadeEffect": "Heather loss directly causes red grouse population collapse in affected areas.",
+      "source_citation": "Hudson (1986) Red Grouse, Game Conservancy Trust"
+    },
+    {
+      "id": "r059",
+      "source": "heather",
+      "target": "hen-harrier",
+      "type": "habitat_provider",
+      "description": "Provides nest concealment and prey-base support in moorland habitats.",
+      "cascadeEffect": "Heather moorland loss reduces hen harrier breeding habitat.",
+      "source_citation": "Redpath et al. (1998); Amar et al. (2008) Biological Conservation"
+    },
+    {
+      "id": "r060",
+      "source": "heather",
+      "target": "small-tortoiseshell",
+      "type": "habitat_provider",
+      "description": "Upland heather provides nectar resource for adult butterflies.",
+      "cascadeEffect": "Moorland degradation reduces nectar availability in upland habitats.",
+      "source_citation": "Butterfly Conservation"
+    },
+    {
+      "id": "r061",
+      "source": "oak",
+      "target": "swift",
+      "type": "habitat_provider",
+      "description": "Mature trees historically provided nest cavities; now mostly buildings serve this role.",
+      "cascadeEffect": "Historical loss of ancient trees was an early driver of swift nest site decline.",
+      "source_citation": "Woodland Trust; BTO"
+    },
+    {
+      "id": "r062",
+      "source": "earthworm",
+      "target": "oak",
+      "type": "soil_engineering",
+      "description": "Burrowing creates soil structure, improves drainage, and recycles nutrients supporting tree growth.",
+      "cascadeEffect": "Earthworm decline degrades soil health beneath oaks, reducing growth rates and resilience to disease.",
+      "source_citation": "Darwin (1881); Blouin et al. (2013) European Journal of Soil Science 64:161–182"
+    },
+    {
+      "id": "r063",
+      "source": "earthworm",
+      "target": "bluebell",
+      "type": "soil_engineering",
+      "description": "Improves soil structure and nutrient cycling in woodland. Earthworms increase plant production by an average of 25%.",
+      "cascadeEffect": "Earthworm decline in woodland soils reduces nutrient cycling that supports bluebell growth.",
+      "source_citation": "Van Groenigen et al. (2014) Scientific Reports 4:6365"
+    },
+    {
+      "id": "r064",
+      "source": "earthworm",
+      "target": "heather",
+      "type": "soil_engineering",
+      "description": "Nutrient cycling in moorland soils supports heather growth.",
+      "cascadeEffect": "Earthworm decline in moorland soils reduces nutrient availability for heather.",
+      "source_citation": "Blouin et al. (2013); Earthworm Society of Britain"
+    },
+    {
+      "id": "r065",
+      "source": "earthworm",
+      "target": "hawthorn",
+      "type": "soil_engineering",
+      "description": "Improves soil fertility beneath hedgerows.",
+      "cascadeEffect": "Earthworm decline reduces soil quality in hedgerow base, affecting hedgerow health.",
+      "source_citation": "Blouin et al. (2013); Garden Organic"
+    },
+    {
+      "id": "r066",
+      "source": "atlantic-salmon",
+      "target": "oak",
+      "type": "nutrient_cycling",
+      "description": "Salmon carcasses deliver marine-derived nitrogen and phosphorus to riparian vegetation via spawning and predator dispersal.",
+      "cascadeEffect": "Salmon decline reduces nutrient input to riparian ecosystems, impoverishing riverside woodlands.",
+      "source_citation": "Sheringham et al. (2022) The Holocene; Bernthal et al. (2022) Aquatic Conservation"
+    },
+    {
+      "id": "r067",
+      "source": "atlantic-salmon",
+      "target": "earthworm",
+      "type": "nutrient_cycling",
+      "description": "Marine-derived nutrients from salmon carcasses boost terrestrial soil invertebrate communities in riparian zones.",
+      "cascadeEffect": "Salmon decline reduces nutrient subsidies that support riparian earthworm populations.",
+      "source_citation": "Woodward et al. (2021) Frontiers in Ecology & Evolution 9:675261"
+    },
+    {
+      "id": "r068",
+      "source": "water-vole",
+      "target": "common-frog",
+      "type": "nutrient_cycling",
+      "description": "Water vole burrowing and grazing creates diverse riparian habitat structure benefiting amphibian populations.",
+      "cascadeEffect": "Water vole loss leads to vegetation homogenisation, reducing habitat quality for frogs and other amphibians.",
+      "source_citation": "Bryce (2006) PhD thesis, University of Aberdeen; Wildlife Trusts"
+    },
+    {
+      "id": "r069",
+      "source": "red-grouse",
+      "target": "heather",
+      "type": "herbivory",
+      "description": "~90% of adult diet is young heather shoots. Grouse grazing influences heather growth patterns.",
+      "cascadeEffect": "Grouse absence reduces grazing pressure, potentially allowing heather to become rank and less productive.",
+      "source_citation": "Hudson (1986) Red Grouse, Game Conservancy Trust"
+    },
+    {
+      "id": "r070",
+      "source": "grey-squirrel",
+      "target": "oak",
+      "type": "herbivory",
+      "description": "Bark stripping causes significant damage to young trees (10–40 years). Can kill trees through ring-barking. £37M annual cost.",
+      "cascadeEffect": "Bark stripping threatens the next generation of mature oaks, potentially cascading to all 2,300+ oak-dependent species.",
+      "source_citation": "UK Squirrel Accord (2021); Forest Research"
+    },
+    {
+      "id": "r071",
+      "source": "swift",
+      "target": "buff-tailed-bumblebee",
+      "type": "predator_prey",
+      "description": "Swifts are aerial insectivores feeding on aphids, flies, and small beetles. They generally avoid stinging insects but share the aerial insect food web.",
+      "cascadeEffect": "Aerial insect decline reduces food for both swifts and creates a shared pressure across insectivorous species.",
+      "source_citation": "Lack & Owen (1955); Romanowski et al. (2024)"
+    },
+    {
+      "id": "r072",
+      "source": "otter",
+      "target": "water-vole",
+      "type": "indirect_positive",
+      "description": "Otter recovery suppresses American mink through competitive displacement, indirectly benefiting water voles — a mesopredator release reversal.",
+      "cascadeEffect": "Otter presence enables water vole recovery by removing mink predation pressure.",
+      "source_citation": "McDonald et al. (2007) Diversity & Distributions; Bonesi & Macdonald (2004)"
+    },
+    {
+      "id": "r073",
+      "source": "otter",
+      "target": "kingfisher",
+      "type": "indirect_positive",
+      "description": "Otter recovery displaces mink, reducing predation pressure on bank-nesting kingfishers.",
+      "cascadeEffect": "Kingfisher nesting success improves along rivers where otters have displaced mink.",
+      "source_citation": "ZSL; McDonald et al. (2007)"
+    },
+    {
+      "id": "r074",
+      "source": "heather",
+      "target": "buff-tailed-bumblebee",
+      "type": "habitat_provider",
+      "description": "Late-season nectar source when many other flowers have finished. Medicinal nectar reduces parasite load.",
+      "cascadeEffect": "Heather loss removes a critical late-season food and medicinal resource for bumblebees.",
+      "source_citation": "Koch et al. Current Biology (Kew research)"
+    },
+    {
+      "id": "r075",
+      "source": "oak",
+      "target": "buff-tailed-bumblebee",
+      "type": "habitat_provider",
+      "description": "Oak woodland supports diverse understory flowering plants that feed bumblebees.",
+      "cascadeEffect": "Woodland loss reduces foraging habitat diversity for pollinators.",
+      "source_citation": "Woodland Trust; NatureScot"
+    },
+    {
+      "id": "r076",
+      "source": "oak",
+      "target": "red-fox",
+      "type": "habitat_provider",
+      "description": "Woodland provides denning sites and hunting habitat for foxes.",
+      "cascadeEffect": "Woodland fragmentation reduces fox habitat connectivity.",
+      "source_citation": "Wildlife Trusts"
+    },
+    {
+      "id": "r077",
+      "source": "oak",
+      "target": "common-frog",
+      "type": "habitat_provider",
+      "description": "Woodland ponds and damp areas beneath oaks provide breeding and foraging habitat for frogs.",
+      "cascadeEffect": "Loss of woodland ponds reduces frog breeding sites.",
+      "source_citation": "Froglife; Freshwater Habitats Trust"
+    },
+    {
+      "id": "r078",
+      "source": "hawthorn",
+      "target": "barn-owl",
+      "type": "habitat_provider",
+      "description": "Hedgerow margins support vole populations that are the primary prey of barn owls.",
+      "cascadeEffect": "Hedgerow loss reduces rough grassland margins where voles thrive, impacting barn owl foraging.",
+      "source_citation": "Barn Owl Trust; RSPB"
+    },
+    {
+      "id": "r079",
+      "source": "hawthorn",
+      "target": "common-frog",
+      "type": "habitat_provider",
+      "description": "Hedgerow bases provide damp shelter and overwintering habitat for frogs in farmland.",
+      "cascadeEffect": "Hedgerow removal exposes frogs to desiccation and predation.",
+      "source_citation": "Froglife; Wildlife Trusts"
+    },
+    {
+      "id": "r080",
+      "source": "atlantic-salmon",
+      "target": "otter",
+      "type": "predator_prey",
+      "description": "Salmon are major prey for otters; salmon availability influences otter body condition and territory size.",
+      "cascadeEffect": "Salmon decline forces otters to diversify diet, increasing pressure on other freshwater prey species.",
+      "source_citation": "Carss, Kruuk & Conroy (1990) Journal of Fish Biology 37:935–944"
+    },
+    {
+      "id": "r081",
+      "source": "atlantic-salmon",
+      "target": "kingfisher",
+      "type": "predator_prey",
+      "description": "Kingfishers take salmon parr and fry from shallow riffles.",
+      "cascadeEffect": "Salmon decline reduces one fish prey available to kingfishers.",
+      "source_citation": "BTO; Wildlife Online"
+    },
+    {
+      "id": "r082",
+      "source": "red-fox",
+      "target": "barn-owl",
+      "type": "predator_prey",
+      "description": "Foxes occasionally take barn owl eggs and chicks from ground-accessible nest sites.",
+      "cascadeEffect": "Minor predation pressure; elevated nest boxes mitigate this risk.",
+      "source_citation": "Barn Owl Trust"
+    },
+    {
+      "id": "r083",
+      "source": "red-fox",
+      "target": "water-vole",
+      "type": "predator_prey",
+      "description": "Foxes opportunistically predate water voles along riverbanks.",
+      "cascadeEffect": "Fox predation adds to cumulative pressures on water vole populations.",
+      "source_citation": "Mammal Society; Wildlife Online"
+    },
+    {
+      "id": "r084",
+      "source": "red-fox",
+      "target": "common-frog",
+      "type": "predator_prey",
+      "description": "Frogs are seasonally important in fox diet, particularly during spring breeding aggregations.",
+      "cascadeEffect": "Fox predation contributes to predation pressure on frogs during vulnerable breeding season.",
+      "source_citation": "Harris (1981) Mammal Review"
+    },
+    {
+      "id": "r085",
+      "source": "earthworm",
+      "target": "common-frog",
+      "type": "soil_engineering",
+      "description": "Earthworm activity improves soil moisture and structure in habitats used by frogs for foraging and overwintering.",
+      "cascadeEffect": "Earthworm decline degrades terrestrial habitat quality for frogs.",
+      "source_citation": "Blouin et al. (2013); Froglife"
+    }
+  ]
+}

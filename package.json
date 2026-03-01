@@ -1,5 +1,5 @@
 {
-  "name": "the-unraveling",
+  "name": "connected",
   "version": "1.0.0",
   "description": "Interactive biodiversity visualization showing species decline and ecological ripple effects",
   "type": "module",
@@ -13,12 +13,16 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.73.0",
+    "d3": "^7.9.0",
     "dotenv": "^17.2.4",
     "framer-motion": "^11.0.0",
     "leaflet": "^1.9.4",
+    "leaflet-polylinedecorator": "^1.6.0",
+    "leaflet.heat": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-leaflet": "^4.2.1",
+    "react-leaflet-cluster": "^4.0.0",
     "react-router-dom": "^6.22.0"
   },
   "devDependencies": {

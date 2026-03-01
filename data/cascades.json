@@ -1,0 +1,327 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generated": "2026-02-26",
+    "description": "8 documented ecological cascade narratives showing how species decline ripples through the web"
+  },
+  "cascades": [
+    {
+      "id": "cascade-01",
+      "title": "The Sand Eel Collapse",
+      "subtitle": "How warming seas starve seabird colonies across the North Sea",
+      "ecosystem": "marine",
+      "chain": ["sand-eel", "atlantic-puffin", "grey-seal", "atlantic-salmon"],
+      "trigger": "Climate warming shifts plankton communities northward, reducing sand eel food base. Industrial fishing compounds decline.",
+      "steps": [
+        {
+          "species": "sand-eel",
+          "event": "Sand eel populations decline as warming North Sea shifts cold-water plankton northward. Industrial fishing historically removed ~1 million tonnes per year.",
+          "status": "declining"
+        },
+        {
+          "species": "atlantic-puffin",
+          "event": "Puffin chicks starve in burrows as parents cannot find enough sand eels. One in four UK puffins lost since 2000. BTO projects potential 90% decline by 2050.",
+          "status": "declining"
+        },
+        {
+          "species": "grey-seal",
+          "event": "Seals switch from sand eels to gadid fish, buffering their population but increasing pressure on commercial fisheries.",
+          "status": "adapting"
+        },
+        {
+          "species": "atlantic-salmon",
+          "event": "Salmon condition and survival at sea reduced as sand eel prey declines during marine phase.",
+          "status": "declining"
+        }
+      ],
+      "resolution": "UK banned industrial sand eel fishing in March 2024. An earlier 20,000km² closure off Scotland's east coast produced measurable improvement in kittiwake breeding success.",
+      "keySources": [
+        "RSPB Revive Our Seas (2021)",
+        "Seabirds Count census (JNCC, 2023)",
+        "State of Nature 2023"
+      ]
+    },
+    {
+      "id": "cascade-02",
+      "title": "The Mink Invasion",
+      "subtitle": "Fur farm escapees triggered Britain's fastest mammal decline — now otters are fighting back",
+      "ecosystem": "freshwater",
+      "chain": ["american-mink", "water-vole", "otter", "kingfisher", "common-frog"],
+      "trigger": "American mink escaped and were released from fur farms throughout the 20th century, establishing wild populations across nearly all of Britain.",
+      "steps": [
+        {
+          "species": "american-mink",
+          "event": "Feral mink populations establish across Britain. Female mink are small enough to enter water vole burrows and kill mothers with pups.",
+          "status": "invasive"
+        },
+        {
+          "species": "water-vole",
+          "event": "Fastest mammal decline in British history: 94% loss. From ~8 million to fewer than 186,000. Riparian habitat simplifies without vole grazing and burrowing.",
+          "status": "declining"
+        },
+        {
+          "species": "kingfisher",
+          "event": "Mink predate bank-nesting kingfishers, suppressing nesting success along affected waterways.",
+          "status": "pressured"
+        },
+        {
+          "species": "otter",
+          "event": "Otter recovery displaces mink — mink occupancy drops from 77% to 23% within one year. Otters are too large for vole burrows, restoring natural predator-prey balance.",
+          "status": "recovering"
+        },
+        {
+          "species": "common-frog",
+          "event": "Reduced mink predation benefits amphibian populations along rivers where otters have returned.",
+          "status": "benefiting"
+        }
+      ],
+      "resolution": "Otter recovery is naturally suppressing mink. Dedicated mink eradication programmes (Waterlife Recovery Trust) have produced documented water vole recovery at target sites.",
+      "keySources": [
+        "Rushton et al. (2000) Journal of Applied Ecology 37:475–490",
+        "Bonesi & Macdonald (2004) Oikos 106:9–18",
+        "McDonald et al. (2007) Diversity & Distributions 13:92–98"
+      ]
+    },
+    {
+      "id": "cascade-03",
+      "title": "Grey Squirrel Invasion",
+      "subtitle": "An invasive species unravelling woodland across two centuries",
+      "ecosystem": "woodland",
+      "chain": ["grey-squirrel", "red-squirrel", "oak", "jay"],
+      "trigger": "Grey squirrels introduced from North America between 1876 and 1929. Now 2.7 million vs 287,000 reds.",
+      "steps": [
+        {
+          "species": "grey-squirrel",
+          "event": "Greys outcompete reds for acorns (superior tannin digestion) and carry squirrelpox virus (~100% fatal to reds, harmless to greys).",
+          "status": "invasive"
+        },
+        {
+          "species": "red-squirrel",
+          "event": "Population crashes 92%. Confined to Scotland, parts of northern England, and isolated island populations. Squirrelpox accelerates replacement 20× faster.",
+          "status": "declining"
+        },
+        {
+          "species": "oak",
+          "event": "Grey squirrels strip bark from young trees (10–40 years), causing £37M annual damage. Threatens the next generation of mature oaks that support 2,300+ species.",
+          "status": "threatened"
+        },
+        {
+          "species": "jay",
+          "event": "Jay-oak mutualism persists but reduced acorn availability due to grey squirrel consumption before ripening may affect jay populations long-term.",
+          "status": "stable"
+        }
+      ],
+      "resolution": "UK Squirrel Accord coordinates grey squirrel management. Fertility control research (immunocontraception) offers a humane long-term solution. Pine marten recovery in Scotland naturally suppresses grey squirrels.",
+      "keySources": [
+        "Gurnell et al. (2004) Journal of Animal Ecology 73:26–35",
+        "Tompkins et al. (2002) Proc. R. Soc. B 269:529–533",
+        "UK Squirrel Accord (2021)"
+      ]
+    },
+    {
+      "id": "cascade-04",
+      "title": "The Badger-Hedgehog Triangle",
+      "subtitle": "Intraguild predation, competition, and a crumbling food foundation",
+      "ecosystem": "farmland_garden",
+      "chain": ["earthworm", "badger", "hedgehog", "common-frog"],
+      "trigger": "Agricultural intensification reduces hedgehog habitat while badger populations double. Earthworm decline adds bottom-up pressure.",
+      "steps": [
+        {
+          "species": "earthworm",
+          "event": "33–41% decline over 25 years from agricultural intensification. Foundation food source for both badgers and hedgehogs.",
+          "status": "declining"
+        },
+        {
+          "species": "badger",
+          "event": "Population doubled to ~562,000. Both predates hedgehogs (only UK animal that can overcome spines) and competes for invertebrate food (consuming ~5× more per individual).",
+          "status": "increasing"
+        },
+        {
+          "species": "hedgehog",
+          "event": "From ~30 million in the 1950s to fewer than 900,000. Experimental badger removal doubled hedgehog counts. Hedgehog decline reduces slug/snail predation.",
+          "status": "declining"
+        },
+        {
+          "species": "common-frog",
+          "event": "Frogs face cumulative predation pressure from both badgers and foxes; hedgehog decline removes one minor predator of frog eggs but does not compensate.",
+          "status": "declining"
+        }
+      ],
+      "resolution": "Hedgehog Street campaign promotes garden connectivity (hedgehog highways). Creating invertebrate-rich habitat benefits both hedgehogs and badgers by reducing competition.",
+      "keySources": [
+        "Trewby et al. (2014) PLOS ONE 9(4):e95477",
+        "Barnes et al. (2023) PLOS ONE",
+        "PTES State of Britain's Hedgehogs (2022)"
+      ]
+    },
+    {
+      "id": "cascade-05",
+      "title": "The Invisible Foundation",
+      "subtitle": "Earthworm decline ripples through the entire web",
+      "ecosystem": "soil",
+      "chain": ["earthworm", "oak", "badger", "hedgehog", "skylark", "tawny-owl", "bluebell"],
+      "trigger": "Agricultural intensification, soil compaction, and chemical use drive 33–41% earthworm decline over 25 years.",
+      "steps": [
+        {
+          "species": "earthworm",
+          "event": "First century-scale UK meta-analysis reveals 33–41% decline. 42% of UK farmland may lack key earthworm functional groups. Contributes 6.5% of global grain production.",
+          "status": "declining"
+        },
+        {
+          "species": "oak",
+          "event": "Reduced soil engineering degrades conditions beneath oaks: poorer drainage, slower nutrient cycling, weaker growth.",
+          "status": "stressed"
+        },
+        {
+          "species": "badger",
+          "event": "80% of diet is earthworms. Decline forces dietary shifts and may increase predation on hedgehogs and other prey.",
+          "status": "pressured"
+        },
+        {
+          "species": "hedgehog",
+          "event": "Major food source declining, compounding habitat loss and badger competition pressures.",
+          "status": "declining"
+        },
+        {
+          "species": "skylark",
+          "event": "Invertebrate prey decline in farmland reduces chick-rearing food availability.",
+          "status": "declining"
+        },
+        {
+          "species": "tawny-owl",
+          "event": "Earthworms are a wet-weather supplementary food. Their decline narrows dietary options when primary prey is scarce.",
+          "status": "declining"
+        },
+        {
+          "species": "bluebell",
+          "event": "Reduced soil nutrient cycling affects woodland wildflower growth. Earthworms boost plant production by 25% on average.",
+          "status": "affected"
+        }
+      ],
+      "resolution": "Regenerative farming practices (no-till, cover crops, reduced chemical inputs) can rebuild earthworm populations. UK government's Environmental Land Management scheme incentivises soil health.",
+      "keySources": [
+        "Barnes et al. (2023) PLOS ONE PMC10069791",
+        "Van Groenigen et al. (2014) Scientific Reports 4:6365",
+        "Blouin et al. (2013) European Journal of Soil Science 64:161–182"
+      ]
+    },
+    {
+      "id": "cascade-06",
+      "title": "The Salmon Artery",
+      "subtitle": "When the nutrient pipeline between ocean and upland breaks",
+      "ecosystem": "freshwater_marine",
+      "chain": ["atlantic-salmon", "otter", "earthworm", "kingfisher", "white-clawed-crayfish"],
+      "trigger": "Salmon classified Endangered in GB (2023). 63% decline over three generations from warming seas, river barriers, pollution, and sea lice from fish farms.",
+      "steps": [
+        {
+          "species": "atlantic-salmon",
+          "event": "63% decline severs the marine-to-freshwater nutrient pipeline. 2,000-year sediment records show salmon historically delivered marine nitrogen and phosphorus to rivers.",
+          "status": "declining"
+        },
+        {
+          "species": "earthworm",
+          "event": "Riparian earthworm populations lose marine nutrient subsidies from salmon carcasses, reducing soil invertebrate productivity.",
+          "status": "affected"
+        },
+        {
+          "species": "otter",
+          "event": "With fewer salmon, otters shift to crayfish (14% of summer diet in chalk streams), frogs, and waterbirds.",
+          "status": "adapting"
+        },
+        {
+          "species": "kingfisher",
+          "event": "Fewer salmon parr and fry in shallow riffles reduces one prey source for kingfishers.",
+          "status": "pressured"
+        },
+        {
+          "species": "white-clawed-crayfish",
+          "event": "Increased otter predation on remaining native crayfish populations. Signal crayfish invasion compounds pressure.",
+          "status": "declining"
+        }
+      ],
+      "resolution": "River barrier removal, fish passage installation, and wild salmon recovery programmes. Atlantic Salmon Trust's Likely Suspects Framework tracks marine survival factors.",
+      "keySources": [
+        "Sheringham et al. (2022) The Holocene",
+        "Bernthal et al. (2022) Aquatic Conservation PMC9314074",
+        "Woodward et al. (2021) Frontiers in Ecology & Evolution 9:675261"
+      ]
+    },
+    {
+      "id": "cascade-07",
+      "title": "The Pollinator Spiral",
+      "subtitle": "A self-reinforcing decline between flowers and their pollinators",
+      "ecosystem": "multiple",
+      "chain": ["buff-tailed-bumblebee", "heather", "hawthorn", "small-tortoiseshell", "swift"],
+      "trigger": "Agricultural intensification removes wildflower habitat. 25% average range shrinkage for British bee and hoverfly species since 1980.",
+      "steps": [
+        {
+          "species": "hawthorn",
+          "event": "50% of UK hedgerows lost since 1945. Removes early-season nectar for emerging bumblebee queens and nesting habitat.",
+          "status": "depleted"
+        },
+        {
+          "species": "buff-tailed-bumblebee",
+          "event": "Generalist species remains stable, masking collapse of specialist pollinators. One-third of British bee species declining. Two bumblebee species extinct.",
+          "status": "stable_but_masking"
+        },
+        {
+          "species": "heather",
+          "event": "Only 25% of UK peatlands in good condition. Loss removes medicinal nectar that protects bumblebees from gut parasites.",
+          "status": "declining"
+        },
+        {
+          "species": "small-tortoiseshell",
+          "event": "86% decline since 1976 in a formerly 'common' butterfly. Demonstrates that even generalists can crash when food web simplifies.",
+          "status": "declining"
+        },
+        {
+          "species": "swift",
+          "event": "60% decline partly driven by aerial insect loss. Pollinators and other insects form the shared food web supporting insectivorous birds.",
+          "status": "declining"
+        }
+      ],
+      "resolution": "National Pollinator Strategy; agri-environment schemes paying farmers for wildflower margins; urban pollinator corridors. Just four plant species now account for half of Britain's nectar — diversification is critical.",
+      "keySources": [
+        "Powney et al. (2019) Nature Communications 10:1018",
+        "Baude et al. (2016) Nature",
+        "Koch et al. Current Biology (Kew heather-bumblebee)"
+      ]
+    },
+    {
+      "id": "cascade-08",
+      "title": "The Hen Harrier Conflict",
+      "subtitle": "Where ecology collides with economics on Britain's moors",
+      "ecosystem": "upland",
+      "chain": ["heather", "red-grouse", "hen-harrier", "red-fox"],
+      "trigger": "Grouse shooting generates significant economic value from managed moorland. Hen harrier predation on grouse chicks threatens this revenue.",
+      "steps": [
+        {
+          "species": "heather",
+          "event": "Rotational burning for grouse management creates a mosaic of young and old heather — the habitat structure both grouse and harriers depend on.",
+          "status": "managed"
+        },
+        {
+          "species": "red-grouse",
+          "event": "Britain's only endemic bird subspecies. ~90% of diet is heather shoots. Population managed for driven shooting.",
+          "status": "managed"
+        },
+        {
+          "species": "hen-harrier",
+          "event": "Predation on grouse chicks can make shooting unviable at high harrier density. England could support 300+ pairs but only 4–12 nesting attempts occur due to illegal persecution.",
+          "status": "persecuted"
+        },
+        {
+          "species": "red-fox",
+          "event": "Fox control on grouse moors reduces predation on ground-nesting birds. This inadvertently benefits skylarks and waders on adjacent farmland.",
+          "status": "controlled"
+        }
+      ],
+      "resolution": "RSPB Hen Harrier LIFE project; satellite tagging exposes illegal killing; diversionary feeding trials show harrier predation can be managed without persecution.",
+      "keySources": [
+        "Thirgood & Redpath (2008) Journal of Applied Ecology 45:982–991",
+        "Murgatroyd et al. (2019) Nature Communications",
+        "Hudson & Newborn (1995) Manual of Red Grouse"
+      ]
+    }
+  ]
+}

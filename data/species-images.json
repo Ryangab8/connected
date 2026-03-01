@@ -1,0 +1,213 @@
+{
+  "_meta": {
+    "description": "Species images from Wikimedia Commons. All Creative Commons licensed.",
+    "license": "Images are used under CC BY-SA or CC BY licenses as noted per image.",
+    "attribution": "Images sourced from Wikimedia Commons contributors. See individual file pages for full attribution.",
+    "generatedAt": "2026-02-27"
+  },
+  "images": {
+    "oak": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Quercus_robur.jpg",
+      "alt": "English oak tree in full leaf",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Quercus_robur.jpg"
+    },
+    "red-squirrel": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Squirrel_posing.jpg",
+      "alt": "Red squirrel sitting on a branch",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Squirrel_posing.jpg"
+    },
+    "grey-squirrel": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Eastern_Grey_Squirrel.jpg",
+      "alt": "Grey squirrel on the ground",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Eastern_Grey_Squirrel.jpg"
+    },
+    "jay": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Garrulus_glandarius_1_Luc_Viatour.jpg",
+      "alt": "Eurasian jay perched on a branch",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Garrulus_glandarius 1 Luc Viatour.jpg"
+    },
+    "tawny-owl": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Tawny_Owl_%28Strix_aluco%29.jpg",
+      "alt": "Tawny owl perched in a tree",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Tawny_Owl_(Strix_aluco).jpg"
+    },
+    "badger": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/02/A_Very_Wet_Badger_%2851283095909%29.jpg",
+      "alt": "European badger in natural habitat",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:A_Very Wet Badger (51283095909).jpg"
+    },
+    "bluebell": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Hyacinthoides_non-scripta_%28Common_Bluebell%29.jpg",
+      "alt": "Bluebell flowers in woodland",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 2.5",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Hyacinthoides_non-scripta (Common Bluebell).jpg"
+    },
+    "hedgehog": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Igel.JPG",
+      "alt": "European hedgehog on grass",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Igel.JPG"
+    },
+    "barn-owl": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Tyto_alba_close_up.jpg",
+      "alt": "Barn owl portrait",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 2.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Tyto_alba_close_up.jpg"
+    },
+    "skylark": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Alauda_arvensis_2.jpg",
+      "alt": "Skylark singing in a field",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Alauda_arvensis_2.jpg"
+    },
+    "earthworm": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Regenwurm1.jpg",
+      "alt": "Earthworm on soil surface",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Regenwurm1.jpg"
+    },
+    "hawthorn": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Crataegus_monogyna_fruits.jpg",
+      "alt": "Hawthorn berries on branch",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Crataegus_monogyna_fruits.jpg"
+    },
+    "atlantic-salmon": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Salmo_trutta_Trout_Aquarium_Atlanterhavsparken_Norway.jpg",
+      "alt": "Atlantic salmon swimming",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Salmo_salar-Atlantic_Salmon-Atlanterhavsparken_Norway.JPG"
+    },
+    "otter": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/41/European_otter_02.jpg",
+      "alt": "Eurasian otter by the water",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:European_otter 02.jpg"
+    },
+    "white-clawed-crayfish": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Austropotamobius_pallipes.jpg",
+      "alt": "White-clawed crayfish underwater",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Austropotamobius_pallipes.jpg"
+    },
+    "kingfisher": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Common_Kingfisher_Alcedo_atthis.jpg",
+      "alt": "Common kingfisher perched above water",
+      "credit": "Mike Goren, Wikimedia Commons",
+      "license": "CC BY 2.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Common_Kingfisher Alcedo atthis.jpg"
+    },
+    "water-vole": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Water.vole.arp.jpg",
+      "alt": "Water vole by a riverbank",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 2.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Water.vole.arp.jpg"
+    },
+    "atlantic-puffin": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Papageitaucher_Fratercula_arctica.jpg",
+      "alt": "Atlantic puffin standing on a cliff",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Papageitaucher_Fratercula_arctica.jpg"
+    },
+    "grey-seal": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Focas_grises_%28Halichoerus_grypus%29%2C_playa_de_Horsey%2C_Norfolk%2C_Inglaterra%2C_2022-11-20%2C_DD_11.jpg",
+      "alt": "Grey seal resting on rocks",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Focas_grises (Halichoerus grypus), playa de Horsey, Norfolk, Inglaterra, 2022-11-20, DD 11.jpg"
+    },
+    "sand-eel": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Ammodytes_tobianus.jpg",
+      "alt": "Sand eel swimming",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Ammodytes_tobianus.jpg"
+    },
+    "hen-harrier": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Circus_cyaneus_MHNT.ZOO.2010.11.83.1.jpg",
+      "alt": "Hen harrier in flight over moorland",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 2.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Circus_cyaneus MHNT.ZOO.2010.11.83.1.jpg"
+    },
+    "red-grouse": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/2014-04-21_Lagopus_lagopus_scotica%2C_Hawsen_Burn_1.jpg",
+      "alt": "Red grouse on moorland heather",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY 2.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:2014-04-21_Lagopus lagopus scotica, Hawsen Burn 1.jpg"
+    },
+    "heather": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Calluna_vulgaris_RF.jpg",
+      "alt": "Heather in bloom on moorland",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Calluna_vulgaris RF.jpg"
+    },
+    "buff-tailed-bumblebee": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Bombus_terrestris_queen_-_Tilia_cordata_-_Keila.jpg",
+      "alt": "Buff-tailed bumblebee collecting pollen",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Bombus_terrestris queen - Tilia cordata - Keila.jpg"
+    },
+    "small-tortoiseshell": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Aglais_urticae_qtl1.jpg",
+      "alt": "Small tortoiseshell butterfly with wings spread",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Aglais_urticae qtl1.jpg"
+    },
+    "swift": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Apus_apus_-Barcelona%2C_Spain-8_%281%29.jpg",
+      "alt": "Common swift in flight",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 2.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Apus_apus_-Barcelona,_Spain-8_(1).jpg"
+    },
+    "red-fox": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Vulpes_vulpes_laying_in_snow.jpg",
+      "alt": "Red fox in natural habitat",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY 2.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Vulpes_vulpes_laying_in_snow.jpg"
+    },
+    "common-frog": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Rana_temporaria_in_nature_park_Trho%C5%88_in_2014_%282%29.jpg",
+      "alt": "Common frog in pond",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Rana_temporaria in nature park Trhoň in 2014 (2).jpg"
+    },
+    "american-mink": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/American_Mink.jpg",
+      "alt": "American mink by water",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 2.0",
+      "filePage": "https://commons.wikimedia.org/wiki/File:American_Mink.jpg"
+    }
+  }
+}

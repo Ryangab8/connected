@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev:*)",
+      "Bash(npm install:*)",
+      "Read(//c/Users/ryang/Downloads/**)",
+      "Bash(node scripts/build-data.js:*)",
+      "Bash(curl:*)",
+      "Bash(node scripts/fetch-wikimedia-images.js:*)",
+      "Bash(node scripts/find-missing-images.js:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

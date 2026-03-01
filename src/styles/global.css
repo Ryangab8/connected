@@ -1,0 +1,302 @@
+/* Global Styles - Dark Theme for UK Ecological Web */
+
+:root {
+  /* Light nature theme - museum exhibition on white walls */
+  --color-bg: #f8f7f4;
+  --color-bg-secondary: #ffffff;
+  --color-bg-tertiary: #f0efeb;
+  --color-text: #2d3436;
+  --color-text-secondary: #636e72;
+  --color-text-muted: #95a5a6;
+
+  /* Ecosystem colors for nodes (nature-inspired, work on white) */
+  --color-woodland: #2d6a4f;
+  --color-freshwater: #2176ae;
+  --color-upland: #7b2d8e;
+  --color-farmland: #c17f24;
+  --color-marine: #0e8a7e;
+  --color-cross-ecosystem: #6b7280;
+
+  /* Conservation status colors (used for rings) */
+  --color-declining: #dc2626;
+  --color-amber: #f59e0b;
+  --color-stable: #16a34a;
+  --color-invasive: #9333ea;
+
+  /* Relationship type colors */
+  --color-predator-prey: #ef4444;
+  --color-competition: #f97316;
+  --color-habitat: #3b82f6;
+  --color-pollination: #ec4899;
+  --color-seed-dispersal: #8b5cf6;
+  --color-disease: #94a3b8;
+  --color-positive: #10b981;
+  --color-herbivory: #ea580c;
+  --color-nutrient-cycling: #0d9488;
+  --color-soil-engineering: #92400e;
+
+  /* UI accent colors - forest green primary, warm earth secondary */
+  --color-accent: #2d6a4f;
+  --color-accent-hover: #1e4d39;
+  --color-accent-secondary: #a67c52;
+  --color-border: #e5e7eb;
+  --color-border-light: #f3f4f6;
+
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  --font-serif: 'Georgia', 'Cambria', 'Times New Roman', serif;
+  --font-mono: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.scientific-name {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+
+.species-name {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Buttons */
+button {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+button:hover {
+  background-color: var(--color-accent);
+  color: white;
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(45, 106, 79, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+button.primary {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: white;
+}
+
+button.primary:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+/* Links */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-tertiary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* Conservation status badges */
+.status-badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-declining {
+  background-color: rgba(231, 76, 60, 0.2);
+  color: var(--color-declining);
+  border: 1px solid var(--color-declining);
+}
+
+.status-amber {
+  background-color: rgba(243, 156, 18, 0.2);
+  color: var(--color-amber);
+  border: 1px solid var(--color-amber);
+}
+
+.status-stable {
+  background-color: rgba(39, 174, 96, 0.2);
+  color: var(--color-stable);
+  border: 1px solid var(--color-stable);
+}
+
+.status-invasive {
+  background-color: rgba(155, 89, 182, 0.2);
+  color: var(--color-invasive);
+  border: 1px solid var(--color-invasive);
+}
+
+/* Utility classes */
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.panel {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--color-border);
+  margin: var(--spacing-lg) 0;
+}
+
+/* Loading state */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--color-text-secondary);
+  font-size: 1.125rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
