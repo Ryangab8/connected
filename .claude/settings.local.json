@@ -8,7 +8,10 @@
       "Bash(curl:*)",
       "Bash(node scripts/fetch-wikimedia-images.js:*)",
       "Bash(node scripts/find-missing-images.js:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd complete UK Ecological Web visualization with species images\n\n- Built interactive network graph with force-directed layout\n- Created UK map view with species distribution data from GBIF\n- Added species detail pages with Wikimedia Commons images\n- Implemented cascade effect visualizations and stories\n- Added species images for all 29 species with working URLs\n- Created data build pipeline for GBIF distributions\n- Organized components: NetworkGraph, MapPage, SpeciesPage, etc.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
