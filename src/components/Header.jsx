@@ -125,6 +125,72 @@ function Header() {
         </Link>
 
         <Link
+          to="/biodiversity-outlook"
+          style={{
+            fontSize: '0.9rem',
+            fontWeight: 500,
+            color: isActive('/biodiversity-outlook') ? '#2d6a4f' : '#636e72',
+            textDecoration: 'none',
+            transition: 'color 0.2s ease',
+            position: 'relative'
+          }}
+          onMouseEnter={(e) => e.target.style.color = '#2d6a4f'}
+          onMouseLeave={(e) => {
+            if (!isActive('/biodiversity-outlook')) {
+              e.target.style.color = '#636e72';
+            }
+          }}
+        >
+          Biodiversity Outlook
+          {isActive('/biodiversity-outlook') && (
+            <motion.div
+              layoutId="nav-indicator"
+              style={{
+                position: 'absolute',
+                bottom: '-8px',
+                left: 0,
+                right: 0,
+                height: '2px',
+                background: '#2d6a4f'
+              }}
+            />
+          )}
+        </Link>
+
+        <Link
+          to="/policy-outlook"
+          style={{
+            fontSize: '0.9rem',
+            fontWeight: 500,
+            color: isActive('/policy-outlook') ? '#2d6a4f' : '#636e72',
+            textDecoration: 'none',
+            transition: 'color 0.2s ease',
+            position: 'relative'
+          }}
+          onMouseEnter={(e) => e.target.style.color = '#2d6a4f'}
+          onMouseLeave={(e) => {
+            if (!isActive('/policy-outlook')) {
+              e.target.style.color = '#636e72';
+            }
+          }}
+        >
+          Policy Outlook
+          {isActive('/policy-outlook') && (
+            <motion.div
+              layoutId="nav-indicator"
+              style={{
+                position: 'absolute',
+                bottom: '-8px',
+                left: 0,
+                right: 0,
+                height: '2px',
+                background: '#2d6a4f'
+              }}
+            />
+          )}
+        </Link>
+
+        <Link
           to="/stories"
           style={{
             fontSize: '0.9rem',
