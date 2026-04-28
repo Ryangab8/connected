@@ -10,6 +10,8 @@ import CascadeStory from './components/CascadeStory';
 import ActPage from './components/ActPage';
 import AboutPage from './components/AboutPage';
 import MapPage from './components/MapPage';
+import BiodiversityOutlook from './components/BiodiversityOutlook';
+import PolicyOutlook from './components/PolicyOutlook';
 
 function WebView() {
   const [relationshipFilter, setRelationshipFilter] = useState('all');
@@ -74,6 +76,18 @@ function App() {
             <>
               <Header />
               <MapPage />
+            </>
+          } />
+          <Route path="/biodiversity-outlook" element={
+            <>
+              <Header />
+              <BiodiversityOutlook />
+            </>
+          } />
+          <Route path="/policy-outlook" element={
+            <>
+              <Header />
+              <PolicyOutlook />
             </>
           } />
         </Routes>
