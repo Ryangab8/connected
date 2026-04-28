@@ -191,6 +191,39 @@ function Header() {
         </Link>
 
         <Link
+          to="/conflict-map"
+          style={{
+            fontSize: '0.9rem',
+            fontWeight: 500,
+            color: isActive('/conflict-map') ? '#2d6a4f' : '#636e72',
+            textDecoration: 'none',
+            transition: 'color 0.2s ease',
+            position: 'relative'
+          }}
+          onMouseEnter={(e) => e.target.style.color = '#2d6a4f'}
+          onMouseLeave={(e) => {
+            if (!isActive('/conflict-map')) {
+              e.target.style.color = '#636e72';
+            }
+          }}
+        >
+          Conflict Map
+          {isActive('/conflict-map') && (
+            <motion.div
+              layoutId="nav-indicator"
+              style={{
+                position: 'absolute',
+                bottom: '-8px',
+                left: 0,
+                right: 0,
+                height: '2px',
+                background: '#2d6a4f'
+              }}
+            />
+          )}
+        </Link>
+
+        <Link
           to="/stories"
           style={{
             fontSize: '0.9rem',
