@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Policy Outlook | Connected UK Biodiversity</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#f5f2ec;--dark:#1a2318;--green-deep:#2d5016;--green-mid:#4a7c2a;
+  --amber:#c8760a;--red:#b83a2a;--purple:#5c3d7a;--teal:#1e6b6b;--blue:#1e4d8c;
+  --panel:rgba(245,242,236,0.98);
+}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark);height:100vh;display:flex;flex-direction:column;overflow:hidden}
+nav{display:flex;align-items:center;justify-content:space-between;padding:0 28px;height:58px;background:var(--cream);border-bottom:1px solid rgba(26,35,24,0.1);flex-shrink:0;z-index:1000}
+.logo-main{font-family:'Playfair Display',serif;font-size:20px;color:var(--green-deep);font-weight:600;line-height:1}
+.logo-sub{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6b7a68;margin-top:2px}
+.nav-links{display:flex;gap:26px;font-size:13px}
+.nav-links a{text-decoration:none;color:#6b7a68}
+.nav-links a.active{color:var(--green-deep);border-bottom:2px solid var(--green-deep);padding-bottom:2px}
+.nav-badge{background:var(--green-deep);color:var(--cream);font-size:10px;padding:3px 8px;border-radius:20px}
+.app{display:flex;flex:1;overflow:hidden}
+
+/* ── LEFT PANEL ─────────────────────────────────────────────────────────── */
+.panel{width:360px;flex-shrink:0;background:var(--panel);border-right:1px solid rgba(26,35,24,0.09);display:flex;flex-direction:column;overflow:hidden}
+.ph{padding:16px 20px 12px;border-bottom:1px solid rgba(26,35,24,.07)}
+.ph-title{font-family:'Playfair Display',serif;font-size:16px;color:var(--green-deep);margin-bottom:5px}
+.ph-desc{font-size:11px;color:#6b7a68;line-height:1.55}
+
+/* MODE TOGGLE */
+.modes{display:flex;padding:10px 16px;gap:5px;border-bottom:1px solid rgba(26,35,24,.07)}
+.mode-btn{flex:1;padding:6px 4px;border-radius:7px;border:1px solid rgba(26,35,24,.1);font-size:10px;font-weight:500;cursor:pointer;background:white;color:#888;transition:all .18s;text-align:center;line-height:1.3}
+.mode-btn.active{background:var(--green-deep);color:white;border-color:var(--green-deep)}
+
+/* YEAR SLIDER */
+.year-section{padding:14px 20px;border-bottom:1px solid rgba(26,35,24,.07)}
+.year-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
+.year-display{font-family:'Playfair Display',serif;font-size:32px;color:var(--green-deep);line-height:1}
+.year-context{font-size:11px;color:#888;max-width:160px;text-align:right;line-height:1.4}
+input[type=range]{width:100%;-webkit-appearance:none;height:4px;border-radius:2px;outline:none;cursor:pointer;
+  background:linear-gradient(to right,var(--green-deep) 0%,var(--green-deep) var(--pct,0%),rgba(26,35,24,.12) var(--pct,0%))}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;
+  background:var(--green-deep);border:2.5px solid white;box-shadow:0 2px 6px rgba(0,0,0,.2);cursor:pointer}
+.year-marks{display:flex;justify-content:space-between;margin-top:5px;font-size:10px;color:#ccc}
+.milestone-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}
+.m-tag{font-size:10px;padding:2px 8px;border-radius:10px;border:1px solid;font-weight:500}
+
+/* CHART */
+.chart-section{padding:12px 20px 8px;border-bottom:1px solid rgba(26,35,24,.07)}
+.chart-label{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#bbb;margin-bottom:4px}
+.chart-context{font-size:11px;color:#5a6a56;line-height:1.5;margin-bottom:8px;padding:8px 10px;background:rgba(74,124,42,.06);border-radius:7px;border-left:3px solid var(--green-mid)}
+.chart-wrap{position:relative;height:150px}
+.chart-legend{display:flex;gap:12px;margin-top:6px;font-size:10px;color:#888}
+.cl-dot{width:10px;height:3px;border-radius:2px;display:inline-block;margin-right:4px;vertical-align:middle}
+
+/* NATIONS */
+.nations-section{flex:1;overflow-y:auto;padding:10px 16px 14px}
+.nations-section::-webkit-scrollbar{width:3px}
+.nations-section::-webkit-scrollbar-thumb{background:rgba(26,35,24,.1);border-radius:3px}
+.ns-title{font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:#bbb;margin-bottom:8px;padding:0 4px}
+.ncard{padding:10px 12px;border-radius:9px;border:1px solid rgba(26,35,24,.08);background:white;margin-bottom:6px;cursor:pointer;transition:all .16s}
+.ncard:hover{border-color:rgba(26,35,24,.16);transform:translateY(-1px)}
+.ncard-top{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.ndot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.nname{font-size:12px;font-weight:500;flex:1}
+.nrating{font-size:10px;padding:2px 7px;border-radius:5px;font-weight:500}
+.r-strong{background:#e6f4e6;color:#2d5016}
+.r-moderate{background:#fef3e2;color:#c8760a}
+.r-weak{background:#fde8e6;color:#b83a2a}
+
+/* POLICY GAP BARS */
+.gap-row{display:flex;align-items:center;gap:6px;margin-bottom:4px}
+.gap-label{font-size:10px;color:#aaa;width:70px;flex-shrink:0}
+.gap-track{flex:1;height:5px;background:rgba(26,35,24,.07);border-radius:3px;position:relative}
+.gap-current{height:5px;border-radius:3px;position:absolute;left:0;top:0;transition:width .5s}
+.gap-target-mark{position:absolute;top:-3px;width:2px;height:11px;background:var(--green-mid);border-radius:1px}
+.gap-val{font-size:10px;font-weight:600;min-width:32px;text-align:right}
+.gap-needed{font-size:10px;color:var(--red);margin-top:2px}
+
+/* ── RIGHT: MAP + DASHBOARD ────────────────────────────────────────────── */
+.right-area{flex:1;display:flex;flex-direction:column;overflow:hidden}
+
+/* DASHBOARD STRIP */
+.dashboard{flex-shrink:0;display:flex;gap:0;border-bottom:1px solid rgba(26,35,24,.09);background:var(--cream)}
+.dash-card{flex:1;padding:12px 16px;border-right:1px solid rgba(26,35,24,.07)}
+.dash-card:last-child{border-right:none}
+.dc-label{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#bbb;margin-bottom:3px}
+.dc-metric{font-family:'Playfair Display',serif;font-size:22px;color:var(--green-deep);line-height:1}
+.dc-sub{font-size:10px;color:#aaa;margin-top:2px}
+.dc-context{font-size:11px;margin-top:4px;line-height:1.4}
+.trend-up{color:var(--green-mid)} .trend-down{color:var(--red)} .trend-flat{color:var(--amber)}
+
+/* PROTECTED LAND BAR */
+.prot-bar{margin-top:6px}
+.prot-bar-track{height:5px;background:rgba(26,35,24,.08);border-radius:3px;position:relative;margin-top:3px}
+.prot-bar-fill{height:5px;border-radius:3px;background:var(--green-mid);transition:width .5s}
+.prot-bar-target{position:absolute;right:0;top:-3px;width:2px;height:11px;background:rgba(26,35,24,.3);border-radius:1px}
+.prot-bar-label{display:flex;justify-content:space-between;font-size:10px;color:#bbb}
+
+/* MAP */
+.map-area{flex:1;position:relative}
+#map{width:100%;height:100%}
+
+/* MILESTONE BAR */
+.milestone-bar{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);z-index:800;display:flex;gap:6px}
+.mstone{background:var(--panel);border-radius:7px;padding:5px 11px;border:1px solid rgba(26,35,24,.09);font-size:10px;color:#6b7a68;box-shadow:0 2px 8px rgba(0,0,0,.06);display:flex;align-items:center;gap:5px;white-space:nowrap}
+.ms-dot{width:6px;height:6px;border-radius:50%}
+.ms-year{font-weight:600;color:var(--dark)}
+
+/* ACTION PANEL */
+.act-btn{background:var(--green-deep);color:var(--cream);font-size:12px;font-weight:500;padding:6px 14px;border-radius:20px;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;letter-spacing:.02em;transition:opacity .15s}
+.act-btn:hover{opacity:.85}
+.act-overlay{display:none;position:fixed;inset:0;background:rgba(10,20,8,.35);z-index:1500;align-items:flex-end;justify-content:center}
+.act-overlay.open{display:flex}
+.act-drawer{background:var(--cream);border-radius:18px 18px 0 0;width:100%;max-width:860px;max-height:78vh;display:flex;flex-direction:column;box-shadow:0 -6px 40px rgba(0,0,0,.18);overflow:hidden;animation:slideUp .3s cubic-bezier(.22,.8,.36,1)}
+@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.act-header{display:flex;align-items:center;justify-content:space-between;padding:18px 22px 12px;border-bottom:1px solid rgba(26,35,24,.08);flex-shrink:0}
+.act-title{font-family:'Playfair Display',serif;font-size:17px;color:var(--green-deep)}
+.act-close{background:none;border:none;cursor:pointer;font-size:20px;color:#aaa;line-height:1;padding:4px}
+.act-tabs{display:flex;gap:6px;padding:12px 22px 0;overflow-x:auto;flex-shrink:0;scrollbar-width:none}
+.act-tabs::-webkit-scrollbar{display:none}
+.act-tab{font-size:11px;padding:5px 13px;border-radius:20px;border:1px solid rgba(26,35,24,.15);background:none;cursor:pointer;font-family:'DM Sans',sans-serif;color:#6b7a68;white-space:nowrap;transition:all .15s}
+.act-tab.active{background:var(--green-deep);color:var(--cream);border-color:var(--green-deep)}
+.act-body{overflow-y:auto;padding:16px 22px 28px;flex:1}
+.act-section{margin-bottom:18px}
+.act-section-title{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#bbb;margin-bottom:10px}
+.act-card{background:white;border-radius:10px;padding:13px 15px;margin-bottom:8px;border:1px solid rgba(26,35,24,.07);display:flex;gap:12px;align-items:flex-start}
+.act-card-icon{font-size:20px;flex-shrink:0;margin-top:1px}
+.act-card-body{}
+.act-card-name{font-size:13px;font-weight:500;color:var(--dark);margin-bottom:2px}
+.act-card-desc{font-size:11px;color:#6b7a68;line-height:1.5;margin-bottom:6px}
+.act-card-link{font-size:11px;color:var(--green-mid);text-decoration:none;font-weight:500}
+.act-card-link:hover{text-decoration:underline}
+.act-tag{display:inline-block;font-size:9px;text-transform:uppercase;letter-spacing:.08em;padding:2px 7px;border-radius:8px;margin-bottom:6px}
+
+.leaflet-popup-content-wrapper{background:var(--panel);border-radius:11px;box-shadow:0 6px 24px rgba(0,0,0,.12);border:1px solid rgba(26,35,24,.09);font-family:'DM Sans',sans-serif;padding:0}
+.leaflet-popup-content{margin:0}
+.leaflet-popup-tip{background:var(--panel)}
+.pi{padding:13px 16px}
+.ptitle{font-family:'Playfair Display',serif;font-size:15px;color:var(--dark);margin-bottom:3px}
+.ptags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px}
+.ptag{font-size:10px;padding:2px 8px;border-radius:8px}
+.prow{display:flex;justify-content:space-between;font-size:11px;color:#888;padding:4px 0;border-top:1px solid rgba(26,35,24,.06)}
+.prow strong{color:var(--dark)}
+.ptext{font-size:11px;color:#5a6a56;line-height:1.55;margin-top:6px}
+.pgap{font-size:11px;color:var(--red);margin-top:5px}
+
+/* SITE POPUP */
+.site-type{font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.carbon-note{font-size:10px;color:#888;margin-top:6px;padding-top:6px;border-top:1px solid rgba(26,35,24,.06)}
+</style>
+</head>
+<body>
+<nav>
+  <div>
+    <div class="logo-main">Connected</div>
+    <div class="logo-sub">UK Biodiversity Web</div>
+  </div>
+  <div class="nav-links">
+    <a href="https://connectedbiodiversity.com">The Web</a>
+    <a href="https://connectedbiodiversity.com/map">Distribution Map</a>
+    <a href="map1_final.html">Biodiversity Outlook</a>
+    <a href="#" class="active">Policy Outlook</a>
+    <span class="nav-badge">New</span>
+    <button class="act-btn" onclick="openActionPanel()">🌿 What You Can Do</button>
+  </div>
+</nav>
+
+<div class="app">
+<!-- ── LEFT PANEL ───────────────────────────────────────────────────────── -->
+<div class="panel">
+  <div class="ph">
+    <div class="ph-title">Policy & Climate Outlook</div>
+    <div class="ph-desc">How does current policy compare to what's needed? Drag the timeline to see how the gap between current trajectory and targets grows or closes to 2050.</div>
+  </div>
+
+  <div class="modes">
+    <div class="mode-btn active" id="modeSpecies" onclick="setMode('species')">Species<br>Abundance</div>
+    <div class="mode-btn" id="modeCarbon" onclick="setMode('carbon')">Carbon<br>in Nature</div>
+    <div class="mode-btn" id="modePolicy" onclick="setMode('policy')">Policy<br>Delivery</div>
+  </div>
+
+  <div class="year-section">
+    <div class="year-top">
+      <div>
+        <div style="font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:#bbb;margin-bottom:1px">Year</div>
+        <div class="year-display" id="yearDisplay">2024</div>
+      </div>
+      <div class="year-context" id="yearContext">Current baseline — biodiversity in continued decline</div>
+    </div>
+    <input type="range" id="yearSlider" min="2024" max="2050" value="2024" step="1">
+    <div class="year-marks"><span>2024</span><span>2030</span><span>2035</span><span>2040</span><span>2045</span><span>2050</span></div>
+    <div class="milestone-tags">
+      <span class="m-tag" style="color:#5c3d7a;border-color:#5c3d7a20;background:#ece8f510">2030 30by30</span>
+      <span class="m-tag" style="color:#c8760a;border-color:#c8760a20;background:#fef3e210">2042 Env. Act</span>
+      <span class="m-tag" style="color:#b83a2a;border-color:#b83a2a20;background:#fde8e610">2050 Net Zero</span>
+    </div>
+  </div>
+
+  <div class="chart-section">
+    <div class="chart-label" id="chartLabel">Species abundance index</div>
+    <div class="chart-context" id="chartContext">
+      In 1970 this was 100 — the baseline. It is now <strong>48</strong>, meaning the UK has roughly half the wildlife it had 55 years ago. Under current policy it falls to ~34 by 2050. Under transformative action it stabilises and rises to ~58.
+    </div>
+    <div class="chart-wrap"><canvas id="mainChart"></canvas></div>
+    <div class="chart-legend">
+      <span><span class="cl-dot" style="background:#b83a2a"></span>Current trajectory</span>
+      <span><span class="cl-dot" style="background:#4a7c2a;border-top:2px dashed #4a7c2a;height:0;margin-top:5px"></span>Transformative action</span>
+    </div>
+  </div>
+
+  <div class="nations-section">
+    <div class="ns-title">Policy delivery gap — current score vs. required to meet commitments</div>
+    <div id="nationCards"></div>
+  </div>
+</div>
+
+<!-- ── RIGHT: DASHBOARD + MAP ──────────────────────────────────────────── -->
+<div class="right-area">
+  <!-- DASHBOARD STRIP -->
+  <div class="dashboard">
+    <div class="dash-card">
+      <div class="dc-label">Abundance index</div>
+      <div class="dc-metric" id="dashAbundance">48</div>
+      <div class="dc-sub">Baseline was 100 in 1970</div>
+      <div class="dc-context" id="dashAbundanceTrend"></div>
+    </div>
+    <div class="dash-card">
+      <div class="dc-label">Carbon stored in nature</div>
+      <div class="dc-metric" id="dashCarbon">3.1 Gt</div>
+      <div class="dc-sub">Gt CO₂e stored · but UK nature is a net <em>source</em>, not sink</div>
+      <div class="dc-context" id="dashCarbonTrend"></div>
+    </div>
+    <div class="dash-card">
+      <div class="dc-label">Land protected</div>
+      <div class="dc-metric" id="dashProtected">8.4%</div>
+      <div class="dc-sub">UK average · 30% target by 2030</div>
+      <div class="prot-bar">
+        <div class="prot-bar-label">
+          <span id="protNow">Now: 8.4%</span><span>Target: 30%</span>
+        </div>
+        <div class="prot-bar-track">
+          <div class="prot-bar-fill" id="protBarFill" style="width:28%"></div>
+          <div class="prot-bar-target"></div>
+        </div>
+      </div>
+      <div class="dc-context" id="dashProtectedTrend"></div>
+    </div>
+    <div class="dash-card">
+      <div class="dc-label">Carbon — the real picture</div>
+      <div class="dc-metric" style="font-size:13px;margin-top:4px;color:var(--red);line-height:1.3">Net source since 2019</div>
+      <div class="dc-sub" style="margin-top:4px;line-height:1.5">UK woodlands absorb ~17 Mt CO₂e/yr. But <strong>degraded peatlands emit ~23 Mt CO₂e/yr</strong> — making UK land use a net carbon source. Only 22% of UK peatland is in near-natural condition. Restoring the rest is the single biggest nature-based lever for reaching net zero.</div>
+    </div>
+  </div>
+
+  <!-- MAP -->
+  <div class="map-area">
+    <div id="map"></div>
+    <div class="milestone-bar">
+      <div class="mstone"><div class="ms-dot" style="background:#5c3d7a"></div><span class="ms-year">2030</span> 30by30 & carbon milestone</div>
+      <div class="mstone"><div class="ms-dot" style="background:#c8760a"></div><span class="ms-year">2042</span> Environment Act species target</div>
+      <div class="mstone"><div class="ms-dot" style="background:#b83a2a"></div><span class="ms-year">2050</span> Net zero deadline</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+// ─────────────────────────────────────────────────────────────────────────────
+// NATION DATA
+// policyScore = current 2024 score
+// required = score needed to actually meet their stated commitments by target year
+// The GAP is the story — not "current vs target trajectory" which was circular
+// ─────────────────────────────────────────────────────────────────────────────
+const NATIONS = [
+  {
+    id:'scotland', name:'Scotland', flag:'🏴󠁧󠁢󠁳󠁣󠁴󠁿', color:'#1e4d8c', rating:'strong', ratingLabel:'Strongest',
+    center:[57.0,-4.2], zoom:6,
+    policyScore:78,         // current delivery score
+    required:95,            // what is needed to meet their own 2030/2045 targets
+    protectedPct:18.4,
+    carbonGt:4.2,
+    keyPolicies:'Scottish Biodiversity Strategy to 2045. Natural Environment Bill 2025 — statutory targets (first in UK). Peatland ACTION: 65,000ha restored of 250,000ha target. £65M Nature Restoration Fund. South of Scotland Golden Eagle Project.',
+    gap:'Gap of 17 points. AECS chronically underfunded (£29.6M vs £55M peak). Capercaillie still on path to extinction. Grouse moor persecution blocking raptor recovery.',
+    trajectory:'Best positioned of all 5 nations — but still needs significant acceleration to reach its own targets.'
+  },
+  {
+    id:'england', name:'England', flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿', color:'#2d6e3e', rating:'moderate', ratingLabel:'Moderate',
+    center:[52.5,-1.5], zoom:6,
+    policyScore:55,
+    required:85,
+    protectedPct:2.83,
+    carbonGt:1.2,
+    keyPolicies:'Environment Act 2021 — legally binding species abundance target (halt decline by 2030, reverse by 2042). ELM replacing CAP. CSHT: 65,400 agreements. But SFI closed abruptly March 2025, creating immediate funding gap.',
+    gap:'Gap of 30 points. Only 2.83% of land currently qualifies for 30by30 — among lowest in UK. OEP confirmed "largely off track" Jan 2024. SFI closure threatens farmland recovery.',
+    trajectory:'Off track. Legally binding targets without funding mechanisms to deliver them.'
+  },
+  {
+    id:'wales', name:'Wales', flag:'🏴󠁧󠁢󠁷󠁬󠁳󠁿', color:'#8b1a1a', rating:'moderate', ratingLabel:'Moderate',
+    center:[52.1,-3.8], zoom:7,
+    policyScore:52,
+    required:82,
+    protectedPct:9.2,
+    carbonGt:0.55,
+    keyPolicies:'Environment (Wales) Act 2016 — Section 6 biodiversity duty on public bodies. Habitat Wales Scheme (interim). Sustainable Farming Scheme delayed to 2026. 30by30 framework published 2025. LIFE Quaking Bogs peatland restoration.',
+    gap:'Gap of 30 points. SFS delay leaving agri-env funding gap. No capital support for new wildflower meadow creation. Upland overgrazing continues unaddressed.',
+    trajectory:'Behind schedule. Curlew near-extinct. Seagrass restoration promising but at small scale.'
+  },
+  {
+    id:'ni', name:'N. Ireland', flag:'🇬🇧', color:'#5c3d7a', rating:'weak', ratingLabel:'Weakest',
+    center:[54.7,-6.6], zoom:7,
+    policyScore:28,
+    required:70,
+    protectedPct:5.1,
+    carbonGt:0.3,
+    keyPolicies:'First Environment Improvement Plan published Sept 2024 (14 months late). Draft Nature Recovery Strategy 2024–2032 in consultation. No statutory biodiversity targets yet in law. Rathlin LIFE Raft seabird project active.',
+    gap:'Gap of 42 points — the largest of any nation. Ranked 12th worst globally for biodiversity intactness. No ELM/SFS equivalent. Rivers among most polluted in UK. Lough Neagh suffering catastrophic algae crisis from agricultural run-off.',
+    trajectory:'Most urgent case. Without statutory targets, the legal framework to compel action does not exist.'
+  },
+  {
+    id:'ireland', name:'Rep. of Ireland', flag:'🇮🇪', color:'#1e6b6b', rating:'moderate', ratingLabel:'Moderate',
+    center:[53.2,-8.0], zoom:6,
+    policyScore:60,
+    required:85,
+    protectedPct:14.4,
+    carbonGt:1.1,
+    keyPolicies:'4th NBAP 2023–2030 on statutory footing. ACRES: €1.5bn, 54,000+ farmers, 1.1M ha. EU Nature Restoration Regulation binding. Wild Atlantic Nature RBPS — results-based payments for biodiversity. Burren Beo project internationally recognised.',
+    gap:'Gap of 25 points. 85% of EU-protected habitats in bad/inadequate condition. €700M annual investment gap identified. Curlew near-extinct as breeder. Raised bogs 99% lost.',
+    trajectory:'Strong policy intent; significant investment gap. EU Nature Restoration Regulation provides binding external accountability.'
+  }
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// CONSERVATION SITES with carbon data
+// carbon = Gt CO₂e stored in this specific habitat complex
+// ─────────────────────────────────────────────────────────────────────────────
+const SITES = [
+  // ── SCOTLAND ──────────────────────────────────────────────────────────────
+  {name:'Flow Country',lat:58.30,lng:-3.80,type:'peatland',carbon:2.10,nation:'Scotland',icon:'🌿',
+   desc:'World\'s largest blanket bog — UNESCO World Heritage Site inscribed July 2024. 190,000ha in the property boundary. Stores 400 million tonnes of carbon — more than double all of Britain\'s woodlands combined.',
+   projects:'<strong>🔧 Flow Country Green Finance Initiative</strong> (2024–active): Phase 1 restoring 600ha at Armadale Farm completed Nov 2024; Phase 2 (360ha) completed March 2025. Generating ~134,000 carbon credits. Blends Peatland ACTION public funding with private finance via Peatland Code.<br><strong>🔧 RSPB Forsinard Flows</strong>: Ongoing forest-to-bog conversion removing conifers planted in the 1980s. Research centre now operational. RSPB/NatureScot/Highland Council partnership.<br><strong>🔧 Peatland ACTION 2025–2030 plan</strong>: Scottish Government target to restore 400,000ha by 2040. Flow Country is flagship delivery area.'},
+
+  {name:'Cairngorms National Park',lat:57.10,lng:-3.60,type:'woodland',carbon:0.80,nation:'Scotland',icon:'🌲',
+   desc:'UK\'s largest national park. Last capercaillie stronghold (~532 birds). 5,000 recorded species. Extensive Caledonian pinewood remnants — the most significant in the UK.',
+   projects:'<strong>🔧 Cairngorms Connect</strong> (200-year partnership, active): 1,185ha native woodland planted, 955ha peatland restored, 2,985ha non-native conifers removed. Active 2024–25: 168ha peatland restoration on An Lurg blanket bog via Peatland ACTION.<br><strong>🔧 Cairngorms 2030</strong>: Restoring 1,300+ ha of damaged peatland annually until 2028. On track despite Scottish Government funding pressures.<br><strong>🔧 Saving Wildcats</strong>: Captive breeding centre released 22 wildcat kittens 2021–2023. Reintroduction to Cairngorms ongoing 2025.<br><strong>🔧 Beaver translocations</strong> 2023–24 to upper River Spey catchment.'},
+
+  {name:'Loch Lomond & Trossachs',lat:56.20,lng:-4.60,type:'freshwater',carbon:0.45,nation:'Scotland',icon:'💧',
+   desc:'Scotland\'s first national park. Diverse habitats from lowland oak woodland to montane heath. Home to rare species including the slender naiad and vendace.',
+   projects:'<strong>🔧 Beaver reintroduction</strong>: Eurasian beavers translocated 2023–24 — largest NatureScot-licensed release to date. Creating wetland habitat in Endrick Water catchment.<br><strong>🔧 Endrick Water riparian restoration</strong>: Wildlife corridors and riverbanks restored. Marshland re-created, now colonised by great crested newts.<br><strong>🔧 Glencoe NNR Habitat Recovery</strong> (National Trust for Scotland): Restoring 3,500ha woodland, wetland and peatland alongside invasive species control.'},
+
+  {name:'Ben Wyvis NNR',lat:57.68,lng:-4.60,type:'peatland',carbon:0.30,nation:'Scotland',icon:'⛰',
+   desc:'National Nature Reserve in Easter Ross. Montane heath and blanket bog. Key site for ptarmigan and dotterel — specialists threatened by climate warming.',
+   projects:'<strong>🔧 Peatland ACTION restoration</strong>: Active ditch blocking and re-wetting restoring hydrology damaged by historic drainage. NatureScot national programme delivery site.<br><strong>🔧 Deer management programme</strong>: Coordinated culling to reduce overgrazing pressure on montane habitats and allow woodland regeneration on lower slopes.'},
+
+  {name:'Outer Hebrides / Machair',lat:57.60,lng:-7.20,type:'grassland',carbon:0.08,nation:'Scotland',icon:'🌾',
+   desc:'Last UK corncrake stronghold (~1,200 calling males). Machair: globally rare lime-rich coastal grassland supporting 200+ plant species. Crofting communities are the essential land managers.',
+   projects:'<strong>🔧 RSPB Corncrake Initiative</strong>: Working with crofters on delayed mowing and soft-cut margins. Population stabilising on the islands.<br><strong>🔧 Wild Atlantic Nature RBPS</strong>: Groundbreaking results-based payment scheme paying crofting communities for actual biodiversity outcomes — not prescriptions.<br><strong>🔧 Species on the Edge</strong> (NatureScot/£6M, 2021–2026): Targeting rare Hebridean species including great yellow bumblebee and chough.'},
+
+  {name:'Shiant Isles',lat:57.90,lng:-6.35,type:'marine',carbon:0.03,nation:'Scotland',icon:'🐦',
+   desc:'Uninhabited islands in the Minch. Declared rat-free 2018. 60,000+ puffins, 8,000 razorbills, 9,000 guillemots. European storm petrels breeding for first time in living memory post-eradication.',
+   projects:'<strong>🔧 Shiant Isles Recovery Project</strong> (completed 2018): RSPB/EU LIFE+ black rat eradication — now the global model for island restoration, directly informing Rathlin LIFE Raft and projects worldwide.<br><strong>🔧 Ongoing biosecurity monitoring</strong>: Regular surveys ensuring islands remain rat-free. Seabird population census continues annually tracking recovery.'},
+
+  {name:'St Kilda',lat:57.80,lng:-8.60,type:'marine',carbon:0.04,nation:'Scotland',icon:'🌊',
+   desc:'UNESCO World Heritage Site. 60,000 northern gannets (24% world population). 136,000 puffin pairs. 49,000 Leach\'s storm petrel pairs (~90% European population). Most remote archipelago in UK.',
+   projects:'<strong>🔧 HPAI recovery monitoring</strong>: Intensive post-avian influenza monitoring tracking seabird recovery following devastating 2022 outbreak. NatureScot coordinating multi-species response.<br><strong>🔧 NatureScot annual seabird census</strong>: Long-term monitoring informing the national Seabird Conservation Strategy. Critical data on climate-driven food web changes.<br><strong>🔧 National Trust for Scotland</strong>: Manages the archipelago. Annual research expeditions with volunteer scientists.'},
+
+  {name:'Bass Rock',lat:56.08,lng:-2.64,type:'marine',carbon:0.02,nation:'Scotland',icon:'🐦',
+   desc:'World\'s largest single-rock gannetry — 40,000+ northern gannet pairs. HPAI devastated colony 2022. Firth of Forth SPA. Gannet scientific name Morus bassanus derives from this rock.',
+   projects:'<strong>🔧 HPAI gannet recovery monitoring</strong>: Post-2022 outbreak tracking of colony recovery. Scottish Seabird Centre runs public engagement boat trips funding research.<br><strong>🔧 Firth of Forth SPA management</strong>: NatureScot/RSPB coordination. Offshore wind farm siting carefully managed to protect gannet flight paths and foraging zones.'},
+
+  {name:'Orkney & Shetland',lat:59.00,lng:-3.10,type:'marine',carbon:0.06,nation:'Scotland',icon:'🦅',
+   desc:'60% of UK great skua nest here. 90% of UK Arctic terns. 40,000+ gannet pairs on Noss. Common seal fell 40% 2001–2006. Globally critical seabird archipelago under acute climate and HPAI pressure.',
+   projects:'<strong>🔧 Species on the Edge — Shetland & Orkney</strong> (£6M, 2021–2026): NatureScot/National Lottery programme. Teams tackling threats to great yellow bumblebee, Shetland mouse-ear and rare coastal plants.<br><strong>🔧 Orkney Native Wildlife Project</strong>: Ongoing stoat eradication — stoats introduced in 1970s are devastating ground-nesting waders and terns across Orkney.<br><strong>🔧 HPAI response</strong>: Coordinated monitoring of great skua, Arctic skua, gannet and tern post-HPAI. Population data informing national seabird recovery strategy.'},
+
+  {name:'Solway Firth',lat:54.90,lng:-3.40,type:'coastal',carbon:0.18,nation:'Scotland',icon:'🌊',
+   desc:'Internationally important estuary for wintering waders and wildfowl. Major saltmarsh carbon store. Cross-border Scotland/England conservation partnership.',
+   projects:'<strong>🔧 WWT Caerlaverock</strong>: Manages key Svalbard barnacle goose wintering site — 30,000+ barnacle geese roost November–April. Active habitat management for waders and wildfowl.<br><strong>🔧 Caerlaverock Estate restoration</strong>: WWT, Caerlaverock Estate and NatureScot restoring wetland at landscape scale. Natterjack toad breeding ponds created. Low-impact cattle grazing enhancing meadow habitats.'},
+
+  // ── NORTHERN IRELAND ──────────────────────────────────────────────────────
+  {name:'Strangford Lough',lat:54.47,lng:-5.60,type:'marine',carbon:0.09,nation:'N. Ireland',icon:'🌊',
+   desc:'NI\'s first Marine Conservation Zone (2013). 2,000+ marine species. Up to 80% of Canada\'s pale-bellied Brent geese overwinter here — flying from Arctic Canada via Greenland. Horse mussel beds support 200 associated species.',
+   projects:'<strong>🔧 National Trust Strangford management</strong>: 150km of shoreline managed. Active monitoring of seal haul-outs, Brent goose feeding grounds and horse mussel beds. Ranger patrols protecting arriving geese in October.<br><strong>🔧 Seagrass restoration</strong>: DAERA exploring eel grass restoration to support Brent geese food supply — critical as current beds are declining.<br><strong>🔧 MCZ compliance monitoring</strong>: Permanent ban on mobile fishing gear in horse mussel areas. DAERA condition assessments ongoing.'},
+
+  {name:'Lough Neagh',lat:54.62,lng:-6.40,type:'freshwater',carbon:0.14,nation:'N. Ireland',icon:'💧',
+   desc:'Largest freshwater lake in the British Isles — 383km². Catastrophic blue-green algae crisis intensifying since 2023. International importance for wintering wildfowl including 100,000+ diving ducks.',
+   projects:'<strong>🔧 Lough Neagh Partnership response</strong>: NI Executive committed £46M in 2023 for catchment improvements following algae crisis. Phosphorus reduction targets set for farms and wastewater. Implementation slow without statutory water quality law.<br><strong>🔧 RSPB Lough Beg wader programme</strong>: Annual breeding surveys tracking curlew, lapwing, snipe and redshank. Farmers advised on water level management and wet grassland creation.<br>⚠ <strong>Critical gap</strong>: NI still lacks statutory water quality targets equivalent to England\'s Environment Act. The Lough Neagh crisis is the direct consequence of this policy vacuum.'},
+
+  {name:'Lough Erne',lat:54.35,lng:-7.80,type:'freshwater',carbon:0.12,nation:'N. Ireland',icon:'🏞',
+   desc:'Upper and Lower Lough Erne in Co. Fermanagh — internationally important for breeding and wintering wildfowl. RSPB manages adjacent wet grassland for curlew, lapwing, snipe and redshank.',
+   projects:'<strong>🔧 RSPB Lough Erne farmland bird programme</strong>: Working with farmers on wet grassland creation, late cutting and buffer strips. Curlew nesting attempts individually monitored and protected each season.<br><strong>🔧 EFS agri-environment agreements</strong>: NI\'s Environmental Farming Scheme supports some wetland management though at significantly lower intensity than GB equivalents.<br><strong>🔧 Crom NNR management</strong> (National Trust): Veteran trees, fen meadow and islands managed for breeding and wintering birds. Otter, red squirrel and pine marten present.'},
+
+  {name:'Mourne Mountains',lat:54.10,lng:-6.02,type:'peatland',carbon:0.22,nation:'N. Ireland',icon:'⛰',
+   desc:'Eastern Mournes SAC: mosaic of upland heath, blanket bog and montane habitat. Rostrevor ancient oakwood — NNR. Slieve Gullion holds one of NI\'s largest European Dry Heath expanses.',
+   projects:'<strong>🔧 Mourne Heritage Trust AONB plan 2023–2027</strong>: Active habitat condition monitoring, invasive species control (rhododendron, Japanese knotweed), and hill farming partnerships for sustainable upland grazing.<br><strong>🔧 DAERA peatland programme</strong>: Mourne upland bogs targeted for restoration — ditch blocking and re-wetting — though at much smaller scale than Scottish equivalents due to funding constraints.<br><strong>🔧 Rostrevor NNR</strong>: DAERA manages 41-acre ancient oakwood. Breeding bird surveys and woodland structure assessments ongoing.'},
+
+  {name:'Rathlin Island',lat:55.30,lng:-6.20,type:'marine',carbon:0.04,nation:'N. Ireland',icon:'🐦',
+   desc:'NI\'s only inhabited offshore island. 250,000+ seabirds. World-first ferret eradication completed March 2026. Manx shearwaters breeding for first time in 20+ years. Puffin, razorbill, guillemot, kittiwake colonies.',
+   projects:'<strong>🔧 LIFE Raft — WORLD FIRST COMPLETE 2026</strong>: £4.5M RSPB NI/Rathlin Community project. Ferret eradication from an inhabited island achieved for the first time anywhere on Earth (March 2026). 2025: Manx shearwaters bred on Rathlin for first time in over 20 years.<br><strong>🔧 Rat eradication phase</strong> (ongoing 2025–26): Brown rat phase completed; monitoring continues. If confirmed rat-free, Rathlin will become the first rodent-free inhabited island in the UK.<br><strong>🔧 Biosecurity programme</strong>: Community-led wardens, detection dog Woody, thermal drones and 100+ cameras maintaining rat/ferret-free status.'},
+
+  {name:'Antrim Coast & Glens',lat:55.02,lng:-6.08,type:'coastal',carbon:0.08,nation:'N. Ireland',icon:'🌊',
+   desc:'AONB with maritime cliffs, coastal heath and ancient oakwood. Important seabird breeding habitat. Red Bay and The Maidens Natura 2000 site. Basking shark and minke whale regularly seen offshore.',
+   projects:'<strong>🔧 Causeway Coast & Glens Heritage Trust</strong>: AONB management including cliff-top grassland surveys, invasive species control and monitoring of seabird colony health post-HPAI.<br><strong>🔧 NI seabird monitoring</strong>: RSPB NI annual seabird counts contributing to national and international monitoring programmes. Kittiwake and fulmar colonies tracked.'},
+
+  {name:'Cuilcagh Mountain / Lough Foyle',lat:54.22,lng:-7.82,type:'peatland',carbon:0.19,nation:'N. Ireland',icon:'🦅',
+   desc:'Aghatirourke reserve in Cuilcagh Mountain UNESCO Global Geopark. Upland heathland with hen harrier and peregrine. Lough Foyle: one of NI\'s key farmland bird areas.',
+   projects:'<strong>🔧 RSPB Aghatirourke reserve</strong>: Heather management and grazing control maintaining open heathland structure. Hen harrier breeding monitored — fewer than 10 NI breeding pairs remain.<br><strong>🔧 Cuilcagh Mountain Geopark</strong>: Ireland-NI cross-border UNESCO Global Geopark raising profile for upland peatland conservation and sustainable eco-tourism.<br><strong>🔧 Lough Foyle RSPB advisory programme</strong>: Working with polder land farmers on water level management for lapwing and redshank. Critical wader breeding habitat under agricultural pressure.'},
+
+  {name:'Murlough Nature Reserve',lat:54.22,lng:-5.90,type:'coastal',carbon:0.05,nation:'N. Ireland',icon:'🦋',
+   desc:'One of Ireland\'s oldest sand dune systems — 6,000 years old. NI\'s largest marsh fritillary butterfly population. Rare plants include shepherd\'s cress (3 NI sites). Managed by National Trust.',
+   projects:'<strong>🔧 National Trust Murlough NNR</strong>: Active dune management — scrub clearance, cattle grazing to maintain open dune grassland, and devil\'s-bit scabious management for marsh fritillary larvae.<br><strong>🔧 Marsh fritillary monitoring</strong>: Annual butterfly surveys tracking NI\'s largest population. Results directly inform grazing prescriptions and scrub management timing.<br><strong>🔧 Seasonal visitor management</strong>: Dog-free zones and path management during breeding season protecting ground-nesting birds.'},
+
+  // ── ENGLAND ───────────────────────────────────────────────────────────────
+  {name:'Norfolk Broads',lat:52.62,lng:1.50,type:'freshwater',carbon:0.20,nation:'England',icon:'💧',
+   desc:'UK\'s largest protected wetland. Last habitat of swallowtail butterfly and Norfolk hawker dragonfly. 25% of all UK conservation priority species found here. Bittern recovering strongly.',
+   projects:'<strong>🔧 Broads Nature Recovery Strategy 2024–2029</strong>: Broads Authority targeting 30% of land for nature by 2030. Currently 60% of SSSIs in favourable condition — aiming for 75% by 2042.<br><strong>🔧 Norfolk Water Fund</strong> (TNC/Natural England, launched Feb 2024): Every £1 invested returns £6.70 in nature and water benefits. Chalk stream restoration at Wendling Beck — re-meandering ongoing.<br><strong>🔧 RSPB Ham Wall & Strumpshaw Fen</strong>: Active reedbed management for bittern, marsh harrier and swallowtail. Large marsh grasshopper returned to the Broads in 2024 after 85-year absence (Natural England Species Recovery Programme).'},
+
+  {name:'Dorset Heathland',lat:50.80,lng:-2.10,type:'heathland',carbon:0.15,nation:'England',icon:'🟤',
+   desc:'Largest lowland heathland complex in Europe. All 6 UK native reptile species. Smooth snake, sand lizard, Dartford warbler, nightjar, woodlark. 80% of lowland heath lost since 1800.',
+   projects:'<strong>🔧 Heathlands Reunited</strong>: Partnership project has enhanced 23,825ha of lowland heath across Dorset and Hampshire — creating wildlife corridors between fragmented blocks.<br><strong>🔧 ARC sand lizard programme</strong>: Amphibian and Reptile Conservation Trust active reintroduction programme on Dorset heaths. Smooth snake monitoring at priority sites ongoing.<br><strong>🔧 Thames Basin Heaths SPA SAMM</strong>: Strategic Access Management and Monitoring managing recreational pressure on internationally important heathland around Dorset/Surrey/Hampshire.'},
+
+  {name:'Somerset Levels',lat:51.10,lng:-2.90,type:'freshwater',carbon:0.35,nation:'England',icon:'🌿',
+   desc:'Last English raised bogs at Shapwick Heath and Meare Heath. Great bittern, otter, water vole. Climate change intensifying winter flooding while threatening summer peat drying.',
+   projects:'<strong>🔧 RSPB Ham Wall & Greylake</strong>: Major reedbed restoration. Bittern: 20+ booming males now on the Levels. Marsh harrier and great white egret breeding. Otter family groups resident year-round.<br><strong>🔧 Somerset Peat Partnership</strong>: Targeting raised bog restoration at Shapwick Heath NNR. Peat dams and bunding restoring sphagnum at Meare Heath.<br><strong>🔧 Natural Flood Management</strong>: Somerset Rivers Authority using Levels peatland for upstream flood storage — dual benefit for nature and flood risk management.'},
+
+  {name:'South Downs Chalk',lat:50.88,lng:-0.50,type:'grassland',carbon:0.10,nation:'England',icon:'🌸',
+   desc:'Species-rich chalk grassland — up to 40 plant species per m². Adonis blue, Duke of Burgundy, chalkhill blue butterflies. Stone curlew recovering. Globally rare chalk streams.',
+   projects:'<strong>🔧 Stone curlew recovery</strong>: Targeted Countryside Stewardship agreements. Stone curlew at ~400 pairs — recovering from near-extinction with farm management.<br><strong>🔧 Chough reintroduction — Kent</strong> (adjacent to South Downs): First wild-hatched chough in Kent in 200+ years hatched 2024, nested again 2025. Wildwood Trust/Kent Wildlife Trust project.<br><strong>🔧 Chalk stream restoration</strong>: WWT and Environment Agency removing barriers, reducing abstraction and restoring in-channel habitats across South Downs chalk rivers.'},
+
+  // ── WALES ─────────────────────────────────────────────────────────────────
+  {name:'Snowdonia / Y Migneint',lat:52.98,lng:-4.02,type:'peatland',carbon:0.42,nation:'Wales',icon:'⛰',
+   desc:'Largest area of upland habitat in Wales. Blanket bog at Y Migneint re-wetted since 2007 via 40,000+ peat dams — 2,500ha restored. Peatland stores 30% of Welsh land-based carbon.',
+   projects:'<strong>🔧 EU LIFE Quaking Bogs</strong>: Multi-year project restoring peatland and quaking bogs to favourable condition across North Wales — habitat management, hydrology restoration and community engagement.<br><strong>🔧 Welsh National Peatland Action Programme</strong>: Y Migneint restoration showing successful sphagnum recolonisation and water table recovery in monitored plots.<br><strong>🔧 Limestone Grassland Community Roots</strong> (North Wales Wildlife Trust): Restoring limestone grassland, removing invasive species, and creating community volunteering opportunities across Snowdonia limestone sites.'},
+
+  {name:'Pembrokeshire Coast',lat:51.72,lng:-5.08,type:'coastal',carbon:0.14,nation:'Wales',icon:'🌊',
+   desc:'Atlantic rainforest fragments. Chough stronghold. Skomer Island: world\'s largest Manx shearwater colony (320,000+ pairs). UK\'s largest seagrass restoration project in adjacent waters.',
+   projects:'<strong>🔧 Project Seagrass & WWF</strong>: UK\'s largest seagrass restoration project active in Pembrokeshire and Dale Bay. Seed harvesting, direct seeding and community engagement. 2024–25: expanded to new planting sites.<br><strong>🔧 Wildlife Trust of South & West Wales — Skomer</strong>: Manx shearwater census (world\'s largest colony). Grey seal monitoring. Annual seabird count informing HPAI recovery assessment.<br><strong>🔧 Welsh Rainforest Alliance</strong>: Rhododendron clearance and native tree planting restoring Atlantic rainforest fragments across Pembrokeshire and Preseli Hills.'},
+
+  // ── REPUBLIC OF IRELAND ───────────────────────────────────────────────────
+  {name:'Burren, Co. Clare',lat:53.02,lng:-9.02,type:'grassland',carbon:0.10,nation:'Ireland',icon:'🌸',
+   desc:'1,100 plant species, 26 orchid species on limestone karst. ACRES results-based scheme: Burren Aran zone 8,700ha scored 9–10/10 on botanical scorecards. Internationally cited as a model for farming and conservation.',
+   projects:'<strong>🔧 Burren Beo ACRES Co-operation</strong>: Results-based farming paying farmers for actual botanical richness — scorecards measure orchid density and habitat condition. 180+ farm families involved. Internationally recognised model.<br><strong>🔧 Life in the Burren / Burren Programme</strong>: EU LIFE-funded. Traditional cattle grazing maintained as the essential tool for limestone grassland management — without it, scrub encroaches within years.<br><strong>🔧 NPWS orchid monitoring</strong>: Annual surveys of 26 orchid species tracking population trends. Groundwater spring monitoring ensuring karst hydrology remains intact.'},
+
+  {name:'Connemara Blanket Bog',lat:53.50,lng:-9.82,type:'peatland',carbon:0.65,nation:'Ireland',icon:'🌿',
+   desc:'Most extensive remaining Atlantic blanket bog in Europe. 99% of Ireland\'s raised bogs lost. Connemara holds the most significant intact Atlantic blanket bog remaining in the country.',
+   projects:'<strong>🔧 Wild Atlantic Nature RBPS pilot</strong>: Groundbreaking results-based payment scheme for farm families managing Natura 2000 blanket bog — paying for bog condition, sphagnum cover and water table outcomes rather than prescriptions.<br><strong>🔧 ACRES Co-operation — Connacht</strong>: High-priority blanket bog payments for farmers maintaining traditional extensive grazing. Preventing drainage and overgrazing of intact bog.<br><strong>🔧 NPWS Connemara National Park</strong>: Bog restoration in degraded sections. Drainage blocking and grazing management. Visitor management to reduce erosion on peat surfaces.'},
+
+  {name:'Wexford Slobs',lat:52.28,lng:-6.38,type:'coastal',carbon:0.08,nation:'Ireland',icon:'🐦',
+   desc:'Internationally important Greenland white-fronted goose wintering site — 10,000+ wildfowl overwinter. NPWS Wexford Wildfowl Reserve. Under pressure from drainage and sea level rise.',
+   projects:'<strong>🔧 NPWS Wexford Wildfowl Reserve</strong>: NPWS manages North Slob as a National Nature Reserve. Controlled flooding and water level management maintaining wet grassland for geese. Pumps maintain water table artificially.<br><strong>🔧 Greenland white-fronted goose monitoring</strong>: Annual population counts coordinated with Iceland and Greenland. Ireland holds over 50% of world population at wintering sites.<br><strong>🔧 ACRES farmland measures</strong>: Working with surrounding farms on stubble retention and wader-friendly grassland management in the wider catchment.'},
+
+  {name:'North Bull Island',lat:53.38,lng:-6.10,type:'coastal',carbon:0.06,nation:'Ireland',icon:'🐦',
+   desc:'Ireland\'s first UNESCO Biosphere Reserve. Critical Dublin Bay migratory stopover. 40,000+ wintering waders. Brent geese. Sea level rise threatening saltmarsh. Urban pressure from recreational use.',
+   projects:'<strong>🔧 Dublin Bay Biosphere programme</strong>: UNESCO Biosphere management plan coordinating Dublin City Council, Fingal County Council and NPWS. Community science, beach monitoring and habitat management.<br><strong>🔧 Brent goose disturbance management</strong>: Ranger patrols during October/November arrival window — exhausted geese arriving from Arctic Canada need undisturbed access to eel grass beds.<br><strong>🔧 Saltmarsh monitoring</strong>: Rising sea levels and storm surges monitored annually. Coastal squeeze threatens saltmarsh as hard infrastructure prevents landward migration.'},
+];
+
+
+const TYPE_COLOR = {peatland:'#5c3d7a',woodland:'#2d5016',freshwater:'#1e4d8c',heathland:'#c8760a',grassland:'#7ab648',coastal:'#1e6b6b',marine:'#2a5f8a'};
+const YEAR_CONTEXT = {
+  2024:'Current baseline — biodiversity in continued decline across all nations',
+  2025:'SFI reopens in England. Scotland\'s Natural Environment Bill progresses through Parliament',
+  2026:'Wales Sustainable Farming Scheme launches. Ireland ACRES midway review',
+  2027:'UK 30by30 interim check. England expected to miss interim species abundance halt',
+  2028:'Lough Neagh algae crisis continues without statutory NI water targets',
+  2029:'Climate impacts accelerate. Seabird colonies hit by warming-driven sandeel collapse',
+  2030:'30by30 deadline. UK at ~10% protected. Transformative gap becomes undeniable',
+  2031:'Post-2030 reassessment. Scotland diverges sharply from other nations in recovery',
+  2032:'NI Nature Recovery Strategy first review. Still lacks statutory targets in law',
+  2033:'Scotland Peatland ACTION milestone: 150,000ha on road to restoration',
+  2035:'Mid-century review. Turtle dove extinct as UK breeding bird under current trajectory',
+  2038:'Capercaillie: last breeding pairs recorded in Scotland under current trajectory',
+  2040:'Freshwater pearl mussel: functionally extinct in England and Wales',
+  2042:'England\'s legally binding Environment Act species abundance target year',
+  2045:'Scotland\'s target: nature positive. Currently partial track. NI still lagging',
+  2050:'Net zero deadline. Nature-based solutions essential. Peatland = 30% of solution'
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+// STATE & CHART
+// ─────────────────────────────────────────────────────────────────────────────
+let mode = 'species', year = 2024, chart;
+const YEARS = Array.from({length:27},(_,i)=>2024+i);
+
+function lerp(a,b,t){return a+(b-a)*t}
+
+function getSpecies(scenario){
+  return YEARS.map(y=>{
+    const t=(y-2024)/26;
+    if(scenario==='current') return +(48.4-t*14.4).toFixed(1);
+    // Transformative: decline slows then halts 2028, rises from 2030
+    if(y<=2028) return +(48.4-((y-2024)/4)*1.2).toFixed(1);
+    return +(lerp(43,58,(y-2028)/22)).toFixed(1);
+  });
+}
+function getCarbon(scenario){
+  return YEARS.map(y=>{
+    const t=(y-2024)/26;
+    // Current: slow increase from existing restoration; transformative: accelerated
+    return scenario==='current' ? +(3.1+t*0.4).toFixed(2) : +(3.1+t*2.3).toFixed(2);
+  });
+}
+function getPolicyAvg(scenario){
+  return YEARS.map(y=>{
+    const t=(y-2024)/26;
+    const avg=NATIONS.reduce((s,n)=>s+n.policyScore,0)/NATIONS.length; // ~54.6
+    const req=NATIONS.reduce((s,n)=>s+n.required,0)/NATIONS.length;    // ~83.4
+    return scenario==='current' ? +(avg+t*10).toFixed(0) : +(lerp(avg,req,t)).toFixed(0);
+  });
+}
+
+const CHART_CONTEXTS = {
+  species:`In 1970 this index was 100 — the baseline. It is now <strong>48</strong>, meaning the UK has roughly half the wildlife it had 55 years ago. Under current policy it falls to ~34 by 2050. Under transformative action it stabilises then rises to ~58.`,
+  carbon:`<strong>Gt = gigatonne</strong> (1 billion tonnes of CO₂e stored in habitat). The UK's peatlands and woodlands currently store ~3.1 Gt. Under current policy this barely grows. Under transformative action — restoring drained peatland and expanding woodland — it could reach 5.4 Gt by 2050, equivalent to removing all UK cars from the road for decades.`,
+  policy:`Each nation's current policy delivery score (out of 100) vs the score needed to meet their own stated commitments. The gap is the story: Northern Ireland needs to almost triple its delivery. England needs to add 30 points. Only Scotland is close to the required trajectory.`
+};
+const CHART_LABELS = {species:'Species abundance index (1970 = 100)',carbon:'Carbon stored in nature (Gt CO₂e)',policy:'Policy delivery score (UK average, 0–100)'};
+
+function buildChart(){
+  let curr, tran;
+  if(mode==='species'){curr=getSpecies('current');tran=getSpecies('target');}
+  else if(mode==='carbon'){curr=getCarbon('current');tran=getCarbon('target');}
+  else{curr=getPolicyAvg('current');tran=getPolicyAvg('target');}
+
+  document.getElementById('chartLabel').textContent = CHART_LABELS[mode];
+  document.getElementById('chartContext').innerHTML = CHART_CONTEXTS[mode];
+
+  const yIdx = year-2024;
+  const nowLinePlugin = {id:'nl',afterDatasetsDraw(c){
+    const {ctx,chartArea,scales}=c;
+    const x=scales.x.getPixelForValue(yIdx);
+    ctx.save();ctx.strokeStyle='rgba(26,35,24,.18)';ctx.lineWidth=1.5;ctx.setLineDash([4,4]);
+    ctx.beginPath();ctx.moveTo(x,chartArea.top);ctx.lineTo(x,chartArea.bottom);ctx.stroke();
+    // Year label
+    ctx.font='10px DM Sans';ctx.fillStyle='rgba(26,35,24,.4)';ctx.textAlign='center';
+    ctx.fillText(year,x,chartArea.top-4);
+    ctx.restore();
+  }};
+
+  if(chart) chart.destroy();
+  chart = new Chart(document.getElementById('mainChart').getContext('2d'),{
+    type:'line',
+    data:{
+      labels:YEARS,
+      datasets:[
+        {label:'Current trajectory',data:curr,borderColor:'#b83a2a',backgroundColor:'rgba(184,58,42,0.07)',
+         borderWidth:2,fill:true,tension:0.4,pointRadius:0,pointHoverRadius:4},
+        {label:'Transformative action',data:tran,borderColor:'#4a7c2a',backgroundColor:'rgba(74,124,42,0.07)',
+         borderWidth:2,fill:true,tension:0.4,borderDash:[6,3],pointRadius:0,pointHoverRadius:4}
+      ]
+    },
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      plugins:{
+        legend:{display:false},
+        tooltip:{
+          backgroundColor:'rgba(245,242,236,0.97)',titleColor:'#1a2318',bodyColor:'#6b7a68',
+          borderColor:'rgba(26,35,24,.1)',borderWidth:1,
+          titleFont:{family:'Playfair Display',size:12},bodyFont:{family:'DM Sans',size:11}
+        }
+      },
+      scales:{
+        x:{ticks:{font:{family:'DM Sans',size:9},color:'#ccc',maxTicksLimit:6},grid:{color:'rgba(26,35,24,.04)'}},
+        y:{ticks:{font:{family:'DM Sans',size:9},color:'#ccc'},grid:{color:'rgba(26,35,24,.04)'}}
+      }
+    },
+    plugins:[nowLinePlugin]
+  });
+}
+
+function setMode(m){
+  mode=m;
+  document.querySelectorAll('.mode-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('mode'+m.charAt(0).toUpperCase()+m.slice(1)).classList.add('active');
+  buildChart();
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// DASHBOARD UPDATES
+// ─────────────────────────────────────────────────────────────────────────────
+function updateDashboard(){
+  const t=(year-2024)/26;
+  // Current trajectory (always declining from 48.4 to ~34 by 2050)
+  const abundance=(48.4-t*14.4).toFixed(1);
+  // Transformative trajectory (stabilises by 2028, rises to ~58 by 2050)
+  const abundanceTransformative = year<=2028
+    ? +(48.4-((year-2024)/4)*1.2).toFixed(1)
+    : +(lerp(43,58,(year-2028)/22)).toFixed(1);
+  const carbon=(3.1+t*0.4).toFixed(2);
+  const prot=Math.min(8.4+t*3.2,30).toFixed(1);
+
+  document.getElementById('dashAbundance').textContent=abundance;
+  document.getElementById('dashCarbon').textContent=carbon+' Gt';
+  document.getElementById('dashProtected').textContent=prot+'%';
+  document.getElementById('protNow').textContent='Now: '+prot+'%';
+  document.getElementById('protBarFill').style.width=((prot/30)*100)+'%';
+
+  const abDiff=(abundance-48.4).toFixed(1);
+  const abGap=(abundanceTransformative-abundance).toFixed(1);
+  document.getElementById('dashAbundanceTrend').innerHTML=
+    `<span class="trend-down">↓ ${Math.abs(abDiff)} pts on current trajectory</span>
+     <span style="font-size:10px;color:#4a7c2a;display:block;margin-top:2px">Transformative action: ${abundanceTransformative} (+${abGap} pts)</span>`;
+
+  const cDiff=(carbon-3.1).toFixed(2);
+  // Net position: UK woodlands sequester ~17.4 Mt CO₂e/yr but degraded peatlands
+  // EMIT ~23.1 Mt CO₂e/yr — meaning UK land use has been a net carbon SOURCE since
+  // 2019 when peatland data was added to the national GHG inventory.
+  // The last year land use was a net sink was ~2018.
+  document.getElementById('dashCarbonTrend').innerHTML=
+    year<=2018
+      ? `<span class="trend-up">✓ Net sink — land use absorbing more than it releases</span>`
+      : year<=2030
+        ? `<span class="trend-down">⚠ Net source since 2019 — degraded peatlands emit ~23 Mt/yr vs forests absorbing ~17 Mt/yr</span>`
+        : `<span class="${cDiff>0.5?'trend-up':'trend-flat'}">${cDiff>0.5?'↑ Peatland restoration shifting balance':'⚠ Still net source — restoration pace too slow'}</span>`;
+
+  const gap=(30-prot).toFixed(1);
+  document.getElementById('dashProtectedTrend').innerHTML=
+    prot>=28?`<span class="trend-up">✓ Approaching 30% target</span>`:
+    `<span class="trend-flat">${gap}% still to protect — 2030 target at risk</span>`;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// NATION CARDS (policy gap)
+// ─────────────────────────────────────────────────────────────────────────────
+function renderNationCards(){
+  const container=document.getElementById('nationCards');
+  container.innerHTML='';
+  const rc={strong:'r-strong',moderate:'r-moderate',weak:'r-weak'};
+  NATIONS.forEach(n=>{
+    const card=document.createElement('div');
+    card.className='ncard';
+    const currentAtYear=Math.round(lerp(n.policyScore,n.policyScore+((n.required-n.policyScore)*0.4),(year-2024)/26));
+    const gap=n.required-n.policyScore;
+    const gapColor=gap>35?'#b83a2a':gap>20?'#c8760a':'#4a7c2a';
+    card.innerHTML=`
+      <div class="ncard-top">
+        <div class="ndot" style="background:${n.color}"></div>
+        <div class="nname">${n.flag} ${n.name}</div>
+        <div class="nrating ${rc[n.rating]}">${n.ratingLabel}</div>
+      </div>
+      <div class="gap-row">
+        <div class="gap-label" style="font-size:9px">Current</div>
+        <div class="gap-track">
+          <div class="gap-current" style="width:${n.policyScore}%;background:${n.color}"></div>
+          <div class="gap-target-mark" style="left:${n.required}%"></div>
+        </div>
+        <div class="gap-val" style="color:${n.color}">${n.policyScore}</div>
+      </div>
+      <div class="gap-row">
+        <div class="gap-label" style="font-size:9px">Required</div>
+        <div class="gap-track">
+          <div class="gap-current" style="width:${n.required}%;background:${n.color}40"></div>
+        </div>
+        <div class="gap-val" style="color:${n.color}80">${n.required}</div>
+      </div>
+      <div class="gap-needed" style="color:${gapColor}">Gap: ${gap} points needed · Land protected: ${n.protectedPct}%</div>`;
+    card.addEventListener('click',()=>map.flyTo(n.center,n.zoom,{duration:1.2}));
+    container.appendChild(card);
+  });
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// MAP
+// ─────────────────────────────────────────────────────────────────────────────
+const map=L.map('map',{zoomControl:true}).setView([55.2,-5.0],6);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{
+  attribution:'© OpenStreetMap © CARTO',subdomains:'abcd',maxZoom:19
+}).addTo(map);
+
+let nationMarkers=[], siteMarkers=[];
+
+function updateMap(){
+  nationMarkers.forEach(m=>map.removeLayer(m));
+  siteMarkers.forEach(m=>map.removeLayer(m));
+  nationMarkers=[];siteMarkers=[];
+
+  // Nation score circles
+  NATIONS.forEach(n=>{
+    const score=Math.round(lerp(n.policyScore,n.policyScore+10,(year-2024)/26));
+    const gap=n.required-n.policyScore;
+    const ringColor=gap>35?'#b83a2a':gap>20?'#c8760a':'#4a7c2a';
+    const icon=L.divIcon({className:'',html:`
+      <div style="position:relative;width:52px;height:52px">
+        <div style="position:absolute;inset:0;border-radius:50%;border:3px solid ${ringColor}40"></div>
+        <div style="position:absolute;inset:4px;border-radius:50%;background:${n.color};
+          display:flex;flex-direction:column;align-items:center;justify-content:center;
+          color:white;font-family:'DM Sans',sans-serif;cursor:pointer;
+          box-shadow:0 3px 12px rgba(0,0,0,.2)">
+          <span style="font-size:13px;font-weight:600;line-height:1">${score}</span>
+          <span style="font-size:8px;opacity:.8">/100</span>
+        </div>
+      </div>`,iconSize:[52,52],iconAnchor:[26,26]});
+
+    const m=L.marker(n.center,{icon}).addTo(map);
+    const protWidth=(n.protectedPct/30*100).toFixed(0);
+    m.bindPopup(`
+      <div class="pi">
+        <div class="ptitle">${n.flag} ${n.name}</div>
+        <div class="ptags">
+          <span class="ptag" style="background:${n.color}18;color:${n.color}">${n.ratingLabel}</span>
+        </div>
+        <div class="prow"><span>Policy score (2024)</span><strong style="color:${n.color}">${n.policyScore}/100</strong></div>
+        <div class="prow"><span>Required to meet targets</span><strong style="color:#4a7c2a">${n.required}/100</strong></div>
+        <div class="prow"><span>Land protected</span><strong>${n.protectedPct}% <span style="color:#aaa">(need 30%)</span></strong></div>
+        <div class="prow"><span>Carbon stored</span><strong>${n.carbonGt} Gt CO₂e</strong></div>
+        <div class="ptext">${n.keyPolicies}</div>
+        <div class="pgap">⚠ Gap: ${n.gap}</div>
+      </div>`,{maxWidth:300});
+    nationMarkers.push(m);
+  });
+
+  // Conservation sites
+  SITES.forEach(s=>{
+    const col=TYPE_COLOR[s.type]||'#888';
+    const icon=L.divIcon({className:'',html:`
+      <div style="width:26px;height:26px;border-radius:7px;background:${col}15;
+        border:1.5px solid ${col};display:flex;align-items:center;justify-content:center;
+        font-size:12px;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.1)">${s.icon}</div>`,
+      iconSize:[26,26],iconAnchor:[13,13]});
+    const nc={Scotland:'#1e4d8c','N. Ireland':'#5c3d7a',England:'#2d6e3e',Wales:'#8b1a1a',Ireland:'#1e6b6b'};
+    const m=L.marker([s.lat,s.lng],{icon}).addTo(map);
+    m.bindPopup(`
+      <div class="pi">
+        <div class="ptitle">${s.icon} ${s.name}</div>
+        <div class="site-type" style="color:${col}">${s.type.charAt(0).toUpperCase()+s.type.slice(1)} · <span style="color:${nc[s.nation]||'#888'}">${s.nation}</span></div>
+        <div class="ptext">${s.desc}</div>
+        <div class="carbon-note">💚 Carbon stored: <strong>${s.carbon} Gt CO₂e</strong><br>
+        <span style="font-size:10px;color:#aaa">1 Gt = 1 billion tonnes of CO₂ equivalent — roughly equal to removing all UK cars from roads for ~18 years</span></div>
+        ${s.projects ? `<div style="margin-top:8px;padding-top:8px;border-top:1px solid rgba(26,35,24,.08)">
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#aaa;margin-bottom:5px">Active conservation projects</div>
+          <div style="font-size:11px;color:#5a6a56;line-height:1.6">${s.projects}</div>
+        </div>` : ''}
+      </div>`,{maxWidth:320});
+    siteMarkers.push(m);
+  });
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// YEAR SLIDER
+// ─────────────────────────────────────────────────────────────────────────────
+document.getElementById('yearSlider').addEventListener('input',function(){
+  year=parseInt(this.value);
+  const pct=((year-2024)/26*100).toFixed(1);
+  this.style.setProperty('--pct',pct+'%');
+  document.getElementById('yearDisplay').textContent=year;
+  document.getElementById('yearContext').textContent=YEAR_CONTEXT[year]||(year+' — monitoring ongoing');
+  updateDashboard();
+  updateMap();
+  buildChart();
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────────────────────────────────────────
+renderNationCards();
+buildChart();
+updateDashboard();
+updateMap();
+</script>
+<!-- ── WHAT YOU CAN DO PANEL ─────────────────────────────────────────────── -->
+<div class="act-overlay" id="actOverlay" onclick="closeIfBg(event)">
+  <div class="act-drawer">
+    <div class="act-header">
+      <div class="act-title">🌿 What You Can Do</div>
+      <button class="act-close" onclick="closeActionPanel()">✕</button>
+    </div>
+    <div class="act-tabs" id="actTabs"></div>
+    <div class="act-body" id="actBody"></div>
+  </div>
+</div>
+
+<script>
+// ─────────────────────────────────────────────────────────────────────────────
+// WHAT YOU CAN DO — per habitat action data
+// ─────────────────────────────────────────────────────────────────────────────
+const ACTION_DATA = {
+  peatland: {
+    label: '🌿 Peatland', color: '#5c3d7a',
+    volunteer: [
+      { icon: '🦅', name: 'RSPB Forsinard Flows residential volunteering',
+        desc: 'Stay on the UK\'s largest RSPB reserve in the Flow Country. Help with peat depth surveys, habitat monitoring, conifer removal and ecological data collection. Placements from 4 weeks+.',
+        link: 'https://volunteer.rspb.org.uk/', tag: 'Residential · Scotland' },
+      { icon: '🌱', name: 'Eyes on the Bog — IUCN UK Peatland Programme',
+        desc: 'Become a citizen science volunteer monitoring the long-term health of your local peatland. Record condition, water levels and vegetation. No specialist skills needed.',
+        link: 'https://www.iucn-uk-peatlandprogramme.org/get-involved', tag: 'Citizen Science · Nationwide' },
+      { icon: '🪴', name: 'Wildlife Trusts peatland work parties',
+        desc: 'Weekly practical habitat management teams at peatland sites in Greater Manchester, Lancashire, Yorkshire and more. Tasks include sphagnum planting, ditch blocking and scrub clearance.',
+        link: 'https://www.wildlifetrusts.org/volunteering-opportunities', tag: 'Practical · Nationwide' },
+      { icon: '⛰', name: 'Moors for the Future — Peak District',
+        desc: 'Volunteer with restoration projects across the Peak District\'s blanket bogs. Help re-vegetate bare peat, plant cotton grass and heather, and monitor revegetation progress.',
+        link: 'https://www.moorsforthefuture.org.uk/get-involved/volunteer', tag: 'Practical · England' },
+    ],
+    actions: [
+      { icon: '🛒', name: 'Go peat-free at home',
+        desc: 'Switch to peat-free compost. UK horticulture still extracts millions of tonnes of peat each year from remaining lowland bogs. Choosing peat-free is one of the most direct consumer actions available.',
+        link: 'https://www.rspb.org.uk/whats-happening/news/go-peat-free', tag: 'Individual action' },
+      { icon: '📣', name: 'Sign: Protect the Flow Country UNESCO peatland',
+        desc: 'Support the Flow Country Partnership\'s campaign for stronger legal protection and increased restoration funding for the world\'s first peatland UNESCO World Heritage Site.',
+        link: 'https://theflowcountry.org.uk', tag: 'Campaign' },
+      { icon: '🌍', name: 'Donate to Peatland CODE carbon units',
+        desc: 'Businesses and individuals can buy validated Peatland Code carbon units to fund certified peatland restoration projects across the UK — directly funding re-wetting work.',
+        link: 'https://www.iucn-uk-peatlandprogramme.org/peatland-code', tag: 'Fund restoration' },
+    ]
+  },
+
+  marine: {
+    label: '🌊 Marine', color: '#2a5f8a',
+    volunteer: [
+      { icon: '🐚', name: 'Shoresearch — Wildlife Trusts citizen science',
+        desc: 'Survey marine plants and animals on the intertidal shore as part of this nationwide citizen science programme. Record species on rocks, take sand and mud core samples. No diving required.',
+        link: 'https://www.wildlifetrusts.org/actions/how-do-shoresearch', tag: 'Citizen Science · Nationwide' },
+      { icon: '🤿', name: 'Seasearch — dive survey programme',
+        desc: 'For volunteer divers and snorkellers — record marine habitats and species underwater. Data used to identify sites of special conservation concern and inform Marine Protected Area management.',
+        link: 'https://www.seasearch.org.uk/volunteer', tag: 'Diving · Nationwide' },
+      { icon: '🌱', name: 'Seagrass seed harvesting — Project Seagrass',
+        desc: 'Join seed picking events to collect tens of thousands of seagrass seeds for UK restoration projects. Volunteers in Cornwall and Pembrokeshire contributed 400+ hours in 2025 alone. Seasonal events June–August.',
+        link: 'https://www.projectseagrass.org/volunteer', tag: 'Seasonal · Wales & SW England' },
+      { icon: '🦭', name: 'ORCA marine mammal surveys',
+        desc: 'Train as an Ocean Watcher and conduct Marine Mammal Observer surveys from ferries and vessels. Record cetacean, shark and turtle sightings contributing to ORCA\'s long-term datasets.',
+        link: 'https://orcaweb.org.uk/get-involved/volunteering/', tag: 'Training required · Nationwide' },
+    ],
+    actions: [
+      { icon: '🎣', name: 'Campaign: Ban bottom trawling in UK Marine Protected Areas',
+        desc: 'Bottom trawling still occurs in over 95% of UK MPAs. The Wildlife Trusts are campaigning for a complete ban. Add your name to protect the 355 designated marine sites that need real protection.',
+        link: 'https://www.wildlifetrusts.org/actions/demand-highly-protected-marine-areas', tag: 'Petition' },
+      { icon: '🐟', name: 'Choose sustainable seafood (MSC certified)',
+        desc: 'Use the MSC blue label and Good Fish Guide when buying seafood. Avoiding species like wild-caught bass, plaice and langoustine from trawled sources reduces pressure on recovering marine ecosystems.',
+        link: 'https://www.mcsuk.org/goodfishguide/', tag: 'Individual action' },
+      { icon: '🌊', name: 'Surfers Against Sewage — report sewage discharge',
+        desc: 'Use the SAS Safer Seas app to report sewage discharge events and add to the national database being used to pressure water companies and the government to act on marine pollution.',
+        link: 'https://www.sas.org.uk/our-work/sewage/', tag: 'Citizen action' },
+    ]
+  },
+
+  freshwater: {
+    label: '💧 Freshwater', color: '#1e4d8c',
+    volunteer: [
+      { icon: '🦦', name: 'The Rivers Trust — riverfly monitoring',
+        desc: 'Join a local Riverfly Partnership group to monitor aquatic insects like mayfly, stonefly and caddisfly — key indicators of river health. Training provided. 700+ volunteer monitoring sites UK-wide.',
+        link: 'https://www.riverflies.org/rmp', tag: 'Citizen Science · Nationwide' },
+      { icon: '🌿', name: 'River restoration work parties — Wildlife Trusts',
+        desc: 'Hands-on river habitat improvement: removing invasive species like Himalayan balsam and Japanese knotweed, planting native riparian vegetation and monitoring chalk stream habitats.',
+        link: 'https://www.wildlifetrusts.org/volunteering-opportunities', tag: 'Practical · Nationwide' },
+      { icon: '🐟', name: 'WWT wetland volunteering',
+        desc: 'Wildfowl & Wetlands Trust volunteer roles across 9 UK centres — habitat management, bird surveys, visitor engagement and wetland monitoring. Flexible roles from single days to regular commitments.',
+        link: 'https://www.wwt.org.uk/get-involved/volunteering', tag: 'Flexible · 9 UK centres' },
+      { icon: '🦢', name: 'Freshwater pearl mussel survey — RSPB',
+        desc: 'Help monitor one of Europe\'s most endangered animals in upland rivers in Scotland and Northern England. Survey work for pearl mussel beds informing urgent conservation action.',
+        link: 'https://volunteer.rspb.org.uk/', tag: 'Survey · Scotland & N. England' },
+    ],
+    actions: [
+      { icon: '📣', name: 'Demand clean rivers — end sewage dumping',
+        desc: 'Add your name to Surfers Against Sewage and The Rivers Trust campaigns calling for water companies to be held legally accountable for illegal sewage discharges into UK rivers and lakes.',
+        link: 'https://theriverstrust.org/take-action', tag: 'Petition' },
+      { icon: '🌱', name: 'Plant a native tree on your riverbank',
+        desc: 'Riparian trees shade rivers, slow water and filter nutrients. If you own or manage land near a river, the Woodland Trust\'s MOREwoods scheme provides free native trees for landowners.',
+        link: 'https://www.woodlandtrust.org.uk/plant-trees/large-scale-planting/morewoods/', tag: 'Landowner action' },
+      { icon: '🏡', name: 'Make your garden wildlife friendly for water',
+        desc: 'Install a small pond — even a container pond. The UK has lost 70% of its ponds since 1900. Even a tiny garden pond can support dragonflies, frogs, newts and drinking water for birds.',
+        link: 'https://www.wildlifetrusts.org/actions/how-make-pond', tag: 'Individual action' },
+    ]
+  },
+
+  coastal: {
+    label: '🏖 Coastal', color: '#1e6b6b',
+    volunteer: [
+      { icon: '🐚', name: 'Marine Conservation Society beach clean volunteering',
+        desc: 'Join or organise a Great British Beach Clean — the UK\'s largest beach litter survey. Data from hundreds of thousands of volunteers directly informs government plastic pollution policy.',
+        link: 'https://www.mcsuk.org/what-you-can-do/volunteering/', tag: 'Events · Nationwide' },
+      { icon: '🌾', name: 'Dune restoration — National Trust work parties',
+        desc: 'Hands-on coastal dune restoration: marram grass planting, scrub removal, sand reprofiling and footpath management. Essential for maintaining dynamic dune habitats and rare dune plant communities.',
+        link: 'https://www.nationaltrust.org.uk/volunteer', tag: 'Practical · Coastal sites' },
+      { icon: '🦅', name: 'RSPB coastal reserve volunteering',
+        desc: 'Volunteer at RSPB coastal reserves including Titchwell, Minsmere, Bempton Cliffs and more. Tasks range from tern monitoring and nest protection to habitat management and visitor engagement.',
+        link: 'https://volunteer.rspb.org.uk/', tag: 'Flexible · Nationwide' },
+      { icon: '🦭', name: 'British Divers Marine Life Rescue — seal medic training',
+        desc: 'Train as a seal medic to respond to stranded seals and other marine animals on UK coasts. Annual training courses available across the UK — a practical skill directly helping marine wildlife.',
+        link: 'https://www.bdmlr.org.uk/volunteer', tag: 'Training · Nationwide' },
+    ],
+    actions: [
+      { icon: '📣', name: 'Protect saltmarsh — oppose coastal squeeze',
+        desc: 'Saltmarsh is one of the UK\'s fastest disappearing habitats. Support The Wildlife Trusts\' campaign for managed realignment policies that allow saltmarsh to migrate landward as sea levels rise.',
+        link: 'https://www.wildlifetrusts.org/living-seas', tag: 'Campaign' },
+      { icon: '🌿', name: 'Plant a native coastal species in your garden',
+        desc: 'Species like sea kale, thrift, sea campion and bird\'s-foot trefoil support coastal invertebrates. Hardy, drought-tolerant and beautiful — and you\'re growing a microhabitat that\'s disappearing from the coast.',
+        link: 'https://www.wildlifetrusts.org/actions/wildlife-gardening', tag: 'Individual action' },
+      { icon: '🐋', name: 'Report cetacean sightings — ORCA / HWDT',
+        desc: 'Record whale, dolphin and porpoise sightings via the ORCA WiSe app or Hebridean Whale & Dolphin Trust. Your sightings contribute to population monitoring and marine spatial planning data.',
+        link: 'https://orcaweb.org.uk/marine-life/sightings/', tag: 'Citizen science' },
+    ]
+  },
+
+  grassland: {
+    label: '🌸 Grassland', color: '#7ab648',
+    volunteer: [
+      { icon: '🦋', name: 'Big Butterfly Count — Butterfly Conservation',
+        desc: 'The world\'s biggest butterfly survey. Spend 15 minutes counting butterflies in any sunny spot July–August each year. Your data tracks grassland quality and pollinator health UK-wide.',
+        link: 'https://bigbutterflycount.butterfly-conservation.org/', tag: 'Citizen Science · Annual' },
+      { icon: '🌸', name: 'Wildflower meadow restoration — Plantlife',
+        desc: 'Join Plantlife\'s volunteer network to survey, restore and create wildflower meadows. Training in plant ID provided. Help with hay cutting, removal of rank grass and seed harvesting at key sites.',
+        link: 'https://www.plantlife.org.uk/get-involved/volunteering/', tag: 'Practical · Nationwide' },
+      { icon: '🐝', name: 'Bumblebee Conservation Trust surveying',
+        desc: 'BeeWalk — a national bumblebee monitoring scheme using volunteers to walk fixed routes monthly from March to October. Track bumblebee populations across the UK\'s declining grasslands.',
+        link: 'https://www.bumblebeeconservation.org/beewalk/', tag: 'Citizen Science · Nationwide' },
+      { icon: '🐄', name: 'RSPB farmland bird surveys',
+        desc: 'Help monitor farmland and grassland birds at RSPB reserves and partner farms. Training provided in species ID. Data feeding into the national Farmland Bird Index — a key UK biodiversity indicator.',
+        link: 'https://volunteer.rspb.org.uk/', tag: 'Survey · Nationwide' },
+    ],
+    actions: [
+      { icon: '✂️', name: 'No Mow May (and beyond) — Plantlife',
+        desc: 'Let your lawn grow through May and beyond. Plantlife\'s campaign shows that unmown lawns can support 250 plant species and are 5× richer in bumblebee food than mown lawns. Sign the pledge.',
+        link: 'https://www.plantlife.org.uk/plants-and-fungi/wildflowers/no-mow-may/', tag: 'Individual action' },
+      { icon: '📣', name: 'Demand stronger protection for chalk grassland',
+        desc: 'Only 1% of the UK\'s original chalk grassland survives. Support the Grasslands Trust\'s campaign calling for mandatory protection of all remaining unimproved grassland from agricultural improvement.',
+        link: 'https://www.grassland-trust.org/', tag: 'Campaign' },
+      { icon: '🌼', name: 'Sow a wildflower patch — RHS partnership schemes',
+        desc: 'Even a 1m² wildflower patch in your garden feeds 70+ insect species. The RHS Plants for Pollinators guide and Plantlife\'s free seed packs help you choose species suited to your soil type.',
+        link: 'https://www.rhs.org.uk/biodiversity/create-a-mini-meadow', tag: 'Individual action' },
+    ]
+  },
+
+  woodland: {
+    label: '🌲 Woodland', color: '#2d5016',
+    volunteer: [
+      { icon: '🌳', name: 'Woodland Trust conservation volunteering',
+        desc: 'Practical woodland management across 1,200+ Woodland Trust sites. Tasks include tree planting, invasive species removal, coppicing, path maintenance and ancient woodland restoration.',
+        link: 'https://www.woodlandtrust.org.uk/support-us/volunteer/', tag: 'Practical · Nationwide' },
+      { icon: '🐿', name: 'Red squirrel monitoring — RSST & Wildlife Trusts',
+        desc: 'Survey red squirrel populations in stronghold areas in Scotland, Northern England, Wales and Northern Ireland. Record sightings using standardised methods contributing to national population data.',
+        link: 'https://www.rsst.org.uk/get-involved/volunteer/', tag: 'Survey · N. England & Scotland' },
+      { icon: '🦇', name: 'Bat Conservation Trust night surveys',
+        desc: 'Join a National Bat Monitoring Programme survey walk near your local woodland. Use a bat detector to record species and feeding activity. Training nights held across the UK each spring.',
+        link: 'https://www.bats.org.uk/our-work/national-bat-monitoring-programme/volunteer', tag: 'Citizen Science · Nationwide' },
+      { icon: '🌿', name: 'RSPB woodland reserve tasks',
+        desc: 'Volunteer at RSPB woodland reserves including Nagshead (Forest of Dean), Ken-Dee Marshes (Scotland) and others. Tasks range from coppicing and rhododendron clearance to bird surveys.',
+        link: 'https://volunteer.rspb.org.uk/', tag: 'Practical · Nationwide' },
+    ],
+    actions: [
+      { icon: '🌳', name: 'Plant trees with the Woodland Trust',
+        desc: 'The Woodland Trust provides free trees to schools, communities and landowners. Their Big Climate Fightback aims to plant 50 million trees by 2025. Order your free trees or adopt a tree online.',
+        link: 'https://www.woodlandtrust.org.uk/plant-trees/', tag: 'Individual & group action' },
+      { icon: '📣', name: 'Campaign: Ancient woodland protection',
+        desc: 'Ancient woodland is irreplaceable — it takes over 400 years to develop. Support the Woodland Trust\'s campaign to strengthen legal protections and oppose developments in or near ancient woodland.',
+        link: 'https://www.woodlandtrust.org.uk/protecting-trees-and-woods/campaign-with-us/', tag: 'Campaign' },
+      { icon: '🪵', name: 'Buy FSC-certified wood and paper products',
+        desc: 'Look for the FSC (Forest Stewardship Council) label on timber, paper and packaging. FSC certification ensures products come from responsibly managed forests supporting biodiversity.',
+        link: 'https://uk.fsc.org/en-uk/for-consumers', tag: 'Individual action' },
+    ]
+  },
+
+  heathland: {
+    label: '🟤 Heathland', color: '#c8760a',
+    volunteer: [
+      { icon: '🦎', name: 'ARC reptile and amphibian surveys',
+        desc: 'Amphibian and Reptile Conservation Trust survey volunteers monitor sand lizard and smooth snake populations on lowland heathland. Artificial refugia (tins) checking programme — ideal for beginners.',
+        link: 'https://www.arc-trust.org/volunteer', tag: 'Survey · S. England' },
+      { icon: '🌿', name: 'Heathland habitat management — Wildlife Trusts',
+        desc: 'Practical heathland management: bracken bashing, gorse cutting, heather scarification and turf stripping to maintain the open, warm micro-habitats that specialists like nightjar, Dartford warbler and rare invertebrates need.',
+        link: 'https://www.wildlifetrusts.org/volunteering-opportunities', tag: 'Practical · Nationwide' },
+      { icon: '🦅', name: 'Nightjar survey — British Trust for Ornithology',
+        desc: 'Help survey this enigmatic heathland bird each June on specially organised evening walks. Nightjars are UK BAP priority species — their churring calls indicate the health of lowland heathland.',
+        link: 'https://www.bto.org/our-science/projects/nightjar-survey', tag: 'Survey · Annual' },
+      { icon: '🔥', name: 'Moors for the Future — heather management',
+        desc: 'Work with the Moors for the Future Partnership on upland heath restoration in the Peak District and South Pennines. Help revegetate bare peat and maintain healthy heather moorland.',
+        link: 'https://www.moorsforthefuture.org.uk/get-involved/volunteer', tag: 'Practical · Peak District' },
+    ],
+    actions: [
+      { icon: '📣', name: 'Campaign: End driven grouse shooting subsidy',
+        desc: 'Driven grouse moors in England and Scotland receive public subsidy while burning heathland and persecuting raptors. League Against Cruel Sports and RSPB campaign for a licensing system with enforceable standards.',
+        link: 'https://www.rspb.org.uk/our-work/rspb-news/news/stories/driven-grouse-shooting/', tag: 'Campaign' },
+      { icon: '🔒', name: 'Oppose heathland development in your area',
+        desc: 'Heathland is one of the UK\'s most threatened habitats. If planning applications threaten local heathland, consult Natural England, your Wildlife Trust and the Amphibian and Reptile Conservation Trust for guidance on objecting.',
+        link: 'https://www.arc-trust.org/', tag: 'Local action' },
+      { icon: '🌿', name: 'Create heathland features in your garden',
+        desc: 'Sandy, acid soil patches planted with heather, gorse and broom create microhabitats for heathland invertebrates. Even a small sunny sandy patch can support solitary bees, reptiles and rare beetles.',
+        link: 'https://www.wildlifetrusts.org/actions/wildlife-gardening', tag: 'Individual action' },
+    ]
+  }
+};
+
+let activeActionTab = 'peatland';
+
+function openActionPanel() {
+  const overlay = document.getElementById('actOverlay');
+  overlay.classList.add('open');
+  renderActionTabs();
+  renderActionContent(activeActionTab);
+}
+
+function closeActionPanel() {
+  document.getElementById('actOverlay').classList.remove('open');
+}
+
+function closeIfBg(e) {
+  if (e.target === document.getElementById('actOverlay')) closeActionPanel();
+}
+
+function renderActionTabs() {
+  const tabs = document.getElementById('actTabs');
+  tabs.innerHTML = Object.entries(ACTION_DATA).map(([key, d]) =>
+    `<button class="act-tab ${key===activeActionTab?'active':''}" onclick="switchActionTab('${key}')">${d.label}</button>`
+  ).join('');
+}
+
+function switchActionTab(key) {
+  activeActionTab = key;
+  renderActionTabs();
+  renderActionContent(key);
+}
+
+function renderActionContent(key) {
+  const d = ACTION_DATA[key];
+  const body = document.getElementById('actBody');
+  const vol = d.volunteer.map(c => `
+    <div class="act-card">
+      <div class="act-card-icon">${c.icon}</div>
+      <div class="act-card-body">
+        <div class="act-tag" style="background:${d.color}15;color:${d.color}">${c.tag}</div>
+        <div class="act-card-name">${c.name}</div>
+        <div class="act-card-desc">${c.desc}</div>
+        <a class="act-card-link" href="${c.link}" target="_blank" rel="noopener">Find out more →</a>
+      </div>
+    </div>`).join('');
+  const act = d.actions.map(c => `
+    <div class="act-card">
+      <div class="act-card-icon">${c.icon}</div>
+      <div class="act-card-body">
+        <div class="act-tag" style="background:#f0ede615;color:#6b7a68">${c.tag}</div>
+        <div class="act-card-name">${c.name}</div>
+        <div class="act-card-desc">${c.desc}</div>
+        <a class="act-card-link" href="${c.link}" target="_blank" rel="noopener">Find out more →</a>
+      </div>
+    </div>`).join('');
+  body.innerHTML = `
+    <div class="act-section">
+      <div class="act-section-title">🙋 Volunteer & get involved</div>
+      ${vol}
+    </div>
+    <div class="act-section">
+      <div class="act-section-title">📣 Take action & campaign</div>
+      ${act}
+    </div>`;
+}
+</script>
+</body>
+</html>

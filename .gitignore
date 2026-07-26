@@ -136,4 +136,5 @@ dist
 .pnp.*
 .env
 config.json
-.claude/worktrees/suspicious-khorana/
+.claude/worktrees/
+.DS_Store

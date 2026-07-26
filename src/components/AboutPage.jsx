@@ -164,47 +164,21 @@ function AboutPage() {
         >
           <h2 style={{ fontSize: '1.75rem', marginBottom: '1.5rem', color: '#2d3436' }}>Creator</h2>
           <div style={{
-            display: 'flex',
-            gap: '2rem',
-            alignItems: 'flex-start',
             padding: '2rem',
             background: '#ffffff',
             border: '1px solid #e5e7eb',
             borderRadius: '8px',
             boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
           }}>
-            <div style={{
-              width: '150px',
-              height: '150px',
-              flexShrink: 0,
-              background: '#e5e7eb',
-              borderRadius: '8px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '0.75rem',
-              color: '#636e72',
-              textAlign: 'center',
-              padding: '1rem'
-            }}>
-              Photo placeholder
-            </div>
-            <div style={{ flex: 1 }}>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '0.75rem', color: '#2d3436' }}>
-                Emily Moreland
-              </h3>
-              <p style={{ fontSize: '1rem', lineHeight: 1.7, color: '#636e72', marginBottom: '1rem' }}>
-                [Placeholder bio text]
-              </p>
-              <div style={{ display: 'flex', gap: '1.5rem', fontSize: '0.95rem' }}>
-                <a href="#" style={{ color: '#2d6a4f', textDecoration: 'none', fontWeight: 500 }}>
-                  LinkedIn
-                </a>
-                <a href="mailto:email@example.com" style={{ color: '#2d6a4f', textDecoration: 'none', fontWeight: 500 }}>
-                  email@example.com
-                </a>
-              </div>
-            </div>
+            <h3 style={{ fontSize: '1.5rem', marginBottom: '0.25rem', color: '#2d3436' }}>
+              Emily Moreland
+            </h3>
+            <p style={{ fontSize: '0.95rem', color: '#8a8f96', marginBottom: '1rem', fontStyle: 'italic' }}>
+              Creator
+            </p>
+            <p style={{ fontSize: '1rem', lineHeight: 1.7, color: '#636e72', margin: 0 }}>
+              Graduated from the University of Exeter in 2022 with a degree in Conservation Biology and Ecology.
+            </p>
           </div>
         </motion.div>
 
