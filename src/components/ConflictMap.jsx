@@ -53,8 +53,12 @@ export default function ConflictMap() {
     if (mapRef.current || !mapEl.current) return;
     const m = L.map(mapEl.current, { zoomControl: false }).setView([52.5, -1.5], 6);
     L.control.zoom({ position: 'topright' }).addTo(m);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-      attribution: '© OpenStreetMap © CARTO', subdomains: 'abcd', maxZoom: 19,
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles © Esri — Esri, HERE, Garmin, © OpenStreetMap contributors',
+      maxZoom: 16, updateWhenZooming: false, keepBuffer: 4,
+    }).addTo(m);
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}', {
+      maxZoom: 16, updateWhenZooming: false, keepBuffer: 4,
     }).addTo(m);
     mapRef.current = m;
 

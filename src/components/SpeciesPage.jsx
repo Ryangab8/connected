@@ -343,8 +343,17 @@ function SpeciesPage() {
                   style={{ width: '100%', height: '100%' }}
                 >
                   <TileLayer
-                    url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                    url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
+                    attribution='Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors'
+                    maxZoom={16}
+                    updateWhenZooming={false}
+                    keepBuffer={4}
+                  />
+                  <TileLayer
+                    url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}"
+                    maxZoom={16}
+                    updateWhenZooming={false}
+                    keepBuffer={4}
                   />
                   <HeatmapLayer points={distributionPoints} color={species.color} />
                 </MapContainer>

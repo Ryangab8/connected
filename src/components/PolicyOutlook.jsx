@@ -53,8 +53,12 @@ export default function PolicyOutlook() {
   useEffect(() => {
     if (mapRef.current || !mapEl.current) return;
     const m = L.map(mapEl.current, { zoomControl: true }).setView([55.2, -5.0], 6);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-      attribution: '© OpenStreetMap © CARTO', subdomains: 'abcd', maxZoom: 19,
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles © Esri — Esri, HERE, Garmin, © OpenStreetMap contributors',
+      maxZoom: 16, updateWhenZooming: false, keepBuffer: 4,
+    }).addTo(m);
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}', {
+      maxZoom: 16, updateWhenZooming: false, keepBuffer: 4,
     }).addTo(m);
     mapRef.current = m;
     return () => { m.remove(); mapRef.current = null; };
