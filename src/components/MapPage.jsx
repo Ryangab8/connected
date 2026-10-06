@@ -8,6 +8,7 @@ import 'leaflet.heat';
 import 'leaflet-polylinedecorator';
 import {
   getNodes,
+  getDistributions,
   getSpeciesDistribution,
   getAllCascades,
   getSpeciesConnections,
@@ -159,14 +160,15 @@ function CascadeArrows({ arrows, stepNumber, cascade, centroids }) {
 function MapPage() {
   const { speciesId } = useParams();
   const [mode, setMode] = useState('species'); // 'species' or 'cascades'
-  const [selectedSpecies, setSelectedSpecies] = useState(speciesId || null);
+  const allSpecies = getNodes();
+  // Default to the first species in the list (Oak) so the map isn't empty on open
+  const [selectedSpecies, setSelectedSpecies] = useState(speciesId || allSpecies[0]?.id || null);
   const [selectedCascade, setSelectedCascade] = useState(null);
   const [cascadeStep, setCascadeStep] = useState(0);
   const [distributionData, setDistributionData] = useState({});
   const [centroids, setCentroids] = useState({});
   const [loading, setLoading] = useState(false);
 
-  const allSpecies = getNodes();
   const allCascades = getAllCascades();
 
   // Load distribution for a species
@@ -185,6 +187,25 @@ function MapPage() {
 
     setLoading(false);
   };
+
+  // Preload every species' distribution (they share one file) so record counts show up front
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const distributions = await getDistributions();
+      if (cancelled) return;
+      const points = {};
+      const cents = {};
+      allSpecies.forEach(s => {
+        points[s.id] = distributions.species?.[s.id]?.points || [];
+        const centroid = calculateCentroid(points[s.id]);
+        if (centroid) cents[s.id] = centroid;
+      });
+      setDistributionData(prev => ({ ...points, ...prev }));
+      setCentroids(prev => ({ ...cents, ...prev }));
+    })();
+    return () => { cancelled = true; };
+  }, []);
 
   // Load distribution when species selected
   useEffect(() => {
@@ -396,7 +417,7 @@ function MapPage() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.5rem' }}>
                 {allSpecies.map(species => {
                   const isSelected = selectedSpecies === species.id;
-                  const points = distributionData[species.id] || [];
+                  const points = distributionData[species.id];
 
                   return (
                     <div
@@ -439,7 +460,7 @@ function MapPage() {
                             color: '#636e72',
                             fontStyle: 'italic'
                           }}>
-                            {points.length > 0 ? `${points.length.toLocaleString()} records` : 'Click to load'}
+                            {!points ? 'Loading…' : points.length > 0 ? `${points.length.toLocaleString()} records` : 'No records'}
                           </div>
                         </div>
                       </div>
