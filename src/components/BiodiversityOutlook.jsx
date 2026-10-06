@@ -20,7 +20,7 @@ function buildPopupHtml(s, col, secondaryLabel) {
   const tag2 = secondaryLabel || groupLabel;
   return `
     <div class="bo-pi">
-      <div class="bo-ptitle">${s.icon} ${s.name}</div>
+      <div class="bo-ptitle">${s.name}</div>
       <div class="bo-platin">${s.latin}</div>
       <div class="bo-ptags">
         <span class="bo-ptag" style="background:${col}18;color:${col}">${THREAT_LABEL[s.status]}</span>
@@ -28,9 +28,9 @@ function buildPopupHtml(s, col, secondaryLabel) {
       </div>
       <div class="bo-pdesc">${s.desc}</div>
       <div class="bo-pstat">
-        📉 <strong>${s.decline}</strong><br>
-        ⚠ ${cause}<br>
-        🔒 ${s.protection}
+        <strong>${s.decline}</strong><br>
+        ${cause}<br>
+        ${s.protection}
       </div>
     </div>`;
 }
@@ -97,7 +97,7 @@ export default function BiodiversityOutlook() {
       });
       const mk = L.marker(ll, { icon }).addTo(map);
       const sitesNote = siteCount > 1
-        ? `<div style="font-size:10px;color:#aaa;margin-top:4px">📍 ${siteCount} known sites — click to see all</div>`
+        ? `<div style="font-size:10px;color:#aaa;margin-top:4px">${siteCount} known sites — click to see all</div>`
         : '';
       mk.bindPopup(buildPopupHtml(s, col) + (sitesNote ? `<div class="bo-extra">${sitesNote}</div>` : ''), { maxWidth: 280 });
       mk.on('click', () => setActiveId(prev => prev === s.id ? null : s.id));
@@ -187,7 +187,6 @@ export default function BiodiversityOutlook() {
                   className={`bo-scard ${activeId === s.id ? 'bo-scard-active' : ''}`}
                   onClick={() => setActiveId(prev => prev === s.id ? null : s.id)}
                 >
-                  <div className="bo-sicon">{s.icon}</div>
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div className="bo-sname">{s.name}</div>
                     <div className="bo-slatin">{s.latin}</div>
@@ -254,7 +253,7 @@ function DetailPanel({ species }) {
   const pop = POP_STATS[s.id];
   return (
     <div className="bo-detail">
-      <div className="bo-dname">{s.icon} {s.name}</div>
+      <div className="bo-dname">{s.name}</div>
       <div className="bo-dtype">{s.latin} · {s.group.charAt(0).toUpperCase() + s.group.slice(1)}</div>
       <div className="bo-ddesc">{s.desc}</div>
       {pop && (
@@ -277,11 +276,11 @@ function DetailPanel({ species }) {
       <div className="bo-dbar-track">
         <div className="bo-dbar-fill" style={{ width: `${pct}%`, background: col }} />
       </div>
-      <div className="bo-dcause">⚠ {s.cause}</div>
-      <div className="bo-dprot">🔒 {s.protection}</div>
+      <div className="bo-dcause">{s.cause}</div>
+      <div className="bo-dprot">{s.protection}</div>
       {siteCount > 1 && (
         <div style={{ fontSize: 10, color: col, marginTop: 5, fontWeight: 500 }}>
-          📍 {siteCount} known sites — click to expand all on map
+          {siteCount} known sites — click to expand all on map
         </div>
       )}
     </div>
@@ -358,8 +357,6 @@ function Styles() {
         border:1px solid transparent;margin-bottom:3px;background:white;transition:all .16s; animation:bo-fi .3s ease forwards; }
       .bo-scard:hover { border-color:rgba(26,35,24,.1);transform:translateX(2px); }
       .bo-scard-active { border-color:var(--bo-green-mid)!important;background:rgba(74,124,42,.05)!important; }
-      .bo-sicon { width:30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;
-        font-size:15px;flex-shrink:0;background:rgba(26,35,24,0.04); }
       .bo-sname { font-size:12px;font-weight:500;color:var(--bo-dark); }
       .bo-slatin { font-size:10px;color:#bbb;font-style:italic; }
       .bo-tbadge { font-size:9px;font-weight:600;padding:2px 6px;border-radius:5px;text-transform:uppercase;flex-shrink:0;letter-spacing:.03em; }
