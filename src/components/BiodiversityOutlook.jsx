@@ -351,11 +351,11 @@ function Styles() {
       .bo-app { position:fixed;top:70px;left:0;right:0;bottom:0;display:flex;
         font-family:'DM Sans',sans-serif;color:var(--bo-dark);background:var(--bo-cream);overflow:hidden; }
       .bo-sidebar { width:320px;flex-shrink:0;background:var(--bo-panel);border-right:1px solid rgba(26,35,24,0.09);
-        display:flex;flex-direction:column;overflow:hidden; }
-      .bo-sb-header { padding:18px 20px 12px;border-bottom:1px solid rgba(26,35,24,0.07); }
+        display:flex;flex-direction:column;overflow-x:hidden;overflow-y:auto; }
+      .bo-sb-header { padding:18px 20px 12px;border-bottom:1px solid rgba(26,35,24,0.07);flex-shrink:0; }
       .bo-sb-title { font-family:'Playfair Display',serif;font-size:16px;color:var(--bo-green-deep);margin-bottom:5px; }
       .bo-sb-desc { font-size:11px;color:#6b7a68;line-height:1.55; }
-      .bo-filters { padding:12px 20px;border-bottom:1px solid rgba(26,35,24,0.07); }
+      .bo-filters { padding:12px 20px;border-bottom:1px solid rgba(26,35,24,0.07);flex-shrink:0; }
       .bo-filter-row { display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px; }
       .bo-filter-row:last-child { margin-bottom:0; }
       .bo-flabel { font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:#bbb;width:100%;margin-bottom:3px; }
@@ -363,9 +363,10 @@ function Styles() {
         border:1.5px solid transparent;background:white;transition:all .18s;color:#888; }
       .bo-pill-active-all { background:var(--bo-dark)!important;color:white!important;border-color:var(--bo-dark)!important; }
       .bo-pill-active { border-color:currentColor;background:white; }
-      .bo-slist { flex:1;overflow-y:auto;padding:10px 14px; }
-      .bo-slist::-webkit-scrollbar { width:3px; }
-      .bo-slist::-webkit-scrollbar-thumb { background:rgba(26,35,24,.12);border-radius:3px; }
+      /* The list keeps at least 180px so its scrollbar stays usable; on short screens the sidebar scrolls instead */
+      .bo-slist { flex:1 1 0;min-height:180px;overflow-y:auto;padding:10px 14px; }
+      .bo-slist::-webkit-scrollbar { width:8px; }
+      .bo-slist::-webkit-scrollbar-thumb { background:rgba(26,35,24,.25);border-radius:4px; }
       .bo-glabel { font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:#ccc;padding:6px 6px 2px;margin-top:4px; }
       .bo-scard { display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:9px;cursor:pointer;
         border:1px solid transparent;margin-bottom:3px;background:white;transition:all .16s; animation:bo-fi .3s ease forwards; }
@@ -379,7 +380,7 @@ function Styles() {
       .bo-td { background:#ece8f5;color:var(--bo-purple); }
       .bo-tr { background:#e6f4e6;color:var(--bo-green-mid); }
 
-      .bo-detail { padding:14px 18px;border-top:1px solid rgba(26,35,24,.07);background:white;min-height:100px;max-height:340px;overflow-y:auto; }
+      .bo-detail { flex:0 0 auto;padding:14px 18px;border-top:1px solid rgba(26,35,24,.07);background:white;min-height:100px;max-height:min(340px, 35vh);overflow-y:auto; }
       .bo-dname { font-family:'Playfair Display',serif;font-size:14px;color:var(--bo-dark);margin-bottom:2px; }
       .bo-dtype { font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#bbb;margin-bottom:5px; }
       .bo-ddesc { font-size:11px;color:#5a6a56;line-height:1.6;margin-bottom:7px; }
