@@ -30,12 +30,12 @@ Repo: C:\Users\ryang\OneDrive - RG Consulting\Github\connected (React/Vite site,
    - Part-time, fixed-term and seasonal are fine. Entry, assistant, trainee and officer level.
    - Only open roles: closing date today or later, or posted within 30 days if there's no closing date.
 
-5. Build the full list. The list is cumulative: keep every role already in content/jobs/latest.json that is still open and eligible, drop those that have closed, and add new eligible roles. There's no fixed size; cap only at 60.
+5. Build the full list. Private healthcare comes first: any role whose listing explicitly offers private healthcare (private medical insurance, health insurance, medical cover, BUPA, Vhi, Laya, Irish Life Health; NOT just a health cash plan or employee assistance programme) goes to the TOP of the list, ahead of every role without it, ranked among themselves by fit. The list is cumulative: keep every role already in content/jobs/latest.json that is still open and eligible, drop those that have closed, and add new eligible roles. There's no fixed size; cap only at 60.
    - Re-rank the whole list each day by overall fit to her CV and preferences: field and outdoor roles first, then mixed field and data roles, then desk-based data roles.
    - At a similar fit, Belfast or NI roles, and roles at CEDaR or the National Biodiversity Data Centre, rank higher.
    - Ties go to the role closing sooner.
 
-6. Write content/jobs/latest.json as {"updated":"YYYY-MM-DD","jobs":[...]}, best fit first. Each job has: title, employer, location, region ("ni"|"ireland"|"remote"), salary (as stated, or null), salary_gbp (annual minimum as a number in GBP, euros × 0.85, null if not stated), contract, posted, closes (YYYY-MM-DD or null), setting ("outdoors"|"mixed"|"desk"), requirements (2–4 short essential items from the listing), about (one sentence), how_to_apply, url, source, first_seen (YYYY-MM-DD; keep the existing value for roles already listed).
+6. Write content/jobs/latest.json as {"updated":"YYYY-MM-DD","jobs":[...]}, best fit first. Each job has: title, employer, location, region ("ni"|"ireland"|"remote"), salary (as stated, or null), salary_gbp (annual minimum as a number in GBP, euros × 0.85, null if not stated), contract, posted, closes (YYYY-MM-DD or null), setting ("outdoors"|"mixed"|"desk"), requirements (2–4 short essential items from the listing), about (one sentence), how_to_apply, url, source, healthcare (true only if the listing explicitly offers private healthcare as above, otherwise false), first_seen (YYYY-MM-DD; keep the existing value for roles already listed).
    - Never guess a salary, date or requirement. No urgency labels.
    - Add new urls to content/jobs/seen.json.
 
@@ -44,7 +44,7 @@ Repo: C:\Users\ryang\OneDrive - RG Consulting\Github\connected (React/Vite site,
 8. If any roles are new today (url not previously in seen.json), send ONE email with the Gmail connector send_message:
    - To emilymoreland9997@gmail.com, cc ryangabriele8@gmail.com.
    - Subject: "Your jobs for <Weekday D Month>: N new".
-   - htmlBody: "Morning Emily,", then the top 5 NEW roles in rank order. For each: the title linked to the listing, plus bullets for location · salary · contract · closing date; mostly outdoors, field and desk, or desk-based, with a few words on the work; "Needs:" with the key requirements; and "Apply:" with how to apply. Then a link to https://connectedbiodiversity.com/jobs ("all N open roles, with sorting and filters"). Sign off "Claude, running your job search".
+   - htmlBody: "Morning Emily,", then the top 5 NEW roles in rank order. For each: the title linked to the listing, plus bullets for location · salary · contract · closing date; mostly outdoors, field and desk, or desk-based, with a few words on the work; "Private healthcare included" when it applies; "Needs:" with the key requirements; and "Apply:" with how to apply. Then a link to https://connectedbiodiversity.com/jobs ("all N open roles, with sorting and filters"). Sign off "Claude, running your job search".
    - Plain, friendly and short. No hype, no all-caps.
    - If nothing is new, send nothing.
 

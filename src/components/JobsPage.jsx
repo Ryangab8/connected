@@ -4,7 +4,8 @@ import feed from '../../content/jobs/latest.json';
 // Unlisted page (not in the menu, not indexed) with Emily's job shortlist.
 // content/jobs/latest.json is rewritten each morning by the daily job run: every still-open role,
 // ranked best fit first. `region` (ni | ireland | remote) and `salary_gbp` (annual minimum, euros
-// converted) drive the filters and the salary sort; `first_seen` marks roles new today.
+// converted) drive the filters and the salary sort; `first_seen` marks roles new today; `healthcare`
+// is true when the listing offers private healthcare (those roles are ranked first).
 const SETTING = {
   outdoors: { label: 'Mostly outdoors', color: '#2d6a4f', bg: '#e6f4e6' },
   mixed: { label: 'Field and desk', color: '#8a5a00', bg: '#fef3e2' },
@@ -24,6 +25,7 @@ export default function JobsPage() {
   const [sort, setSort] = useState('fit');
   const [setting, setSetting] = useState('all');
   const [region, setRegion] = useState('all');
+  const [perks, setPerks] = useState('all');
 
   useEffect(() => {
     const meta = document.createElement('meta');
@@ -35,8 +37,9 @@ export default function JobsPage() {
 
   const jobs = useMemo(() => feed.jobs
     .map((job, i) => ({ ...job, rank: i + 1 }))
-    .filter(j => (setting === 'all' || j.setting === setting) && (region === 'all' || j.region === region))
-    .sort((a, b) => SORTS[sort].fn(a, b) || a.rank - b.rank), [sort, setting, region]);
+    .filter(j => (setting === 'all' || j.setting === setting) && (region === 'all' || j.region === region)
+      && (perks === 'all' || j.healthcare))
+    .sort((a, b) => SORTS[sort].fn(a, b) || a.rank - b.rank), [sort, setting, region, perks]);
 
   const updated = new Date(`${feed.updated}T12:00:00`).toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' });
   const newCount = feed.jobs.filter(j => j.first_seen === feed.updated).length;
@@ -53,6 +56,7 @@ export default function JobsPage() {
         <Chips label="Sort" value={sort} onChange={setSort} options={Object.entries(SORTS).map(([v, s]) => [v, s.label])} />
         <Chips label="Work" value={setting} onChange={setSetting} options={[['all', 'All'], ...Object.entries(SETTING).map(([v, s]) => [v, s.label])]} />
         <Chips label="Where" value={region} onChange={setRegion} options={[['all', 'All'], ...Object.entries(REGION)]} />
+        <Chips label="Perks" value={perks} onChange={setPerks} options={[['all', 'All'], ['healthcare', 'Private healthcare']]} />
       </div>
 
       {jobs.length === 0 && <p className="jb-empty">No roles match these filters right now.</p>}
@@ -88,6 +92,7 @@ function Job({ job, isNew }) {
         <div className="jb-where">{job.employer} · {job.location}</div>
         <div className="jb-tags">
           {isNew && <span className="jb-tag jb-new">New</span>}
+          {job.healthcare && <span className="jb-tag jb-health">Private healthcare</span>}
           {setting && <span className="jb-tag" style={{ color: setting.color, background: setting.bg }}>{setting.label}</span>}
           {facts.map(f => <span key={f} className="jb-tag">{f}</span>)}
         </div>
@@ -127,6 +132,7 @@ function Styles() {
       .jb-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
       .jb-tag { font-size: 0.8rem; padding: 3px 10px; border-radius: 12px; background: #f1f0ec; color: #3d4a3a; }
       .jb-new { background: #2d6a4f; color: #ffffff; font-weight: 600; }
+      .jb-health { background: #1e4d8c; color: #ffffff; font-weight: 600; }
       .jb-about { margin: 0 0 8px; line-height: 1.55; font-size: 0.95rem; }
       .jb-reqs { margin: 0 0 10px; padding-left: 18px; line-height: 1.55; font-size: 0.9rem; color: #3d4a3a; }
       .jb-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; font-size: 0.85rem; color: #6b7a68; }

@@ -41,8 +41,9 @@ Claude writes the drafts. Emily rewrites them in her own words and posts them he
     the whole list is re-ranked each day (cap 60).
   - Eligibility is strict: a role is listed only if her CV meets every essential criterion. No master's,
     chartered status, survey licences, specialist ID skills, recent-graduate schemes or GB-only roles.
-  - Ranking: field and outdoor roles first, then field and desk, then desk-based. At a similar fit,
-    Belfast or NI roles and CEDaR or NBDC roles rank higher.
+  - Ranking: roles offering private healthcare go to the top. Then field and outdoor roles, then field
+    and desk, then desk-based. At a similar fit, Belfast or NI roles and CEDaR or NBDC roles rank higher.
+    The page tags private healthcare and can filter on it.
   - Email: only on days with new roles. It goes from ryangabriele8@gmail.com to
     emilymoreland9997@gmail.com, copied to Ryan, with the top 5 new roles and a link to the full page.
 - Each listing shows salary, location, contract, closing or posting date, key requirements, setting and

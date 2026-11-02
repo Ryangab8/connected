@@ -22,6 +22,7 @@
       "source": "publicjobs.ie",
       "region": "ireland",
       "salary_gbp": 27300,
+      "healthcare": false,
       "first_seen": "2026-11-02"
     },
     {
@@ -44,6 +45,7 @@
       "source": "NI Environment Link",
       "region": "ni",
       "salary_gbp": 24479,
+      "healthcare": false,
       "first_seen": "2026-11-02"
     },
     {
@@ -66,6 +68,7 @@
       "source": "NI Environment Link",
       "region": "ni",
       "salary_gbp": 24479,
+      "healthcare": false,
       "first_seen": "2026-11-02"
     },
     {
@@ -88,6 +91,7 @@
       "source": "GreenJobs.ie",
       "region": "ireland",
       "salary_gbp": null,
+      "healthcare": false,
       "first_seen": "2026-11-02"
     },
     {
@@ -110,6 +114,7 @@
       "source": "GreenJobs.ie",
       "region": "ireland",
       "salary_gbp": null,
+      "healthcare": false,
       "first_seen": "2026-11-02"
     }
   ]
