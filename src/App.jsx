@@ -14,6 +14,7 @@ import BiodiversityOutlook from './components/BiodiversityOutlook';
 import PolicyOutlook from './components/PolicyOutlook';
 import ConflictMap from './components/ConflictMap';
 import DraftsPage from './components/DraftsPage';
+import JobsPage from './components/JobsPage';
 
 function WebView() {
   const [relationshipFilter, setRelationshipFilter] = useState('all');
@@ -102,6 +103,12 @@ function App() {
             <>
               <Header />
               <DraftsPage />
+            </>
+          } />
+          <Route path="/jobs" element={
+            <>
+              <Header />
+              <JobsPage />
             </>
           } />
         </Routes>
