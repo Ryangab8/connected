@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import {
@@ -41,9 +42,22 @@ export default function BiodiversityOutlook() {
   const primaryMarkersRef = useRef([]);
   const expandedMarkersRef = useRef([]);
 
+  const [searchParams, setSearchParams] = useSearchParams();
   const [activeStatus, setActiveStatus] = useState('all');
   const [activeGroup, setActiveGroup] = useState('all');
-  const [activeId, setActiveId] = useState(null);
+  // ?species=<id> opens the map on that species (used by links in LinkedIn posts)
+  const [activeId, setActiveId] = useState(() => {
+    const id = searchParams.get('species');
+    return SPECIES.some(s => s.id === id) ? id : null;
+  });
+
+  // Keep ?species= in step with the selection so the address can be shared
+  useEffect(() => {
+    if ((searchParams.get('species') || null) === activeId) return;
+    const next = new URLSearchParams(searchParams);
+    if (activeId) next.set('species', activeId); else next.delete('species');
+    setSearchParams(next, { replace: true });
+  }, [activeId]);
 
   // Filtered species, sorted by threat severity then name
   const filtered = useMemo(() => {

@@ -13,6 +13,7 @@ import MapPage from './components/MapPage';
 import BiodiversityOutlook from './components/BiodiversityOutlook';
 import PolicyOutlook from './components/PolicyOutlook';
 import ConflictMap from './components/ConflictMap';
+import DraftsPage from './components/DraftsPage';
 
 function WebView() {
   const [relationshipFilter, setRelationshipFilter] = useState('all');
@@ -95,6 +96,12 @@ function App() {
             <>
               <Header />
               <ConflictMap />
+            </>
+          } />
+          <Route path="/drafts" element={
+            <>
+              <Header />
+              <DraftsPage />
             </>
           } />
         </Routes>
