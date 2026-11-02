@@ -138,3 +138,7 @@ dist
 config.json
 .claude/worktrees/
 .DS_Store
+
+# Emily's CV files stay local (OneDrive), not on GitHub or the site
+career/*.docx
+career/*.pdf

@@ -179,6 +179,14 @@ function AboutPage() {
             <p style={{ fontSize: '1rem', lineHeight: 1.7, color: '#636e72', margin: 0 }}>
               Graduated from the University of Exeter in 2022 with a degree in Conservation Biology and Ecology.
             </p>
+            <a
+              href="https://www.linkedin.com/in/emily-moreland-b6804043a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: 'inline-block', marginTop: '1rem', color: '#2d6a4f', textDecoration: 'none', fontWeight: 500 }}
+            >
+              Follow Emily on LinkedIn
+            </a>
           </div>
         </motion.div>
 
