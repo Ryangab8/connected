@@ -20,7 +20,7 @@
         },
         {
           "species": "atlantic-puffin",
-          "event": "Puffin chicks starve in burrows as parents cannot find enough sand eels. One in four UK puffins lost since 2000. BTO projects potential 90% decline by 2050.",
+          "event": "Puffin chicks starve in burrows as parents cannot find enough sand eels. Almost one in four UK puffins lost since 2000. BTO projects a decline of more than 70% by 2050.",
           "status": "declining"
         },
         {
@@ -56,7 +56,7 @@
         },
         {
           "species": "water-vole",
-          "event": "Fastest mammal decline in British history: 94% loss. From ~8 million to fewer than 186,000. Riparian habitat simplifies without vole grazing and burrowing.",
+          "event": "Fastest mammal decline in British history: almost 90% lost between 1989 and 1998, leaving about 132,000 in Britain. Riparian habitat simplifies without vole grazing and burrowing.",
           "status": "declining"
         },
         {
@@ -138,7 +138,7 @@
         },
         {
           "species": "hedgehog",
-          "event": "From ~30 million in the 1950s to fewer than 900,000. Experimental badger removal doubled hedgehog counts. Hedgehog decline reduces slug/snail predation.",
+          "event": "Around 500,000 left in Britain, after a fall of at least 46% in 13 years. Experimental badger removal doubled hedgehog counts. Hedgehog decline reduces slug/snail predation.",
           "status": "declining"
         },
         {
@@ -307,7 +307,7 @@
         },
         {
           "species": "hen-harrier",
-          "event": "Predation on grouse chicks can make shooting unviable at high harrier density. England could support 300+ pairs but only 4–12 nesting attempts occur due to illegal persecution.",
+          "event": "Predation on grouse chicks can make shooting unviable at high harrier density. England could support 300+ pairs but had only 39 nesting attempts in 2025, held back by illegal persecution.",
           "status": "persecuted"
         },
         {

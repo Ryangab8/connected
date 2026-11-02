@@ -11,10 +11,10 @@ const interventions = [
     intervention: 'Protect sand eel populations',
     atStakeSummary: "Without sand eel protections, the North Sea food web collapses from the bottom up — taking seabird colonies with it.",
     atStakeDetails: [
-      'One in four UK puffins lost since 2000',
+      'Almost one in four UK puffins lost since 2000',
       '62% of UK seabird species declining',
-      'BTO models predict potential 90% puffin decline by 2050',
-      'Kittiwake populations halved since the 1960s, now globally threatened'
+      'BTO projects a puffin decline of more than 70% by 2050',
+      'Kittiwake numbers down 55% since 1986, now globally threatened'
     ],
     whatsDone: "The UK banned industrial sand eel fishing in UK North Sea waters effective March 2024. An earlier 20,000 km² closure off Scotland's east coast (from 2000) already produced measurable improvement in kittiwake breeding success.",
     protects: ['Atlantic Puffin', 'Grey Seal', 'Atlantic Salmon', 'Kittiwakes', 'Guillemots', 'Razorbills', 'Harbour Porpoises'],
@@ -33,8 +33,8 @@ const interventions = [
     intervention: 'Remove American mink from waterways',
     atStakeSummary: "Unchecked mink populations drove the fastest mammal decline in British history and continue to devastate riverbank ecosystems.",
     atStakeDetails: [
-      'Water vole population collapsed 94% — the fastest mammal decline in British history',
-      'From 8 million water voles to fewer than 186,000',
+      'Water vole numbers fell almost 90% between 1989 and 1998 — the fastest mammal decline in British history',
+      'About 132,000 water voles remain in Britain',
       'Riverbank ecosystems lose their "mini-engineers" — dense scrub replaces diverse grassland',
       'Kingfishers and other bank-nesting birds face increased predation'
     ],
@@ -79,9 +79,9 @@ const interventions = [
     title: 'The Badger-Hedgehog Triangle',
     summary: 'Badger predation and habitat loss drive hedgehog decline',
     intervention: 'Create hedgehog-friendly habitats in gardens and urban areas',
-    atStakeSummary: "Britain's hedgehog population has crashed 97% in a single human lifetime — from 30 million to fewer than 900,000.",
+    atStakeSummary: "Britain's hedgehogs are down to around 500,000, after a fall of at least 46% in just 13 years.",
     atStakeDetails: [
-      'Hedgehog numbers fell from 30 million in the 1950s to fewer than 900,000',
+      'Around 500,000 hedgehogs remain in Britain',
       'That\'s a roughly 97% decline in a single lifetime',
       'Hedgehogs now absent from 71% of surveyed countryside sites',
       'Without hedgehog predation, slug and snail populations rise, impacting gardens and native plants'
@@ -105,7 +105,7 @@ const interventions = [
     atStakeDetails: [
       'Earthworm populations down 33–41% over 25 years',
       '42% of UK farmland fields may be "over-worked" with missing earthworm groups',
-      '8 predator species in this network lose a critical food source',
+      '7 predator species in this network lose a critical food source',
       'Plant production drops by an estimated 25% without earthworm soil engineering'
     ],
     whatsDone: "The UK government's Environmental Land Management (ELM) schemes now incentivize soil health practices. Research by Rothamsted Research and the Earthworm Society of Britain is quantifying decline and testing recovery methods. No-till farming trials have shown earthworm populations can recover within 3-5 years of practice change.",
@@ -180,9 +180,9 @@ const interventions = [
     title: 'The Hen Harrier Conflict',
     summary: 'Illegal persecution on grouse moors devastates raptor populations',
     intervention: 'End illegal raptor persecution on grouse moors',
-    atStakeSummary: "Illegal persecution has reduced England's hen harrier population to less than 4% of what the landscape could support.",
+    atStakeSummary: "Illegal persecution has reduced England's hen harriers to about 13% of what the landscape could support.",
     atStakeDetails: [
-      'England could support 300+ nesting pairs of hen harriers based on habitat availability, compared to the current 4-12 annual nesting attempts',
+      'England could support 300+ nesting pairs of hen harriers based on habitat availability, compared to 39 nesting attempts in 2025',
       'Satellite-tagged hen harriers repeatedly disappear over grouse moors',
       'Removing a natural predator allows unnaturally high grouse densities, increasing grazing pressure on heather habitat',
       'The ecological paradox: the same moor management that creates harrier habitat incentivizes harrier persecution'

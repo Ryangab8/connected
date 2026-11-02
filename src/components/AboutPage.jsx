@@ -36,7 +36,7 @@ function AboutPage() {
         >
           <h2 style={{ fontSize: '1.75rem', marginBottom: '1rem', color: '#2d3436' }}>About</h2>
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#636e72', marginBottom: '1rem' }}>
-            Connected explores the intricate ecological relationships between 29 carefully selected UK wildlife species. Through an interactive network graph and distribution maps, it reveals how species depend on each other through predation, pollination, habitat provision, and more — and how the decline of one species can cascade through the entire ecosystem.
+            Connected explores the intricate ecological relationships between 29 carefully selected UK and Ireland species, and its Biodiversity Outlook maps 78 protected and Red Listed species. Through an interactive network graph and distribution maps, it reveals how species depend on each other through predation, pollination, habitat provision, and more — and how the decline of one species can cascade through the entire ecosystem.
           </p>
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#636e72' }}>
             This project combines curated ecological research with large-scale biodiversity data to make the invisible connections between species visible.

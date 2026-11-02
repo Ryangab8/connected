@@ -95,7 +95,7 @@
       "source": "american-mink",
       "target": "water-vole",
       "type": "predator_prey",
-      "description": "Primary driver of 94% water vole decline. Female mink enter burrows and kill mothers with pups.",
+      "description": "Primary driver of the water vole's decline of almost 90%. Female mink enter burrows and kill mothers with pups.",
       "cascadeEffect": "Water vole extinction from river reaches simplifies riparian habitat, reducing invertebrate and amphibian diversity.",
       "source_citation": "Rushton et al. (2000) Journal of Applied Ecology 37:475–490"
     },

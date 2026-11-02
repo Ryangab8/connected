@@ -7,15 +7,15 @@ export const NATIONS = [
   {
     id:'scotland', name:'Scotland', flag:'🏴󠁧󠁢󠁳󠁣󠁴󠁿', color:'#1e4d8c', rating:'strong', ratingLabel:'Strongest',
     center:[57.0,-4.2], zoom:6,
-    policyScore:78, required:95, protectedPct:18.4, carbonGt:4.2,
-    keyPolicies:'Scottish Biodiversity Strategy to 2045. Natural Environment Bill 2025 — statutory targets (first in UK). Peatland ACTION: 65,000ha restored of 250,000ha target. £65M Nature Restoration Fund. South of Scotland Golden Eagle Project.',
+    policyScore:78, required:95, protectedPct:18.4, carbonGt:6.23,
+    keyPolicies:'Scottish Biodiversity Strategy to 2045. Natural Environment Bill 2025 — statutory nature targets for Scotland. Peatland ACTION: 65,000ha restored of 250,000ha target. £65M Nature Restoration Fund. South of Scotland Golden Eagle Project.',
     gap:'Gap of 17 points. AECS chronically underfunded (£29.6M vs £55M peak). Capercaillie still on path to extinction. Grouse moor persecution blocking raptor recovery.',
     trajectory:'Best positioned of all 5 nations — but still needs significant acceleration to reach its own targets.'
   },
   {
     id:'england', name:'England', flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿', color:'#2d6e3e', rating:'moderate', ratingLabel:'Moderate',
     center:[52.5,-1.5], zoom:6,
-    policyScore:55, required:85, protectedPct:2.83, carbonGt:1.2,
+    policyScore:55, required:85, protectedPct:2.83, carbonGt:2.14,
     keyPolicies:'Environment Act 2021 — legally binding species abundance target (halt decline by 2030, reverse by 2042). ELM replacing CAP. CSHT: 65,400 agreements. But SFI closed abruptly March 2025, creating immediate funding gap.',
     gap:'Gap of 30 points. Only 2.83% of land currently qualifies for 30by30 — among lowest in UK. OEP confirmed "largely off track" Jan 2024. SFI closure threatens farmland recovery.',
     trajectory:'Off track. Legally binding targets without funding mechanisms to deliver them.'
@@ -23,7 +23,7 @@ export const NATIONS = [
   {
     id:'wales', name:'Wales', flag:'🏴󠁧󠁢󠁷󠁬󠁳󠁿', color:'#8b1a1a', rating:'moderate', ratingLabel:'Moderate',
     center:[52.1,-3.8], zoom:7,
-    policyScore:52, required:82, protectedPct:9.2, carbonGt:0.55,
+    policyScore:52, required:82, protectedPct:9.2, carbonGt:0.72,
     keyPolicies:'Environment (Wales) Act 2016 — Section 6 biodiversity duty on public bodies. Habitat Wales Scheme (interim). Sustainable Farming Scheme delayed to 2026. 30by30 framework published 2025. LIFE Quaking Bogs peatland restoration.',
     gap:'Gap of 30 points. SFS delay leaving agri-env funding gap. No capital support for new wildflower meadow creation. Upland overgrazing continues unaddressed.',
     trajectory:'Behind schedule. Curlew near-extinct. Seagrass restoration promising but at small scale.'
@@ -31,9 +31,9 @@ export const NATIONS = [
   {
     id:'ni', name:'N. Ireland', flag:'🇬🇧', color:'#5c3d7a', rating:'weak', ratingLabel:'Weakest',
     center:[54.7,-6.6], zoom:7,
-    policyScore:28, required:70, protectedPct:5.1, carbonGt:0.3,
+    policyScore:28, required:70, protectedPct:5.1, carbonGt:0.60,
     keyPolicies:'First Environment Improvement Plan published Sept 2024 (14 months late). Draft Nature Recovery Strategy 2024–2032 in consultation. No statutory biodiversity targets yet in law. Rathlin LIFE Raft seabird project active.',
-    gap:'Gap of 42 points — the largest of any nation. Ranked 12th worst globally for biodiversity intactness. No ELM/SFS equivalent. Rivers among most polluted in UK. Lough Neagh suffering catastrophic algae crisis from agricultural run-off.',
+    gap:'Gap of 42 points — the largest of any nation. Ranked 12th worst globally for biodiversity intactness. No ELM/SFS-scale scheme; the Environmental Farming Scheme runs at much lower intensity. Rivers among most polluted in UK. Lough Neagh suffering catastrophic algae crisis from agricultural run-off.',
     trajectory:'Most urgent case. Without statutory targets, the legal framework to compel action does not exist.'
   },
   {
@@ -57,12 +57,12 @@ export const NATION_COLOR = {
 
 export const YEAR_CONTEXT = {
   2024:'Current baseline — biodiversity in continued decline across all nations',
-  2025:"SFI reopens in England. Scotland's Natural Environment Bill progresses through Parliament",
-  2026:'Wales Sustainable Farming Scheme launches. Ireland ACRES midway review',
+  2025:"Scotland's Natural Environment Bill progresses through Parliament",
+  2026:'SFI reopens in England as SFI26. Wales Sustainable Farming Scheme launches. Ireland ACRES midway review',
   2027:'UK 30by30 interim check. England expected to miss interim species abundance halt',
   2028:'Lough Neagh algae crisis continues without statutory NI water targets',
   2029:'Climate impacts accelerate. Seabird colonies hit by warming-driven sandeel collapse',
-  2030:'30by30 deadline. UK at ~10% protected. Transformative gap becomes undeniable',
+  2030:'30by30 deadline. UK at ~9% protected. Transformative gap becomes undeniable',
   2031:'Post-2030 reassessment. Scotland diverges sharply from other nations in recovery',
   2032:'NI Nature Recovery Strategy first review. Still lacks statutory targets in law',
   2033:'Scotland Peatland ACTION milestone: 150,000ha on road to restoration',
@@ -76,12 +76,12 @@ export const YEAR_CONTEXT = {
 
 export const CHART_LABELS = {
   species:'Species abundance index (1970 = 100)',
-  carbon:'Carbon stored in nature (Gt CO₂e)',
-  policy:'Policy delivery score (UK average, 0–100)'
+  carbon:'Carbon stored in UK peatlands (Gt CO₂e)',
+  policy:'Policy delivery score (UK and Ireland average, 0–100)'
 };
 
 export const CHART_CONTEXTS = {
   species:`In 1970 this index was 100 — the baseline. It is now <strong>48</strong>, meaning the UK has roughly half the wildlife it had 55 years ago. Under current policy it falls to ~34 by 2050. Under transformative action it stabilises then rises to ~58.`,
-  carbon:`<strong>Gt = gigatonne</strong> (1 billion tonnes of CO₂e stored in habitat). The UK's peatlands and woodlands currently store ~3.1 Gt. Under current policy this barely grows. Under transformative action — restoring drained peatland and expanding woodland — it could reach 5.4 Gt by 2050, equivalent to removing all UK cars from the road for decades.`,
-  policy:`Each nation's current policy delivery score (out of 100) vs the score needed to meet their own stated commitments. The gap is the story: Northern Ireland needs to almost triple its delivery. England needs to add 30 points. Only Scotland is close to the required trajectory.`
+  carbon:`<strong>Gt = gigatonne</strong> (1 billion tonnes of CO₂e). The UK's peatlands hold about 2.6 billion tonnes of carbon, roughly 9.7 Gt CO₂e: Scotland 6.2, England 2.1, Wales 0.7, Northern Ireland 0.6. Most of it sits in degraded peat that leaks ~23 Mt CO₂e a year, so under current policy the store shrinks. Restoring drained peatland stops the loss and lets it slowly grow again.`,
+  policy:`Each nation's current policy delivery score (out of 100) vs the score needed to meet their own stated commitments. The gap is the story: Northern Ireland needs to deliver two and a half times its current score. England needs to add 30 points. Only Scotland is close to the required trajectory.`
 };

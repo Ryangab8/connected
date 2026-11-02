@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { Chart, registerables } from 'chart.js';
@@ -7,6 +8,7 @@ import {
 } from '../data/policyNations';
 import { SITES } from '../data/policySites';
 import { ACTION_DATA } from '../data/actionData';
+import { siteSlug } from '../utils/siteSlug';
 
 Chart.register(...registerables);
 
@@ -24,7 +26,7 @@ function getSpeciesSeries(scenario) {
 function getCarbonSeries(scenario) {
   return YEARS.map(y => {
     const t = (y - 2024) / 26;
-    return scenario === 'current' ? +(3.1 + t * 0.4).toFixed(2) : +(3.1 + t * 2.3).toFixed(2);
+    return scenario === 'current' ? +(9.7 - t * 0.6).toFixed(2) : +(9.7 + t * 0.3).toFixed(2);
   });
 }
 function getPolicyAvgSeries(scenario) {
@@ -37,6 +39,7 @@ function getPolicyAvgSeries(scenario) {
 }
 
 export default function PolicyOutlook() {
+  const [searchParams] = useSearchParams();
   const [mode, setMode] = useState('species');
   const [year, setYear] = useState(2024);
   const [actionOpen, setActionOpen] = useState(false);
@@ -126,9 +129,9 @@ export default function PolicyOutlook() {
           <div class="po-ptitle">${s.icon} ${s.name}</div>
           <div class="po-site-type" style="color:${col}">${typeLabel} · <span style="color:${NATION_COLOR[s.nation] || '#888'}">${s.nation}</span></div>
           <div class="po-ptext">${s.desc}</div>
-          <div class="po-carbon-note">💚 Carbon stored: <strong>${s.carbon} Gt CO₂e</strong><br>
-            <span style="font-size:10px;color:#aaa">1 Gt = 1 billion tonnes of CO₂ equivalent — roughly equal to removing all UK cars from roads for ~18 years</span>
-          </div>
+          ${s.carbon != null ? `<div class="po-carbon-note">💚 Carbon stored in peat: <strong>${s.carbon} Gt CO₂e</strong><br>
+            <span style="font-size:10px;color:#aaa">1 Gt = 1 billion tonnes of CO₂ equivalent</span>
+          </div>` : ''}
           ${s.projects ? `<div style="margin-top:8px;padding-top:8px;border-top:1px solid rgba(26,35,24,.08)">
             <div style="font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#aaa;margin-bottom:5px">Active conservation projects</div>
             <div style="font-size:11px;color:#5a6a56;line-height:1.6">${s.projects}</div>
@@ -137,6 +140,21 @@ export default function PolicyOutlook() {
       siteMarkersRef.current.push(m);
     });
   }, [year]);
+
+  // ?site=<slug> or ?nation=<id> opens the map on that site or nation (used by links in LinkedIn posts)
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
+    const siteIdx = SITES.findIndex(s => siteSlug(s.name) === searchParams.get('site'));
+    const nationIdx = NATIONS.findIndex(n => n.id === searchParams.get('nation'));
+    if (siteIdx >= 0) {
+      map.setView([SITES[siteIdx].lat, SITES[siteIdx].lng], 9);
+      siteMarkersRef.current[siteIdx]?.openPopup();
+    } else if (nationIdx >= 0) {
+      map.setView(NATIONS[nationIdx].center, NATIONS[nationIdx].zoom);
+      nationMarkersRef.current[nationIdx]?.openPopup();
+    }
+  }, []);
 
   // Build / rebuild chart when mode or year changes
   useEffect(() => {
@@ -215,7 +233,7 @@ export default function PolicyOutlook() {
     const abundanceTransformative = year <= 2028
       ? +(48.4 - ((year - 2024) / 4) * 1.2).toFixed(1)
       : +(lerp(43, 58, (year - 2028) / 22)).toFixed(1);
-    const carbon = +(3.1 + t * 0.4).toFixed(2);
+    const carbon = +(9.7 - t * 0.6).toFixed(2);
     const prot = +Math.min(8.4 + t * 3.2, 30).toFixed(1);
     return { abundance, abundanceTransformative, carbon, prot };
   }, [year]);
@@ -298,13 +316,13 @@ export default function PolicyOutlook() {
             </div>
           </div>
           <div className="po-dash-card">
-            <div className="po-dc-label">Carbon stored in nature</div>
+            <div className="po-dc-label">Carbon stored in UK peat</div>
             <div className="po-dc-metric">{dash.carbon} Gt</div>
             <div className="po-dc-sub">Gt CO₂e stored · but UK nature is a net <em>source</em>, not sink</div>
             <div className="po-dc-context">
               {year <= 2030
                 ? <span className="po-trend-down">⚠ Net source since 2019 — degraded peatlands emit ~23 Mt/yr vs forests absorbing ~17 Mt/yr</span>
-                : (dash.carbon - 3.1) > 0.5
+                : (dash.carbon - 9.7) > 0.5
                   ? <span className="po-trend-up">↑ Peatland restoration shifting balance</span>
                   : <span className="po-trend-flat">⚠ Still net source — restoration pace too slow</span>
               }
