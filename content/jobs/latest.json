@@ -148,6 +148,116 @@
       "healthcare": false,
       "first_seen": "2026-11-02",
       "gaps": []
+    },
+    {
+      "title": "Higher Scientific Officer",
+      "employer": "Agri-Food and Biosciences Institute (AFBI)",
+      "location": "Belfast",
+      "region": "ni",
+      "salary": "£37,694 - £38,990 per annum",
+      "salary_gbp": 37694,
+      "contract": "Permanent",
+      "posted": null,
+      "closes": null,
+      "setting": "desk",
+      "requirements": [
+        "Full criteria on the listing; check before applying"
+      ],
+      "about": "Scientific officer post at AFBI, where she did her lab internship.",
+      "how_to_apply": "Search NIJobs for \"Higher Scientific Officer\" (Agri-Food and Biosciences Institute (AFBI)) and apply on the listing",
+      "url": "https://www.nijobs.com/#higher-scientific-officer-afbi",
+      "source": "NIJobs alert",
+      "healthcare": false,
+      "gaps": [],
+      "first_seen": "2026-11-03"
+    },
+    {
+      "title": "Waste Water Scientific Officer",
+      "employer": "MCS Group",
+      "location": "Belfast",
+      "region": "ni",
+      "salary": "£15.32 - £16.32 per hour",
+      "salary_gbp": null,
+      "contract": "Temporary",
+      "posted": null,
+      "closes": null,
+      "setting": "desk",
+      "requirements": [
+        "Full criteria on the listing; check before applying"
+      ],
+      "about": "Scientific officer post in wastewater, advertised by recruiter MCS Group.",
+      "how_to_apply": "Search NIJobs for \"Waste Water Scientific Officer\" (MCS Group) and apply on the listing",
+      "url": "https://www.nijobs.com/#waste-water-scientific-officer-mcs-group",
+      "source": "NIJobs alert",
+      "healthcare": false,
+      "gaps": [],
+      "first_seen": "2026-11-03"
+    },
+    {
+      "title": "Quality Sampling and Testing Technician",
+      "employer": "Devenish Nutrition Ltd",
+      "location": "Belfast",
+      "region": "ni",
+      "salary": null,
+      "salary_gbp": null,
+      "contract": "Permanent",
+      "posted": null,
+      "closes": null,
+      "setting": "mixed",
+      "requirements": [
+        "Full criteria on the listing; check before applying"
+      ],
+      "about": "Technician role collecting and preparing samples for analysis.",
+      "how_to_apply": "Search NIJobs for \"Quality Sampling and Testing Technician\" (Devenish Nutrition Ltd) and apply on the listing",
+      "url": "https://www.nijobs.com/#quality-sampling-testing-technician-devenish",
+      "source": "NIJobs alert",
+      "healthcare": false,
+      "gaps": [],
+      "first_seen": "2026-11-03"
+    },
+    {
+      "title": "Biomedical Lab Assistant",
+      "employer": "MCS Group",
+      "location": "Enniskillen, County Fermanagh",
+      "region": "ni",
+      "salary": "£24,937 per annum",
+      "salary_gbp": 24937,
+      "contract": "Temporary",
+      "posted": null,
+      "closes": null,
+      "setting": "desk",
+      "requirements": [
+        "Full criteria on the listing; check before applying"
+      ],
+      "about": "Healthcare lab assistant role, advertised as a way to begin a lab career.",
+      "how_to_apply": "Search NIJobs for \"Biomedical Lab Assistant\" (MCS Group) and apply on the listing",
+      "url": "https://www.nijobs.com/#biomedical-lab-assistant-mcs-group",
+      "source": "NIJobs alert",
+      "healthcare": false,
+      "gaps": [],
+      "first_seen": "2026-11-03"
+    },
+    {
+      "title": "Milk Intake Laboratory Technician",
+      "employer": "Dale Farm Ltd",
+      "location": "Cookstown, County Tyrone",
+      "region": "ni",
+      "salary": null,
+      "salary_gbp": null,
+      "contract": "Permanent",
+      "posted": null,
+      "closes": null,
+      "setting": "desk",
+      "requirements": [
+        "Full criteria on the listing; check before applying"
+      ],
+      "about": "Laboratory technician role on milk intake at Dale Farm.",
+      "how_to_apply": "Search NIJobs for \"Milk Intake Laboratory Technician\" (Dale Farm Ltd) and apply on the listing",
+      "url": "https://www.nijobs.com/#milk-intake-laboratory-technician-dale-farm",
+      "source": "NIJobs alert",
+      "healthcare": false,
+      "gaps": [],
+      "first_seen": "2026-11-03"
     }
   ]
 }
