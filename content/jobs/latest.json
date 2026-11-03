@@ -23,7 +23,10 @@
       "region": "ireland",
       "salary_gbp": 27300,
       "healthcare": false,
-      "first_seen": "2026-11-02"
+      "first_seen": "2026-11-02",
+      "gaps": [
+        "Irish driving licence (exchange of her UK licence, if she moves to Ireland)"
+      ]
     },
     {
       "title": "Trainee (Conservation), Brooke Park",
@@ -46,7 +49,8 @@
       "region": "ni",
       "salary_gbp": 24479,
       "healthcare": false,
-      "first_seen": "2026-11-02"
+      "first_seen": "2026-11-02",
+      "gaps": []
     },
     {
       "title": "Trainee (Conservation), Acorn Farm",
@@ -69,7 +73,8 @@
       "region": "ni",
       "salary_gbp": 24479,
       "healthcare": false,
-      "first_seen": "2026-11-02"
+      "first_seen": "2026-11-02",
+      "gaps": []
     },
     {
       "title": "Environmental Consultant",
@@ -92,7 +97,33 @@
       "region": "ireland",
       "salary_gbp": null,
       "healthcare": false,
-      "first_seen": "2026-11-02"
+      "first_seen": "2026-11-02",
+      "gaps": []
+    },
+    {
+      "title": "Community Engagement Coordinator",
+      "employer": "Live Here Love Here (Keep Northern Ireland Beautiful)",
+      "location": "Belfast (hybrid, 2 days a week in the office)",
+      "region": "ni",
+      "salary": "£30,935",
+      "salary_gbp": 30935,
+      "contract": "Permanent subject to funding, full-time (4-day, 30-hour week)",
+      "posted": null,
+      "closes": "2026-11-09",
+      "setting": "mixed",
+      "requirements": [
+        "Degree, or three years' relevant experience",
+        "2 years' project coordination and 1 year's staff supervision",
+        "Data collection, analysis and reporting; Excel",
+        "Full driving licence and knowledge of environmental matters"
+      ],
+      "about": "Runs community workshops and events on litter and local environments, coordinates Field Officers and line manages a Community Engagement Officer.",
+      "how_to_apply": "Personio application form by 9am, 9 November; interviews 17 November in Belfast",
+      "url": "https://jobs.charityjobsni.com/jobs/780523105-community-engagement-coordinator",
+      "source": "NI Environment Link / Charity Jobs NI",
+      "healthcare": false,
+      "gaps": [],
+      "first_seen": "2026-11-03"
     },
     {
       "title": "Environmental Coordinator",
@@ -115,7 +146,8 @@
       "region": "ireland",
       "salary_gbp": null,
       "healthcare": false,
-      "first_seen": "2026-11-02"
+      "first_seen": "2026-11-02",
+      "gaps": []
     }
   ]
 }
