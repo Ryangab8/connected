@@ -39,8 +39,15 @@ Claude writes the drafts. Emily rewrites them in her own words and posts them he
     (one search at a time; it rate-limits), and the boards listed in section 3.
   - The list is cumulative. Roles stay while they're open and she qualifies, closed roles drop off, and
     the whole list is re-ranked each day (cap 60).
-  - Eligibility is strict: a role is listed only if her CV meets every essential criterion. No master's,
-    chartered status, survey licences, specialist ID skills, recent-graduate schemes or GB-only roles.
+  - Eligibility: the run judges each listing against her CV. "Graduate" jobs open to anyone with a degree
+    are in. Gaps she could close in a few weeks (GIS course, CIEEM membership, CSCS card, PA1/PA6) keep the
+    role in, with a "Needs first" note on the page. Long gaps drop it: years of specialist experience, a
+    master's, chartered status, survey licences, specialist ID skills, GB-only roles.
+  - Role types: ecology and conservation, plus related roles she qualifies for: field and water-quality
+    sampling, environmental and lab technicians, fisheries, countryside and ranger, council biodiversity
+    and parks, records and data, nursery and horticulture, and admin or outreach at conservation charities.
+  - Sites that block automated reading or need a login (CEDaR, NICS, NIJobs, Gradcracker, CharityJob,
+    WildTeam) aren't fetched; their jobs come in through alert emails filed under "Emily Jobs".
   - Ranking: roles offering private healthcare go to the top. Then field and outdoor roles, then field
     and desk, then desk-based. At a similar fit, Belfast or NI roles and CEDaR or NBDC roles rank higher.
     The page tags private healthcare and can filter on it.

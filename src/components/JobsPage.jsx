@@ -5,7 +5,8 @@ import feed from '../../content/jobs/latest.json';
 // content/jobs/latest.json is rewritten each morning by the daily job run: every still-open role,
 // ranked best fit first. `region` (ni | ireland | remote) and `salary_gbp` (annual minimum, euros
 // converted) drive the filters and the salary sort; `first_seen` marks roles new today; `healthcare`
-// is true when the listing offers private healthcare (those roles are ranked first).
+// is true when the listing offers private healthcare (those roles are ranked first); `gaps` lists
+// essential criteria she could meet quickly (for example a short GIS course), shown as a "Needs first" note.
 const SETTING = {
   outdoors: { label: 'Mostly outdoors', color: '#2d6a4f', bg: '#e6f4e6' },
   mixed: { label: 'Field and desk', color: '#8a5a00', bg: '#fef3e2' },
@@ -96,6 +97,9 @@ function Job({ job, isNew }) {
           {setting && <span className="jb-tag" style={{ color: setting.color, background: setting.bg }}>{setting.label}</span>}
           {facts.map(f => <span key={f} className="jb-tag">{f}</span>)}
         </div>
+        {job.gaps?.length > 0 && (
+          <div className="jb-gap"><strong>Needs first:</strong> {job.gaps.join('; ')}</div>
+        )}
         {job.about && <p className="jb-about">{job.about}</p>}
         {job.requirements?.length > 0 && (
           <ul className="jb-reqs">
@@ -133,6 +137,7 @@ function Styles() {
       .jb-tag { font-size: 0.8rem; padding: 3px 10px; border-radius: 12px; background: #f1f0ec; color: #3d4a3a; }
       .jb-new { background: #2d6a4f; color: #ffffff; font-weight: 600; }
       .jb-health { background: #1e4d8c; color: #ffffff; font-weight: 600; }
+      .jb-gap { margin: 0 0 10px; padding: 8px 12px; border-left: 3px solid #c8760a; background: #fef3e2; border-radius: 6px; font-size: 0.9rem; color: #5a3d00; line-height: 1.5; }
       .jb-about { margin: 0 0 8px; line-height: 1.55; font-size: 0.95rem; }
       .jb-reqs { margin: 0 0 10px; padding-left: 18px; line-height: 1.55; font-size: 0.9rem; color: #3d4a3a; }
       .jb-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; font-size: 0.85rem; color: #6b7a68; }
