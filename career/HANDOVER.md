@@ -21,8 +21,8 @@ as they are; she's already a collaborator.
 
 2. **Gmail:** create a label called `Emily Jobs`, then a filter with From set to
    `jobs.nijobs.com OR jobalerts-noreply@linkedin.com OR servms.co.uk OR greenjobs.co.uk OR nienvironmentlink.org`.
-   Tick **Skip the Inbox**, **Mark as read** and **Apply the label: Emily Jobs**. environmentjob's alerts
-   come from `servms.co.uk`.
+   Tick **Apply the label: Emily Jobs**. Emily keeps alerts in her inbox as well, so the run labels them but
+   never archives them. environmentjob's alerts come from `servms.co.uk`.
 3. **Connectors:** at claude.ai/customize/connectors, connect **Gmail** and **Indeed**.
 4. **Scheduled task:** at claude.ai/code/routines, choose new, connect GitHub if asked, then set:
    - **Name:** Daily job search
