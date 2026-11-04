@@ -1,28 +1,30 @@
 # Moving Emily's daily job run to the cloud
 
-Goal: the daily run lives on Emily's Claude account as a cloud scheduled task, so nobody's computer has
-to be on. Ryan keeps his job alerts, the GitHub repo and the Vercel site. His alerts forward to Emily's
-Gmail, so she can add her own alerts and they all land in one place. About 20 minutes, done together.
-
-## Ryan
-
-1. **GitHub:** repo Settings → Collaborators → add Emily with write access. The site stays on Ryan's
-   Vercel and keeps deploying from main.
-2. **Gmail forwarding:** Settings → Forwarding and POP/IMAP → Add a forwarding address →
-   `emilymoreland9997@gmail.com`. Emily gets a confirmation email; she clicks the link or reads you the code.
-   Leave the page set to **Disable forwarding**, so only the filter below forwards anything.
-3. **Gmail filter:** Create a filter with From set to
-   `jobs.nijobs.com OR jobalerts-noreply@linkedin.com OR servms.co.uk OR greenjobs.co.uk OR nienvironmentlink.org`.
-   Tick **Skip the Inbox**, **Mark as read**, **Apply the label: Emily Jobs** and
-   **Forward it to: emilymoreland9997@gmail.com**. Add new senders here as alerts are added.
+Goal: the daily run and its job alerts live entirely on Emily's accounts, on her Claude Pro usage, as a
+cloud scheduled task, so nobody's computer has to be on. Ryan's email drops out. The repo and site stay
+as they are; she's already a collaborator.
 
 ## Emily
 
-4. **GitHub:** create a free account if needed and accept Ryan's invite.
-5. **Gmail:** create a label called `Emily Jobs`, then a filter with the same From list:
-   **Skip the Inbox**, **Mark as read**, **Apply the label: Emily Jobs**. Add her own alert senders over time.
-6. **Connectors:** at claude.ai/customize/connectors, connect **Gmail** and **Indeed**.
-7. **Scheduled task:** at claude.ai/code/routines, choose new, connect GitHub if asked, then set:
+1. **Job alerts:** sign up with her own email. Daily emails where offered.
+
+   | Site | Alerts |
+   | --- | --- |
+   | linkedin.com/jobs (search, then turn on **Set alert**) | ecology, environmental and conservation in Northern Ireland; laboratory technician in Belfast; ecology in Ireland |
+   | nijobs.com | ecology, environmental and conservation in Belfast |
+   | environmentjob.co.uk | environmental jobs in Northern Ireland, plus remote |
+   | greenjobs.co.uk | Northern Ireland |
+   | nienvironmentlink.org | jobs and opportunities emails |
+
+   Worth adding: indeed.co.uk (ecology, environmental, laboratory technician, water quality, Belfast) and
+   publicjobs.ie (environmental).
+
+2. **Gmail:** create a label called `Emily Jobs`, then a filter with From set to
+   `jobs.nijobs.com OR jobalerts-noreply@linkedin.com OR servms.co.uk OR greenjobs.co.uk OR nienvironmentlink.org`.
+   Tick **Skip the Inbox**, **Mark as read** and **Apply the label: Emily Jobs**. environmentjob's alerts
+   come from `servms.co.uk`.
+3. **Connectors:** at claude.ai/customize/connectors, connect **Gmail** and **Indeed**.
+4. **Scheduled task:** at claude.ai/code/routines, choose new, connect GitHub if asked, then set:
    - **Name:** Daily job search
    - **Prompt:** the block below
    - **Trigger:** Schedule, daily, 6:07am Belfast time
@@ -37,7 +39,8 @@ Gmail, so she can add her own alerts and they all land in one place. About 20 mi
    Commit and push directly to main, not to a claude/ branch.
    ```
 
-8. Click **Run now** and watch the first run.
+5. Click **Run now** and watch the first run. Her first alerts may take a day to arrive; the run still
+   works from Indeed and the job boards until then.
 
 ## Check the first run
 
@@ -46,12 +49,13 @@ Gmail, so she can add her own alerts and they all land in one place. About 20 mi
 - If there were roles she hadn't been sent, the email arrived, copied to Ryan.
 - The run's report lists no boards blocked by the network.
 
-## Then
+## Ryan, once that works
 
-9. **Ryan: turn off the local task the same day.** In the sidebar under Scheduled, pause
-   "Emily's daily job feed". If both run, they compete on main and repeat the work.
-   `content/jobs/emailed.json` lives in the repo, so Emily won't be re-sent what she has already had.
-10. `career/daily-jobs-routine.md` can then be deleted; `career/cloud-routine-instructions.md` replaces it.
+6. **Pause the local task the same day:** in the sidebar under Scheduled, pause "Emily's daily job feed". If
+   both run, they compete on main and repeat the work. `content/jobs/emailed.json` lives in the repo, so
+   Emily won't be re-sent what she has already had.
+7. Delete his alerts and filters whenever he likes, and `career/daily-jobs-routine.md`, which
+   `career/cloud-routine-instructions.md` replaces.
 
 ## Good to know
 
