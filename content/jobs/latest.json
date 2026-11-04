@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "jobs": [
     {
       "title": "Conservation Ranger, National Parks and Wildlife Service",
@@ -77,6 +77,61 @@
       "gaps": []
     },
     {
+      "title": "Fisheries Officer",
+      "employer": "Inland Fisheries Ireland",
+      "location": "Farnanes, County Cork",
+      "region": "ireland",
+      "salary": "€33,127 to €48,136, plus an unsocial hours allowance of up to €7,979",
+      "salary_gbp": 28158,
+      "contract": "Permanent, full-time (39-hour week including weekends, evenings and nights)",
+      "posted": "2026-10-29",
+      "closes": "2026-11-26",
+      "setting": "outdoors",
+      "requirements": [
+        "Leaving Certificate or recognised equivalent",
+        "Full Category B driving licence valid in Ireland",
+        "Competent in and on the water, at sea and on lakes and rivers",
+        "Strong interest in conserving natural resources; must live within 60 minutes' drive of base"
+      ],
+      "about": "Mostly outdoors role patrolling rivers, lakes and coast, with habitat improvement, electro-fishing, fish surveys, pollution sampling and enforcement work.",
+      "how_to_apply": "Cover letter and CV through the listing by 5pm, 26 November",
+      "url": "https://to.indeed.com/aa72r2zk7d9z",
+      "source": "Indeed",
+      "healthcare": false,
+      "gaps": [
+        "On-water competence (a short powerboat or water safety course covers this)",
+        "Irish driving licence (exchange of her UK licence, if she moves to Ireland)"
+      ],
+      "first_seen": "2026-11-04"
+    },
+    {
+      "title": "L1 Graduate Environmental Consultant, Renewables Team",
+      "employer": "Malone O'Regan Environmental",
+      "location": "Dublin, Shannon or Tullamore (hybrid)",
+      "region": "ireland",
+      "salary": null,
+      "salary_gbp": null,
+      "contract": "Full-time",
+      "posted": "2026-10-08",
+      "closes": null,
+      "setting": "mixed",
+      "requirements": [
+        "Degree in environmental science or a related field",
+        "Familiarity with relevant legislation and the planning application process",
+        "Technical report writing and Microsoft Office",
+        "Full clean driving licence"
+      ],
+      "about": "Entry-level consultancy role on solar, battery and wind projects: environmental surveys, data analysis and drafting Environmental Impact Assessment chapters.",
+      "how_to_apply": "Cover letter and CV to careers@mores.ie",
+      "url": "https://to.indeed.com/aax7fb7nzgwk",
+      "source": "Indeed",
+      "healthcare": false,
+      "gaps": [
+        "Familiarity with the planning application process (some reading before applying covers this)"
+      ],
+      "first_seen": "2026-11-04"
+    },
+    {
       "title": "Environmental Consultant",
       "employer": "Environmental consultancy (via Gaia Talent)",
       "location": "Dublin (hybrid)",
@@ -150,6 +205,28 @@
       "gaps": []
     },
     {
+      "title": "Quality Sampling and Testing Technician",
+      "employer": "Devenish Nutrition Ltd",
+      "location": "Belfast",
+      "region": "ni",
+      "salary": null,
+      "salary_gbp": null,
+      "contract": "Permanent",
+      "posted": null,
+      "closes": null,
+      "setting": "mixed",
+      "requirements": [
+        "Full criteria on the listing; check before applying"
+      ],
+      "about": "Technician role collecting and preparing samples for analysis.",
+      "how_to_apply": "Search NIJobs for \"Quality Sampling and Testing Technician\" (Devenish Nutrition Ltd) and apply on the listing",
+      "url": "https://www.nijobs.com/#quality-sampling-testing-technician-devenish",
+      "source": "NIJobs alert",
+      "healthcare": false,
+      "gaps": [],
+      "first_seen": "2026-11-03"
+    },
+    {
       "title": "Higher Scientific Officer",
       "employer": "Agri-Food and Biosciences Institute (AFBI)",
       "location": "Belfast",
@@ -194,26 +271,50 @@
       "first_seen": "2026-11-03"
     },
     {
-      "title": "Quality Sampling and Testing Technician",
-      "employer": "Devenish Nutrition Ltd",
-      "location": "Belfast",
+      "title": "Sample/Laboratory Administrator",
+      "employer": "Beyond HR",
+      "location": "Doagh, Ballyclare",
       "region": "ni",
-      "salary": null,
-      "salary_gbp": null,
-      "contract": "Permanent",
+      "salary": "£25,000 - £27,000 per annum",
+      "salary_gbp": 25000,
+      "contract": "Permanent, Monday to Friday",
       "posted": null,
       "closes": null,
-      "setting": "mixed",
+      "setting": "desk",
       "requirements": [
         "Full criteria on the listing; check before applying"
       ],
-      "about": "Technician role collecting and preparing samples for analysis.",
-      "how_to_apply": "Search NIJobs for \"Quality Sampling and Testing Technician\" (Devenish Nutrition Ltd) and apply on the listing",
-      "url": "https://www.nijobs.com/#quality-sampling-testing-technician-devenish",
+      "about": "Sample and laboratory administration post, advertised by recruiter Beyond HR.",
+      "how_to_apply": "Search NIJobs for \"Sample/Laboratory Administrator\" (Beyond HR) and apply on the listing",
+      "url": "https://www.nijobs.com/#sample-laboratory-administrator-beyond-hr",
       "source": "NIJobs alert",
       "healthcare": false,
       "gaps": [],
-      "first_seen": "2026-11-03"
+      "first_seen": "2026-11-04"
+    },
+    {
+      "title": "Serum QC Analyst (Night Shift), Functional QC",
+      "employer": "Randox Laboratories",
+      "location": "Antrim (Randox Science Park, onsite)",
+      "region": "ni",
+      "salary": null,
+      "salary_gbp": null,
+      "contract": "Fixed-term 12 months, full-time (nights, 4pm to 4am or 7pm to 7am, Tuesday to Thursday)",
+      "posted": "2026-11-03",
+      "closes": null,
+      "setting": "desk",
+      "requirements": [
+        "Bachelor's degree in biochemistry, chemistry, immunology or a life science",
+        "Strong analytical and problem-solving skills",
+        "Attention to detail and computer literacy"
+      ],
+      "about": "Lab role testing diagnostic products against specification, running analysers and keeping quality control records.",
+      "how_to_apply": "Apply on the listing, quoting ref 26N/SQCN",
+      "url": "https://to.indeed.com/aaslvlcf2zpr",
+      "source": "Indeed / NIJobs alert",
+      "healthcare": false,
+      "gaps": [],
+      "first_seen": "2026-11-04"
     },
     {
       "title": "Biomedical Lab Assistant",
