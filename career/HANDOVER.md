@@ -1,45 +1,61 @@
-# Handing the kit over to Emily
+# Moving Emily's daily job run to the cloud
 
-Everything except the accounts below lives in this repo, so the handover is mostly moving ownership
-and recreating one scheduled run on her account. Allow an afternoon, done together.
+Goal: the daily run lives on Emily's Claude account as a cloud scheduled task, so nobody's computer has
+to be on. Ryan keeps his job alerts, the GitHub repo and the Vercel site. His alerts forward to Emily's
+Gmail, so she can add her own alerts and they all land in one place. About 20 minutes, done together.
 
-## 1. Code and site
+## Ryan
 
-1. GitHub: transfer `Ryangab8/connected` to Emily's GitHub account (Settings → Danger Zone → Transfer),
-   or add her as an owner.
-2. Vercel: transfer the project to her Vercel account, or invite her to it. Check that a push to main
-   still deploys connectedbiodiversity.com, and that the domain stays connected.
+1. **GitHub:** repo Settings → Collaborators → add Emily with write access. The site stays on Ryan's
+   Vercel and keeps deploying from main.
+2. **Gmail forwarding:** Settings → Forwarding and POP/IMAP → Add a forwarding address →
+   `emilymoreland9997@gmail.com`. Emily gets a confirmation email; she clicks the link or reads you the code.
+   Leave the page set to **Disable forwarding**, so only the filter below forwards anything.
+3. **Gmail filter:** Create a filter with From set to
+   `jobs.nijobs.com OR jobalerts-noreply@linkedin.com OR servms.co.uk OR greenjobs.co.uk OR nienvironmentlink.org`.
+   Tick **Skip the Inbox**, **Mark as read**, **Apply the label: Emily Jobs** and
+   **Forward it to: emilymoreland9997@gmail.com**. Add new senders here as alerts are added.
 
-## 2. Claude
+## Emily
 
-1. Emily signs in to Claude Code with her Pro plan and connects her GitHub.
-2. In claude.ai, she connects the Gmail and Indeed connectors to her account.
-3. She creates a cloud routine (claude.ai/code/routines, or `/schedule` in Claude Code):
-   - Repository: `connected`.
-   - Schedule: daily, around 6:00am Belfast time.
-   - Prompt: the text of `career/daily-jobs-routine.md`, with these changes:
-     - Repo line: replace the Windows path with "this repository".
-     - Step 1: read the LinkedIn alerts from her Gmail, using her own label and its label id.
-     - Step 8: send the email from her Gmail to herself, or drop the email and just use the
-       `/jobs` page.
-4. On Ryan's computer, disable the local scheduled task `emily-daily-jobs` so it doesn't run twice.
+4. **GitHub:** create a free account if needed and accept Ryan's invite.
+5. **Gmail:** create a label called `Emily Jobs`, then a filter with the same From list:
+   **Skip the Inbox**, **Mark as read**, **Apply the label: Emily Jobs**. Add her own alert senders over time.
+6. **Connectors:** at claude.ai/customize/connectors, connect **Gmail** and **Indeed**.
+7. **Scheduled task:** at claude.ai/code/routines, choose new, connect GitHub if asked, then set:
+   - **Name:** Daily job search
+   - **Prompt:** the block below
+   - **Trigger:** Schedule, daily, 6:07am Belfast time
+   - **Advanced settings → Repository:** `Ryangab8/connected`. If it isn't listed, Ryan installs the Claude
+     GitHub app on the repo.
+   - **Advanced settings → Cloud environment:** edit it and set **Network access** to **Full**. The default
+     blocks job boards.
+   - **Advanced settings → Connectors:** keep Gmail and Indeed; remove the rest.
 
-## 3. Accounts to recreate on her side
+   ```
+   Follow career/cloud-routine-instructions.md in this repository exactly, from start to finish.
+   Commit and push directly to main, not to a claude/ branch.
+   ```
 
-- LinkedIn job alerts on her LinkedIn: biodiversity (Remote), biodiversity belfast, ecology belfast.
-  Delivery: email only.
-- A Gmail filter on her account: from `jobalerts-noreply@linkedin.com`, Skip the Inbox, Mark as read,
-  apply her job label.
-- Ryan can then delete his three alerts, his Gmail filter and the "Emily Jobs" label.
+8. Click **Run now** and watch the first run.
 
-## 4. What stays local
+## Check the first run
 
-- Her full CV (`career/*.docx`) is gitignored, so it never goes to GitHub or the site. Send her the
-  latest copy directly. `career/profile.md` is the version the job run reads; keep it current when her
-  CV changes.
+- GitHub shows a commit "Jobs: daily update <date>" on main from Emily's account.
+- Vercel deployed it, and connectedbiodiversity.com/jobs shows the new date.
+- If there were roles she hadn't been sent, the email arrived, copied to Ryan.
+- The run's report lists no boards blocked by the network.
 
-## 5. Check after the first run on her account
+## Then
 
-- `/jobs` shows the new date.
-- The commit "Jobs: daily update <date>" appears on GitHub.
-- The email arrived, if it's still in use.
+9. **Ryan: turn off the local task the same day.** In the sidebar under Scheduled, pause
+   "Emily's daily job feed". If both run, they compete on main and repeat the work.
+   `content/jobs/emailed.json` lives in the repo, so Emily won't be re-sent what she has already had.
+10. `career/daily-jobs-routine.md` can then be deleted; `career/cloud-routine-instructions.md` replaces it.
+
+## Good to know
+
+- Commits and emails from the run appear as Emily, and it draws on her Pro usage. One run a day should
+  be comfortable, but check claude.ai/settings/usage after the first week.
+- Scheduled tasks are in research preview, so details can change.
+- Her full CV (`career/*.docx`) is gitignored. `career/profile.md` is what the run reads; keep it current.
