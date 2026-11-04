@@ -227,6 +227,31 @@
       "first_seen": "2026-11-03"
     },
     {
+      "title": "Cleanroom Microbiologist",
+      "employer": "Norbrook",
+      "location": "Newry, County Down",
+      "salary": null,
+      "contract": "Permanent, full-time (shift pattern incl. nights and weekends)",
+      "posted": "2026-10-27",
+      "closes": "2026-11-09",
+      "setting": "mixed",
+      "requirements": [
+        "GCSE English and Maths grade C or above",
+        "Able to work 8 or 12 hour shifts incl. nights and weekends",
+        "Full UK driving licence",
+        "No prior experience required; full training given"
+      ],
+      "about": "Sampling of pharmaceutical cleanrooms for quality assurance and recording the results in a database system.",
+      "how_to_apply": "Send your CV via the Apply button on NIJobs (job ref CM261026) by 5pm, 9 November",
+      "url": "https://www.nijobs.com/#cleanroom-microbiologist-norbrook",
+      "source": "NIJobs alert email",
+      "region": "ni",
+      "salary_gbp": null,
+      "healthcare": false,
+      "first_seen": "2026-11-04",
+      "gaps": []
+    },
+    {
       "title": "Higher Scientific Officer",
       "employer": "Agri-Food and Biosciences Institute (AFBI)",
       "location": "Belfast",
