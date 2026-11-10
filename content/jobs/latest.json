@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "jobs": [
     {
       "title": "Conservation Ranger, National Parks and Wildlife Service",
@@ -156,31 +156,6 @@
       "gaps": []
     },
     {
-      "title": "Community Engagement Coordinator",
-      "employer": "Live Here Love Here (Keep Northern Ireland Beautiful)",
-      "location": "Belfast (hybrid, 2 days a week in the office)",
-      "region": "ni",
-      "salary": "£30,935",
-      "salary_gbp": 30935,
-      "contract": "Permanent subject to funding, full-time (4-day, 30-hour week)",
-      "posted": null,
-      "closes": "2026-11-09",
-      "setting": "mixed",
-      "requirements": [
-        "Degree, or three years' relevant experience",
-        "2 years' project coordination and 1 year's staff supervision",
-        "Data collection, analysis and reporting; Excel",
-        "Full driving licence and knowledge of environmental matters"
-      ],
-      "about": "Runs community workshops and events on litter and local environments, coordinates Field Officers and line manages a Community Engagement Officer.",
-      "how_to_apply": "Personio application form by 9am, 9 November; interviews 17 November in Belfast",
-      "url": "https://jobs.charityjobsni.com/jobs/780523105-community-engagement-coordinator",
-      "source": "NI Environment Link / Charity Jobs NI",
-      "healthcare": false,
-      "gaps": [],
-      "first_seen": "2026-11-03"
-    },
-    {
       "title": "Environmental Coordinator",
       "employer": "Wastewater operator (via Gaia Talent)",
       "location": "Dublin",
@@ -225,31 +200,6 @@
       "healthcare": false,
       "gaps": [],
       "first_seen": "2026-11-03"
-    },
-    {
-      "title": "Cleanroom Microbiologist",
-      "employer": "Norbrook",
-      "location": "Newry, County Down",
-      "salary": null,
-      "contract": "Permanent, full-time (shift pattern incl. nights and weekends)",
-      "posted": "2026-10-27",
-      "closes": "2026-11-09",
-      "setting": "mixed",
-      "requirements": [
-        "GCSE English and Maths grade C or above",
-        "Able to work 8 or 12 hour shifts incl. nights and weekends",
-        "Full UK driving licence",
-        "No prior experience required; full training given"
-      ],
-      "about": "Sampling of pharmaceutical cleanrooms for quality assurance and recording the results in a database system.",
-      "how_to_apply": "Send your CV via the Apply button on NIJobs (job ref CM261026) by 5pm, 9 November",
-      "url": "https://www.nijobs.com/#cleanroom-microbiologist-norbrook",
-      "source": "NIJobs alert email",
-      "region": "ni",
-      "salary_gbp": null,
-      "healthcare": false,
-      "first_seen": "2026-11-04",
-      "gaps": []
     },
     {
       "title": "Higher Scientific Officer",
@@ -384,6 +334,28 @@
       "healthcare": false,
       "gaps": [],
       "first_seen": "2026-11-03"
+    },
+    {
+      "title": "Science Placement",
+      "employer": "Randox Laboratories",
+      "location": "Crumlin, County Antrim",
+      "region": "ni",
+      "salary": null,
+      "salary_gbp": null,
+      "contract": "Temporary",
+      "posted": null,
+      "closes": null,
+      "setting": "desk",
+      "requirements": [
+        "Full criteria on the listing; check before applying"
+      ],
+      "about": "Temporary science placement in the Randox laboratories at Crumlin.",
+      "how_to_apply": "Search NIJobs for \"Science Placement\" (Randox Laboratories, job ref 27N/PLCS) and apply on the listing",
+      "url": "https://www.nijobs.com/#science-placement-randox",
+      "source": "NIJobs alert",
+      "healthcare": false,
+      "gaps": [],
+      "first_seen": "2026-11-10"
     }
   ]
 }
