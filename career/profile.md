@@ -59,6 +59,9 @@ Search broadly and rank by overall fit. Confirmed by Ryan on 2026-11-01.
 
 - Location: Belfast is ideal, and anywhere in Northern Ireland is fine. She would move anywhere on the
   island of Ireland for a good role, as long as it is in or near a city. Skip remote rural postings.
+- Work from home: fully remote and hybrid roles are welcome (added by Emily on 2026-11-11). Remote
+  roles must accept NI-based staff. Hybrid roles need an office in NI or in a city or large town in
+  Ireland, or an office in GB with only occasional office days (about once a month or less).
 - Contracts: full-time preferred. Part-time, fixed-term and seasonal are fine.
 - Salary: no floor. Show the salary on every listing where it is given.
 - Seniority: graduate, entry level and assistant roles.
