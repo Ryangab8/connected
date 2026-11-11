@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-11",
   "jobs": [
     {
       "title": "Conservation Ranger, National Parks and Wildlife Service",
@@ -266,6 +266,28 @@
       "healthcare": false,
       "gaps": [],
       "first_seen": "2026-11-04"
+    },
+    {
+      "title": "Clinical Lab Analyst",
+      "employer": "Randox Laboratories",
+      "location": "Antrim, County Antrim",
+      "region": "ni",
+      "salary": null,
+      "salary_gbp": null,
+      "contract": "Permanent",
+      "posted": null,
+      "closes": null,
+      "setting": "desk",
+      "requirements": [
+        "Full criteria on the listing; check before applying"
+      ],
+      "about": "Laboratory analyst role in the Randox clinical laboratories at Antrim (job ref 26N/LANS).",
+      "how_to_apply": "Search NIJobs for \"Clinical Lab Analyst\" (Randox Laboratories, job ref 26N/LANS) and apply on the listing",
+      "url": "https://www.nijobs.com/#clinical-lab-analyst-randox",
+      "source": "NIJobs alert",
+      "healthcare": false,
+      "gaps": [],
+      "first_seen": "2026-11-11"
     },
     {
       "title": "Serum QC Analyst (Night Shift), Functional QC",
