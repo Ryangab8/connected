@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "jobs": [
     {
       "title": "Conservation Ranger, National Parks and Wildlife Service",
@@ -27,54 +27,6 @@
       "gaps": [
         "Irish driving licence (exchange of her UK licence, if she moves to Ireland)"
       ]
-    },
-    {
-      "title": "Trainee (Conservation), Brooke Park",
-      "employer": "The Conservation Volunteers (TCV)",
-      "location": "Derry~Londonderry",
-      "salary": "£24,479",
-      "contract": "Fixed-term to September 2027",
-      "posted": null,
-      "closes": "2026-11-11",
-      "setting": "outdoors",
-      "requirements": [
-        "No previous experience needed",
-        "Horticulture or plant-growing experience helpful",
-        "Experience with volunteers and the public helpful"
-      ],
-      "about": "Paid traineeship leading volunteers on community gardens and habitat work on bogs, woodlands and dunes.",
-      "how_to_apply": "Online on the TCV vacancy page, quoting ID357",
-      "url": "https://www2.tcv.org.uk/cgi-bin/jobs/job_vacancy?id=2155",
-      "source": "NI Environment Link",
-      "region": "ni",
-      "salary_gbp": 24479,
-      "healthcare": false,
-      "first_seen": "2026-11-02",
-      "gaps": []
-    },
-    {
-      "title": "Trainee (Conservation), Acorn Farm",
-      "employer": "The Conservation Volunteers (TCV)",
-      "location": "Derry~Londonderry (St Columb's Park)",
-      "salary": "£24,479",
-      "contract": "Fixed-term to September 2027",
-      "posted": null,
-      "closes": "2026-11-11",
-      "setting": "outdoors",
-      "requirements": [
-        "No previous experience needed",
-        "Say how the role advances your career",
-        "Plant or vegetable growing experience helpful"
-      ],
-      "about": "Paid traineeship helping open a sustainable food-growing site, then running community learning and volunteer days in 2027.",
-      "how_to_apply": "Online on the TCV vacancy page, quoting ID358",
-      "url": "https://www2.tcv.org.uk/cgi-bin/jobs/job_vacancy?id=2156",
-      "source": "NI Environment Link",
-      "region": "ni",
-      "salary_gbp": 24479,
-      "healthcare": false,
-      "first_seen": "2026-11-02",
-      "gaps": []
     },
     {
       "title": "Fisheries Officer",
@@ -378,6 +330,32 @@
       "healthcare": false,
       "gaps": [],
       "first_seen": "2026-11-10"
+    },
+    {
+      "title": "Scientific Officer, Inorganic Chemistry (DAERA Water Chemistry)",
+      "employer": "DAERA via JDR Recruitment",
+      "location": "Lisburn, County Antrim",
+      "region": "ni",
+      "salary": "£17.43 per hour",
+      "salary_gbp": null,
+      "contract": "Temporary agency assignment, 37 hours, to 29 January 2027",
+      "posted": "2026-11-10",
+      "closes": null,
+      "setting": "desk",
+      "requirements": [
+        "HNC, HND or higher in chemistry, biochemistry or environmental science",
+        "One year of chemical analysis experience (academic work, volunteering or employment can count)",
+        "Standard security clearance"
+      ],
+      "about": "Laboratory role preparing and analysing water samples (pH, conductivity, ammonia and more) for Water Framework Directive monitoring.",
+      "how_to_apply": "Apply with an up-to-date CV through the Indeed listing",
+      "url": "https://to.indeed.com/aayt9xb26h2j",
+      "source": "Indeed",
+      "healthcare": false,
+      "gaps": [
+        "One year of chemical analysis experience (degree lab work and her AFBI internship may count; check with the recruiter)"
+      ],
+      "first_seen": "2026-11-12"
     }
   ]
 }
