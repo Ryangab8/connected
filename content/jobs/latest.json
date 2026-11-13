@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "jobs": [
     {
       "title": "Conservation Ranger, National Parks and Wildlife Service",
@@ -29,6 +29,30 @@
       ]
     },
     {
+      "title": "Environmental Site Technician (oil spill surveys and remediation)",
+      "employer": "Spill Resolve Ltd",
+      "location": "Northern Ireland (Warrenpoint base; sites across Ireland)",
+      "region": "ni",
+      "salary": "£2,000 to £3,200 per month",
+      "salary_gbp": 24000,
+      "contract": "Full-time",
+      "posted": "2026-11-03",
+      "closes": "2026-11-16",
+      "setting": "outdoors",
+      "requirements": [
+        "Clean driving licence",
+        "Willing to travel to sites across Ireland",
+        "Preference for oil spill remediation experience"
+      ],
+      "about": "Mostly outdoors role carrying out site investigations and surveys, setting up containment and treatment systems and monitoring sites.",
+      "how_to_apply": "Send CV to Liam McPolin, Spill Resolve Ltd (liam@spillresolve.com) by 16 November 2026",
+      "url": "https://to.indeed.com/aag8zkktq9sq",
+      "source": "Indeed",
+      "healthcare": false,
+      "gaps": [],
+      "first_seen": "2026-11-13"
+    },
+    {
       "title": "Fisheries Officer",
       "employer": "Inland Fisheries Ireland",
       "location": "Farnanes, County Cork",
@@ -53,33 +77,6 @@
       "gaps": [
         "On-water competence (a short powerboat or water safety course covers this)",
         "Irish driving licence (exchange of her UK licence, if she moves to Ireland)"
-      ],
-      "first_seen": "2026-11-04"
-    },
-    {
-      "title": "L1 Graduate Environmental Consultant, Renewables Team",
-      "employer": "Malone O'Regan Environmental",
-      "location": "Dublin, Shannon or Tullamore (hybrid)",
-      "region": "ireland",
-      "salary": null,
-      "salary_gbp": null,
-      "contract": "Full-time",
-      "posted": "2026-10-08",
-      "closes": null,
-      "setting": "mixed",
-      "requirements": [
-        "Degree in environmental science or a related field",
-        "Familiarity with relevant legislation and the planning application process",
-        "Technical report writing and Microsoft Office",
-        "Full clean driving licence"
-      ],
-      "about": "Entry-level consultancy role on solar, battery and wind projects: environmental surveys, data analysis and drafting Environmental Impact Assessment chapters.",
-      "how_to_apply": "Cover letter and CV to careers@mores.ie",
-      "url": "https://to.indeed.com/aax7fb7nzgwk",
-      "source": "Indeed",
-      "healthcare": false,
-      "gaps": [
-        "Familiarity with the planning application process (some reading before applying covers this)"
       ],
       "first_seen": "2026-11-04"
     },
@@ -152,6 +149,32 @@
       "healthcare": false,
       "gaps": [],
       "first_seen": "2026-11-03"
+    },
+    {
+      "title": "Research Technologist (SAFER agroecology project)",
+      "employer": "Teagasc",
+      "location": "Dublin 15 (Ashtown) or Athenry, Co. Galway",
+      "region": "ireland",
+      "salary": "€42,921 to €81,218 (Technologist Grade 1 scale)",
+      "salary_gbp": 36483,
+      "contract": "Temporary, full-time, about 19 months",
+      "posted": "2026-11-10",
+      "closes": "2026-12-02",
+      "setting": "desk",
+      "requirements": [
+        "Level 8 degree in environmental science or a related discipline",
+        "Research and technical skills in quantitative and qualitative methods",
+        "Own car for travel between Teagasc centres"
+      ],
+      "about": "Mostly desk-based role collecting and analysing farm-level economic and ecological data for an agroecology research project, with farm visits.",
+      "how_to_apply": "Apply online through the listing by 12 noon on 2 December 2026",
+      "url": "https://to.indeed.com/aalnlprs7rth",
+      "source": "Indeed",
+      "healthcare": false,
+      "gaps": [
+        "Irish driving licence (exchange of her UK licence)"
+      ],
+      "first_seen": "2026-11-13"
     },
     {
       "title": "Higher Scientific Officer",
