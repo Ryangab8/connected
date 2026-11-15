@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-15",
   "jobs": [
     {
       "title": "Conservation Ranger, National Parks and Wildlife Service",
@@ -79,6 +79,31 @@
         "Irish driving licence (exchange of her UK licence, if she moves to Ireland)"
       ],
       "first_seen": "2026-11-04"
+    },
+    {
+      "title": "Water Management & Leakage Detection Trainee",
+      "employer": "E McMullan Ltd",
+      "location": "Holywood, Co. Down",
+      "region": "ni",
+      "salary": "From £26,100 a year",
+      "salary_gbp": 26100,
+      "contract": "Permanent, full-time (40 hours)",
+      "posted": "2026-11-14",
+      "closes": null,
+      "setting": "outdoors",
+      "requirements": [
+        "Secondary level education (maths, science, IT or geography preferred)",
+        "Full valid driving licence and own transport",
+        "Good numeracy and spreadsheet skills",
+        "Able to work in confined spaces; Access NI certificate"
+      ],
+      "about": "Outdoor trainee role assisting with leakage detection, pressure management and GIS data collection on water networks, with a 12-month structured training programme.",
+      "how_to_apply": "Apply through the Indeed listing",
+      "url": "https://to.indeed.com/aaw9jfwdfqg6",
+      "source": "Indeed",
+      "healthcare": false,
+      "gaps": [],
+      "first_seen": "2026-11-15"
     },
     {
       "title": "Environmental Consultant",
