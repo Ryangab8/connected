@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "jobs": [
     {
       "title": "Conservation Ranger, National Parks and Wildlife Service",
@@ -80,6 +80,30 @@
       "healthcare": false,
       "gaps": [],
       "first_seen": "2026-11-15"
+    },
+    {
+      "title": "Data Officer",
+      "employer": "National Biodiversity Network Trust",
+      "location": "Remote (UK)",
+      "region": "remote",
+      "salary": "£32,445 per year",
+      "salary_gbp": 32445,
+      "contract": "Permanent (dependent on continuing funding), full-time",
+      "posted": null,
+      "closes": "2026-11-27",
+      "setting": "desk",
+      "requirements": [
+        "Right to work in the UK",
+        "Able to work from home",
+        "Full criteria on the listing; check before applying"
+      ],
+      "about": "Biodiversity data role at the NBN Trust, which makes data work for nature; starts early 2027.",
+      "how_to_apply": "Use the Apply now link on nbn.org.uk, or the listing on environmentjob.co.uk",
+      "url": "https://www.nienvironmentlink.org/opportunities/national-biodiversity-network-trust-data-officer/",
+      "source": "NI Environment Link",
+      "healthcare": false,
+      "gaps": [],
+      "first_seen": "2026-11-18"
     },
     {
       "title": "Environmental Consultant",
