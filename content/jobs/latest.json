@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "jobs": [
     {
       "title": "Fisheries Officer",
@@ -285,6 +285,28 @@
       "healthcare": false,
       "gaps": [],
       "first_seen": "2026-11-04"
+    },
+    {
+      "title": "Medical Laboratory Assistant (H & I Lab)",
+      "employer": "Belfast Health and Social Care Trust",
+      "location": "Belfast (NIBTS building)",
+      "region": "ni",
+      "salary": "Band 4, £27,485 - £30,162",
+      "salary_gbp": 27485,
+      "contract": "Permanent, full-time",
+      "posted": "2026-11-18",
+      "closes": "2026-12-01",
+      "setting": "desk",
+      "requirements": [
+        "Full criteria in the job description on the HSC application portal; check before applying"
+      ],
+      "about": "Entry-level laboratory assistant post in the Trust's H & I (tissue typing) lab, Belfast.",
+      "how_to_apply": "Apply online through the HSC Trust portal via the LinkedIn listing; closes 1 December 2026, 4:30pm",
+      "url": "https://uk.linkedin.com/jobs/view/bhsct-medical-laboratory-assistant-at-belfast-health-and-social-care-trust-4490808412",
+      "source": "LinkedIn alert",
+      "healthcare": false,
+      "gaps": [],
+      "first_seen": "2026-11-21"
     },
     {
       "title": "Biomedical Lab Assistant",
