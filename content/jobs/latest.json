@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "jobs": [
     {
       "title": "Fisheries Officer",
@@ -53,6 +53,34 @@
       "healthcare": false,
       "gaps": [],
       "first_seen": "2026-11-15"
+    },
+    {
+      "title": "Ecologist",
+      "employer": "Scott Cawley Ltd.",
+      "location": "Hybrid: Ireland (field, office and some remote work)",
+      "region": "ireland",
+      "salary": null,
+      "salary_gbp": null,
+      "contract": "Full-time",
+      "posted": "2026-11-19",
+      "closes": null,
+      "setting": "mixed",
+      "requirements": [
+        "Relevant degree in ecology, environmental science or similar",
+        "Field survey skills (habitat surveys, species ID, data collection)",
+        "Technical ecological report writing; GIS or mapping skills",
+        "Full driving licence"
+      ],
+      "about": "Entry-level ecologist role mixing field surveys, report writing and data analysis for Irish ecological consultancy projects.",
+      "how_to_apply": "Apply through the LinkedIn listing",
+      "url": "https://ie.linkedin.com/jobs/view/ecologist-at-scott-cawley-ltd-4490879951",
+      "source": "LinkedIn",
+      "healthcare": false,
+      "gaps": [
+        "GIS skills (a short QGIS course covers this)",
+        "Ecological report writing (build from her dissertation)"
+      ],
+      "first_seen": "2026-11-22"
     },
     {
       "title": "Data Officer",
