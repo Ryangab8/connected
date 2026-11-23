@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "jobs": [
     {
       "title": "Fisheries Officer",
@@ -427,6 +427,28 @@
         "One year of chemical analysis experience (degree lab work and her AFBI internship may count; check with the recruiter)"
       ],
       "first_seen": "2026-11-12"
+    },
+    {
+      "title": "External Affairs Officer",
+      "employer": "National Trust",
+      "location": "County Down",
+      "region": "ni",
+      "salary": "£24,773 per annum",
+      "salary_gbp": 24773,
+      "contract": "Temporary",
+      "posted": "2026-11-23",
+      "closes": null,
+      "setting": "desk",
+      "requirements": [
+        "Full criteria on the listing; check before applying"
+      ],
+      "about": "Outreach and external affairs role at a conservation organisation in County Down, as listed in the NIJobs alert (details not readable automatically).",
+      "how_to_apply": "Apply through the NIJobs listing",
+      "url": "https://www.nijobs.com/#external-affairs-officer-national-trust",
+      "source": "NIJobs",
+      "healthcare": false,
+      "gaps": [],
+      "first_seen": "2026-11-23"
     }
   ]
 }
