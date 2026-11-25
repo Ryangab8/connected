@@ -62,6 +62,10 @@ Search broadly and rank by overall fit. Confirmed by Ryan on 2026-11-01.
 - Work from home: fully remote and hybrid roles are welcome (added by Emily on 2026-11-11). Remote
   roles must accept NI-based staff. Hybrid roles need an office in NI or in a city or large town in
   Ireland, or an office in GB with only occasional office days (about once a month or less).
+- Civil service: any civil service job she qualifies for, in any field, not only environment roles
+  (added by Emily on 2026-11-25). Entry grades: NICS AA, AO, EO II and EO I; UK Civil Service AA, AO
+  and EO; Irish Clerical Officer and Executive Officer. Same location, remote and hybrid rules as above.
+  Civil service roles outside her field rank below environment roles.
 - Contracts: full-time preferred. Part-time, fixed-term and seasonal are fine.
 - Salary: no floor. Show the salary on every listing where it is given.
 - Seniority: graduate, entry level and assistant roles.
