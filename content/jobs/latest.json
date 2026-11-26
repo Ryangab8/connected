@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "jobs": [
     {
       "title": "Fisheries Officer",
@@ -28,6 +28,30 @@
         "Irish driving licence (exchange of her UK licence, if she moves to Ireland)"
       ],
       "first_seen": "2026-11-04"
+    },
+    {
+      "title": "Fisheries Officer (DAERA Inland Fisheries Inspectorate)",
+      "employer": "DAERA via JDR Recruitment",
+      "location": "Clare House, Belfast",
+      "region": "ni",
+      "salary": "£17.43 per hour",
+      "salary_gbp": null,
+      "contract": "Temporary agency assignment, 37 hours, 30 Nov 2026 to 31 May 2027",
+      "posted": "2026-11-18",
+      "closes": null,
+      "setting": "mixed",
+      "requirements": [
+        "GCSE English and Maths, plus A Levels",
+        "Full Microsoft Office experience or qualification",
+        "Standard security clearance"
+      ],
+      "about": "Supports salmon and inland fisheries management: fish stock monitoring, enforcement support, permissions, reporting and stakeholder engagement (a degree in biological or environmental science and aquatic ecology are desirable).",
+      "how_to_apply": "Apply with an up-to-date CV through the Indeed listing",
+      "url": "https://to.indeed.com/aayl242g4z9b",
+      "source": "Indeed",
+      "healthcare": false,
+      "gaps": [],
+      "first_seen": "2026-11-26"
     },
     {
       "title": "Water Management & Leakage Detection Trainee",
@@ -427,6 +451,32 @@
         "One year of chemical analysis experience (degree lab work and her AFBI internship may count; check with the recruiter)"
       ],
       "first_seen": "2026-11-12"
+    },
+    {
+      "title": "Scientific Officer, Trace Organics Analysis and Screening (DAERA Water Chemistry)",
+      "employer": "DAERA via JDR Recruitment",
+      "location": "NIEA, Lisburn, County Antrim",
+      "region": "ni",
+      "salary": "£17.43 per hour",
+      "salary_gbp": null,
+      "contract": "Temporary agency assignment, 37 hours, 30 Nov 2026 to 23 April 2027",
+      "posted": "2026-11-18",
+      "closes": null,
+      "setting": "desk",
+      "requirements": [
+        "HNC, HND or higher in chemistry, biochemistry or environmental science",
+        "One year of chemical analysis experience (academic work, volunteering or employment can count)",
+        "Standard security clearance"
+      ],
+      "about": "Laboratory role analysing pollution and screening samples with mass spectrometry for environmental monitoring, under an ISO 17025 quality system.",
+      "how_to_apply": "Apply with an up-to-date CV through the Indeed listing",
+      "url": "https://to.indeed.com/aacq6lmlz42k",
+      "source": "Indeed",
+      "healthcare": false,
+      "gaps": [
+        "One year of chemical analysis experience (degree lab work and her AFBI internship may count; check with the recruiter)"
+      ],
+      "first_seen": "2026-11-26"
     },
     {
       "title": "External Affairs Officer",
