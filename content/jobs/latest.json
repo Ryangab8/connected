@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27",
+  "updated": "2026-11-28",
   "jobs": [
     {
       "title": "Fisheries Officer (DAERA Inland Fisheries Inspectorate)",
@@ -77,30 +77,6 @@
         "Ecological report writing (build from her dissertation)"
       ],
       "first_seen": "2026-11-22"
-    },
-    {
-      "title": "Data Officer",
-      "employer": "National Biodiversity Network Trust",
-      "location": "Remote (UK)",
-      "region": "remote",
-      "salary": "£32,445 per year",
-      "salary_gbp": 32445,
-      "contract": "Permanent (dependent on continuing funding), full-time",
-      "posted": null,
-      "closes": "2026-11-27",
-      "setting": "desk",
-      "requirements": [
-        "Right to work in the UK",
-        "Able to work from home",
-        "Full criteria on the listing; check before applying"
-      ],
-      "about": "Biodiversity data role at the NBN Trust, which makes data work for nature; starts early 2027.",
-      "how_to_apply": "Use the Apply now link on nbn.org.uk, or the listing on environmentjob.co.uk",
-      "url": "https://www.nienvironmentlink.org/opportunities/national-biodiversity-network-trust-data-officer/",
-      "source": "NI Environment Link",
-      "healthcare": false,
-      "gaps": [],
-      "first_seen": "2026-11-18"
     },
     {
       "title": "Environmental Consultant",
@@ -471,6 +447,72 @@
       "healthcare": false,
       "gaps": [],
       "first_seen": "2026-11-23"
+    },
+    {
+      "salary_gbp": null,
+      "posted": null,
+      "closes": null,
+      "healthcare": false,
+      "gaps": [],
+      "first_seen": "2026-11-28",
+      "region": "ni",
+      "setting": "desk",
+      "requirements": [
+        "Full criteria on the listing; check before applying"
+      ],
+      "title": "Data Evidence Analyst",
+      "employer": "Honeycomb Jobs Limited (for Ards and North Down)",
+      "location": "Bangor, County Down",
+      "salary": "£23.54 per hour",
+      "contract": "Temporary",
+      "about": "Data analysis post for Ards and North Down, advertised by recruiter Honeycomb; details read from the NIJobs alert only.",
+      "how_to_apply": "Search NIJobs for \"Data Evidence Analyst\" (Honeycomb Jobs Limited) and apply on the listing",
+      "url": "https://www.nijobs.com/#data-evidence-analyst-honeycomb",
+      "source": "NIJobs alert"
+    },
+    {
+      "salary_gbp": 27000,
+      "posted": null,
+      "closes": null,
+      "healthcare": false,
+      "gaps": [],
+      "first_seen": "2026-11-28",
+      "region": "ni",
+      "setting": "mixed",
+      "requirements": [
+        "Full criteria on the listing; check before applying"
+      ],
+      "title": "Quality Sampling and Testing Technician",
+      "employer": "VANRATH",
+      "location": "Belfast",
+      "salary": "£27,000 - £31,000 per annum",
+      "contract": "Temporary",
+      "about": "Sampling and testing technician post with a major company, advertised by recruiter VANRATH; details read from the NIJobs alert only.",
+      "how_to_apply": "Search NIJobs for \"Quality Sampling and Testing Technician\" (VANRATH) and apply on the listing",
+      "url": "https://www.nijobs.com/#quality-sampling-testing-technician-vanrath",
+      "source": "NIJobs alert"
+    },
+    {
+      "salary_gbp": 24937,
+      "posted": null,
+      "closes": null,
+      "healthcare": false,
+      "gaps": [],
+      "first_seen": "2026-11-28",
+      "region": "ni",
+      "setting": "desk",
+      "requirements": [
+        "Full criteria on the listing; check before applying"
+      ],
+      "title": "Biomedical Lab Assistant - Band 3",
+      "employer": "MCS Group",
+      "location": "Londonderry, County Londonderry",
+      "salary": "£24,937 - £26,598 per annum",
+      "contract": "Temporary",
+      "about": "Healthcare lab assistant role for people beginning or developing a lab career; details read from the NIJobs alert only.",
+      "how_to_apply": "Search NIJobs for \"Biomedical Lab Assistant - Band 3\" (MCS Group) and apply on the listing",
+      "url": "https://www.nijobs.com/#biomedical-lab-assistant-band3-mcs-londonderry",
+      "source": "NIJobs alert"
     }
   ]
 }
